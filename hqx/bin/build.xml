@@ -1,0 +1,105 @@
+﻿<project name="DFV" basedir="." default="make">
+
+
+  <description>
+    Увеличение спрайтов - Dungeon Crawl
+  </description>
+
+
+  <property name="workspace" value="dangeon-crawl-sprite" />
+  <property name="project.name" value="dangeon-crawl-sprite" />
+  <property name="source" location="${workspace}" />
+
+  <patternset id="only.png">
+    <include name="**/*.png"/>
+    <exclude name="**/*.2x.png"/>
+    <exclude name="**/*.3x.png"/>
+    <exclude name="**/*.4x.png"/>
+  </patternset>
+  
+  <!-- Вспомогательные значения -->
+  <property name="nl" value="&#13;&#10;"/>
+
+
+  
+  
+  <target name="init">
+
+    <echo>Инициализация</echo>
+
+    <buildnumber />
+    <echo>Номер сборки: ${build.number}</echo>
+
+    <tstamp>
+        <format property="touch.time" pattern="dd-MM-yyyy HH:mm" />
+    </tstamp>
+    <echo>Время сборки: ${touch.time}</echo>
+
+  </target>
+
+
+
+
+  <target name="scale-2x-png" depends="init">
+
+    <echo>${nl}Увеличиваем в 2 раза</echo>
+    <apply executable="hqx" dest="${source}">
+      <arg value="-s 2" />
+      <srcfile />
+      <targetfile />
+      <fileset dir="${source}"><patternset refid="only.png" /></fileset>
+      <mapper type="glob" from="*.png" to="*.2x.png"/>
+    </apply>
+
+  </target>
+
+
+
+
+  <target name="scale-3x-png" depends="init">
+
+    <echo>${nl}Увеличиваем в 3 раза</echo>
+    <apply executable="hqx" dest="${source}">
+      <arg value="-s 3" />
+      <srcfile />
+      <targetfile />
+      <fileset dir="${source}"><patternset refid="only.png" /></fileset>
+      <mapper type="glob" from="*.png" to="*.3x.png"/>
+    </apply>
+
+  </target>
+
+
+
+
+  <target name="scale-4x-png" depends="init">
+
+    <echo>${nl}Увеличиваем в 4 раза</echo>
+    <apply executable="hqx" dest="${source}">
+      <arg value="-s 4" />
+      <srcfile />
+      <targetfile />
+      <fileset dir="${source}"><patternset refid="only.png" /></fileset>
+      <mapper type="glob" from="*.png" to="*.4x.png"/>
+    </apply>
+
+  </target>
+
+
+
+
+  <!-- Старт-блок -->
+  <target name="make" depends="init, scale-2x-png, scale-3x-png, scale-4x-png">
+
+    <resourcecount property="count-png">
+      <fileset dir="${source}"><patternset refid="only.png" /></fileset>
+    </resourcecount>
+    <echo>${nl}Преобразовано спрайтов &gt; ${count-png}</echo>
+
+
+    <echo>${nl}Конвертация завершена</echo>
+
+  </target>
+
+
+</project>
