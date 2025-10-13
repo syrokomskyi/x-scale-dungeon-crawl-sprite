@@ -5,14 +5,14 @@ echo Starting sprite upscaling process...
 echo Thanks https://github.com/upscayl/upscayl
 echo.
 
-::set "MODEL_NAME=digital-art-4x"
-set "MODEL_NAME=upscayl-standard-4x"
+set "MODEL_NAME=digital-art-4x"
+::set "MODEL_NAME=upscayl-standard-4x"
 
 set "SCALE=4"
 set "SCALE_FOLDER=128x"
 
 :: `work` or `test` mode
-set "MODE=test"
+set "MODE=work"
 set "INPUT_DIR=..\..\sprites\%MODE%\original"
 set "OUTPUT_DIR=..\..\sprites\%MODE%\%MODEL_NAME%\%SCALE_FOLDER%"
 
