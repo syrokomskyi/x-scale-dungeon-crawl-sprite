@@ -4,12 +4,16 @@ setlocal enabledelayedexpansion
 echo Starting sprite upscaling process...
 echo.
 
+::set "MODEL_NAME=digital-art-4x"
+set "MODEL_NAME=high-fidelity-4x"
+
+set "SCALE=4"
+set "SCALE_FOLDER=128x"
+
 set "INPUT_DIR=C:\projects\x-scale-dungeon-crawl-sprite\sprites\test\original"
-set "OUTPUT_BASE=C:\projects\x-scale-dungeon-crawl-sprite\sprites\test\digital-art-4x\128x"
+set "OUTPUT_BASE=C:\projects\x-scale-dungeon-crawl-sprite\sprites\test\%MODEL_NAME%\%SCALE_FOLDER%"
 set "UPSCALE_BIN=C:\Program Files\Upscayl\resources\bin\upscayl-bin.exe"
 set "MODELS_DIR=C:\Program Files\Upscayl\resources\models"
-set "MODEL_NAME=digital-art-4x"
-set "SCALE=4"
 
 :: Create output base directory if it doesn't exist
 if not exist "%OUTPUT_BASE%" mkdir "%OUTPUT_BASE%"
