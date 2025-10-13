@@ -10,6 +10,10 @@ Share some ❤️ and star repo to support the [Large Sprites for the game "Dung
 
 _If you write an article about **Dungeon Crawl: Stone Soup**, let me know and I'll post the URL of the article in the **README**_ 🤝
 
+## Sprite Source
+
+<https://github.com/crawl/crawl>
+
 Created [with ❤️](https://syrokomskyi.com "Andrii Syrokomskyi")
 
 [![fresher](https://img.shields.io/badge/maintained%20using-fresher-darkgreen.svg?style=for-the-badge)](https://github.com/syrokomskyi/fresher "Keeps Projects Up to Date")
