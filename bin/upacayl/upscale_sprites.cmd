@@ -5,8 +5,8 @@ echo Starting sprite upscaling process...
 echo Thanks https://github.com/upscayl/upscayl
 echo.
 
-set "MODEL_NAME=digital-art-4x"
-::set "MODEL_NAME=upscayl-standard-4x"
+::set "MODEL_NAME=digital-art-4x"
+set "MODEL_NAME=upscayl-standard-4x"
 
 set "SCALE=4"
 set "SCALE_FOLDER=128x"
