@@ -14,34 +14,26 @@ set "SCALE=4"
 :: Create output base directory if it doesn't exist
 if not exist "%OUTPUT_BASE%" mkdir "%OUTPUT_BASE%"
 
-for /r "%INPUT_DIR%" %%f in (*.png) do (
-    echo Processing file: "%%f"
-
-    :: Get directory path of the file
-    set "FILE_DIR=%%~dpf"
+:: Process each subdirectory
+for /d %%d in ("%INPUT_DIR%\*") do (
+    set "SUBDIR=%%~nxd"
+    set "INPUT_SUBDIR=%%d"
+    set "OUTPUT_SUBDIR=%OUTPUT_BASE%\!SUBDIR!"
+    set "INPUT_SUBDIR_UNIX=!INPUT_SUBDIR:\=/!"
+    set "OUTPUT_SUBDIR_UNIX=!OUTPUT_SUBDIR:\=/!"
     
-    :: Remove INPUT_DIR from FILE_DIR to get relative directory
-    set "REL_DIR=!FILE_DIR:%INPUT_DIR%\=!"
+    echo Processing folder: "!SUBDIR!"
+    echo   Input:  !INPUT_SUBDIR_UNIX!
+    echo   Output: !OUTPUT_SUBDIR_UNIX!
     
-    :: Remove trailing backslash if present
-    if "!REL_DIR:~-1!" EQU "\" set "REL_DIR=!REL_DIR:~0,-1!"
-
-    set "OUTPUT_DIR=%OUTPUT_BASE%\!REL_DIR!"
-    set "OUTPUT_FILE=!OUTPUT_DIR!\%%~nxf"
-    set "OUTPUT_FILE_UNIX=!OUTPUT_FILE:\=/!"
-
-    if not exist "!OUTPUT_DIR!" (
-        echo   Creating directory: !OUTPUT_DIR!
-        mkdir "!OUTPUT_DIR!"
-    )
-
-    echo   Upscaling to: !OUTPUT_FILE_UNIX!
-    "%UPSCALE_BIN%" -i "%%f" -o "!OUTPUT_FILE_UNIX!" -m "%MODELS_DIR%" -n "%MODEL_NAME%" -s %SCALE%
-
+    if not exist "!OUTPUT_SUBDIR!" mkdir "!OUTPUT_SUBDIR!"
+    
+    "%UPSCALE_BIN%" -i "!INPUT_SUBDIR_UNIX!" -o "!OUTPUT_SUBDIR_UNIX!" -m "%MODELS_DIR%" -n "%MODEL_NAME%" -s %SCALE%
+    
     if !errorlevel! equ 0 (
-        echo   SUCCESS: %%~nxf
+        echo   SUCCESS: Folder !SUBDIR! processed
     ) else (
-        echo   ERROR: Failed to process %%~nxf
+        echo   ERROR: Failed to process folder !SUBDIR!
     )
     echo.
 )
