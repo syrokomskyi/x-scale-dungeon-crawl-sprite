@@ -10,8 +10,11 @@ set "MODEL_NAME=digital-art-4x"
 set "SCALE=4"
 set "SCALE_FOLDER=128x"
 
-set "INPUT_DIR=C:\projects\x-scale-dungeon-crawl-sprite\sprites\test\original"
-set "OUTPUT_BASE=C:\projects\x-scale-dungeon-crawl-sprite\sprites\test\%MODEL_NAME%\%SCALE_FOLDER%"
+:: `work` or `test` mode
+set "MODE=test"
+set "INPUT_DIR=C:\projects\x-scale-dungeon-crawl-sprite\sprites\%MODE%\original"
+set "OUTPUT_BASE=C:\projects\x-scale-dungeon-crawl-sprite\sprites\%MODE%\%MODEL_NAME%\%SCALE_FOLDER%"
+
 set "UPSCALE_BIN=C:\Program Files\Upscayl\resources\bin\upscayl-bin.exe"
 set "MODELS_DIR=C:\Program Files\Upscayl\resources\models"
 
