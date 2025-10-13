@@ -16,7 +16,9 @@ _If you write an article about **Dungeon Crawl: Stone Soup**, let me know and I'
 
 ## Transform
 
-For transfrom sprites run in terminal:
+For transfrom sprites run the script in terminal.
+
+### Upscayl
 
 ```sh
 cd transform/upscayl
@@ -24,6 +26,26 @@ cd transform/upscayl
 
 ```sh
 upscale-sprites
+```
+
+### Hugging Face Diffusers
+
+TODO
+
+```python
+import requests
+
+API_URL = "https://api-inference.huggingface.co/models/stable-diffusion-v1-5"
+headers = {"Authorization": f"Bearer {API_TOKEN}"}
+
+def query(payload):
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.content
+
+image_bytes = query({
+    "inputs": "Astronaut riding a horse",
+    "parameters": {"guidance_scale": 7.5}
+})
 ```
 
 Created [with ❤️](https://syrokomskyi.com "Andrii Syrokomskyi")
