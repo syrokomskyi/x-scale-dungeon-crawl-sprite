@@ -14,6 +14,18 @@ _If you write an article about **Dungeon Crawl: Stone Soup**, let me know and I'
 
 <https://github.com/crawl/crawl>
 
+## Transform
+
+For transfrom sprites run in terminal:
+
+```sh
+cd transform/upscayl
+```
+
+```sh
+upscale-sprites
+```
+
 Created [with ❤️](https://syrokomskyi.com "Andrii Syrokomskyi")
 
 [![fresher](https://img.shields.io/badge/maintained%20using-fresher-darkgreen.svg?style=for-the-badge)](https://github.com/syrokomskyi/fresher "Keeps Projects Up to Date")
