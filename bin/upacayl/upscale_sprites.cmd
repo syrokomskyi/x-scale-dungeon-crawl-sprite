@@ -2,6 +2,7 @@
 setlocal enabledelayedexpansion
 
 echo Starting sprite upscaling process...
+echo Thanks https://github.com/upscayl/upscayl
 echo.
 
 set "MODEL_NAME=digital-art-4x"
@@ -15,6 +16,8 @@ set "MODE=test"
 set "INPUT_DIR=..\..\sprites\%MODE%\original"
 set "OUTPUT_DIR=..\..\sprites\%MODE%\%MODEL_NAME%\%SCALE_FOLDER%"
 
+:: Upscayl tool must be installed by this path.
+:: See https://github.com/upscayl/upscayl
 set "UPSCALE_BIN=C:\Program Files\Upscayl\resources\bin\upscayl-bin.exe"
 set "MODELS_DIR=C:\Program Files\Upscayl\resources\models"
 
