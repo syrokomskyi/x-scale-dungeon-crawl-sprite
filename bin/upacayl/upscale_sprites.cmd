@@ -44,4 +44,4 @@ for /d %%d in ("%INPUT_DIR%\*") do (
 
 echo.
 echo Sprite upscaling process completed!
-pause
+::pause
