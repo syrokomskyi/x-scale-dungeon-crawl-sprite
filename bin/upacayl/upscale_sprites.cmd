@@ -12,8 +12,8 @@ set "SCALE_FOLDER=128x"
 
 :: `work` or `test` mode
 set "MODE=test"
-set "INPUT_DIR=C:\projects\x-scale-dungeon-crawl-sprite\sprites\%MODE%\original"
-set "OUTPUT_DIR=C:\projects\x-scale-dungeon-crawl-sprite\sprites\%MODE%\%MODEL_NAME%\%SCALE_FOLDER%"
+set "INPUT_DIR=..\..\sprites\%MODE%\original"
+set "OUTPUT_DIR=..\..\sprites\%MODE%\%MODEL_NAME%\%SCALE_FOLDER%"
 
 set "UPSCALE_BIN=C:\Program Files\Upscayl\resources\bin\upscayl-bin.exe"
 set "MODELS_DIR=C:\Program Files\Upscayl\resources\models"
