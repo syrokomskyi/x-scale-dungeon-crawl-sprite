@@ -3,9 +3,12 @@
 ## Prompt
 
 ```text
-v3.1.0
+v3.2.0
 
-Draw a **realistic dark fantasy reinterpretation** of the original pixel art (see attachment). 
+Draw a **realistic dark fantasy reinterpretation** of the original pixel art (see attachment) and description:
+
+[description from https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt]
+
 Keep the **same composition, silhouette, and pose**, as well as the **relative layout of background elements**.
 This is a **dramatic, cinematic reinterpretation**, not a copy.
 
