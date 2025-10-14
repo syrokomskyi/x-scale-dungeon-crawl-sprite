@@ -3,7 +3,7 @@
 ## Prompt
 
 ```text
-v3.0.0
+v3.1.0
 
 Draw a **realistic dark fantasy reinterpretation** of the original pixel art (see attachment). 
 Keep the **same composition, silhouette, and pose**, as well as the **relative layout of background elements**.
@@ -15,6 +15,12 @@ Render the creature (item, object, building, etc.), its armor, and surroundings 
 - **Cinematic shadows** and **strong light direction** (like from a torch, spell, or moon).
 - **Atmospheric depth**, with subtle fog, floating dust, and background blur.
 - **Dynamic tension** and **epic scale feeling**, as if from a movie still.
+
+Like a still frame from a dark fantasy film, captured with cinematic lighting and lens blur.
+
+Imbued with arcane glow, symbols faintly carved into armor, magical energy flickering in the mist.
+
+Depict the creature as a mythic abomination, awe-inspiring and terrifying, blending beauty and horror.
 
 The atmosphere should feel **moody, ancient, and mythic**, combining realism with fantasy.
 Do not try to make the creature biologically plausible — interpret it artistically, as a **dark mythic entity**.
