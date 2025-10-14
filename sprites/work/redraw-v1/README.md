@@ -3,14 +3,9 @@
 ## Prompt
 
 ```text
-v3.2.0
+v3.4.0
 
-Draw a **realistic dark fantasy reinterpretation** of the original pixel art (see attachment) and description:
-
-[description from https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt]
-
-Keep the **same composition, silhouette, and pose**, as well as the **relative layout of background elements**.
-This is a **dramatic, cinematic reinterpretation**, not a copy.
+Draw a **realistic dark fantasy reinterpretation** of the original pixel art (see attachment) and description (see below). Keep the **same composition, silhouette, and pose**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy.
 
 Render the creature (item, object, building, etc.), its armor, and surroundings with:
 - **Realistic materials** (metal, bone, leather, fabric, stone, mist, etc.).
@@ -21,8 +16,6 @@ Render the creature (item, object, building, etc.), its armor, and surroundings 
 
 Like a still frame from a dark fantasy film, captured with cinematic lighting and lens blur.
 
-Imbued with arcane glow, symbols faintly carved into armor, magical energy flickering in the mist.
-
 Depict the creature as a mythic abomination, awe-inspiring and terrifying, blending beauty and horror.
 
 The atmosphere should feel **moody, ancient, and mythic**, combining realism with fantasy.
@@ -32,6 +25,10 @@ Do not try to make the creature biologically plausible — interpret it artistic
 Dark Souls / Elden Ring / Diablo IV / Magic: The Gathering / Greg Rutkowski / Magali Villeneuve / Wētā Workshop concept art.
 
 Use the attached pixel image as reference for **composition and silhouette**, but reinterpret every surface, light, and texture in **a fully rendered, realistic way**.
+
+Use this description to understand the creature's appearance and behavior:
+
+[description from https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt]
 
 --ar 1:1 --style raw
 
