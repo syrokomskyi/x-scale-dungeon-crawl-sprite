@@ -1,5 +1,9 @@
 # Redraw with LLMs
 
+## Model
+
+Nano Banana
+
 ## Prompt
 
 ```text
