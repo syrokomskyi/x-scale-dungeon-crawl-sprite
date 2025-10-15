@@ -16,11 +16,11 @@ _If you write an article about **Dungeon Crawl: Stone Soup**, let me know and I'
 
 ## Transform
 
+See `README.md` in every `./sprites/work/` folder.
+
 For transfrom sprites run the script in terminal.
 
-### Hugging Face Diffusers
-
-TODO
+### TODO Hugging Face Diffusers
 
 ```python
 import requests
