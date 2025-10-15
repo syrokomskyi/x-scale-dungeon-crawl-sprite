@@ -18,16 +18,6 @@ _If you write an article about **Dungeon Crawl: Stone Soup**, let me know and I'
 
 For transfrom sprites run the script in terminal.
 
-### Upscayl
-
-```sh
-cd transform/upscayl
-```
-
-```sh
-upscale-sprites
-```
-
 ### Hugging Face Diffusers
 
 TODO
