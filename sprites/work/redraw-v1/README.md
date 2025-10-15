@@ -3,12 +3,14 @@
 ## Prompt
 
 ```text
-v3.4.0
+v4.0.0
 
-Draw a **realistic dark fantasy reinterpretation** of the original pixel art (see attachment) and description (see below). Keep the **same composition, silhouette, and pose**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy.
+[name and description from https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt]
+
+Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, silhouette, pose, and colours**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy.
 
 Render the creature (item, object, building, etc.), its armor, and surroundings with:
-- **Realistic materials** (metal, bone, leather, fabric, stone, mist, etc.).
+- **Realistic materials** (metal, bone, leather, fabric, stone, mist, etc.) in the colours of the provided image.
 - **High-detail textures** and **volumetric lighting**.
 - **Cinematic shadows** and **strong light direction** (like from a torch, spell, or moon).
 - **Atmospheric depth**, with subtle fog, floating dust, and background blur.
@@ -26,9 +28,7 @@ Dark Souls / Elden Ring / Diablo IV / Magic: The Gathering / Greg Rutkowski / Ma
 
 Use the attached pixel image as reference for **composition and silhouette**, but reinterpret every surface, light, and texture in **a fully rendered, realistic way**.
 
-Use this description to understand the creature's appearance and behavior:
-
-[description from https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt]
+Use the name and description above to understand the creature's appearance and behavior.
 
 --ar 1:1 --style raw
 
