@@ -112,7 +112,7 @@ function getImageFiles(dir: string): string[] {
 }
 
 function findImage(name: string): string | null {
-  const pname = name.toLowerCase().replace("the ", "");
+  const pname = name.toLowerCase().replace(/^the\s+/, "");
   const slugName = generateSlug(pname, "");
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   for (const file of imageFiles) {
