@@ -1,18 +1,14 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { VertexAI } from "@google-cloud/vertexai";
+import { GoogleGenAI } from "@google/genai";
 
-// Initialize VertexAI
-const vertexAI = new VertexAI({
-  project: process.env.GOOGLE_CLOUD_PROJECT || "your-project-id",
-  location: "us-central1",
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY,
 });
 
-// Static prompt part
 const STATIC_PROMPT =
-  "Redraw this dungeon crawl sprite in a modern pixel art style";
+  "Redraw this dungeon crawl sprite in a modern pixel art style.";
 
-// Directories
 const ORIGINAL_DIR = path.join(
   __dirname,
   "..",
@@ -32,7 +28,6 @@ const REDRAW_DIR = path.join(
   "item",
 );
 
-// Function to recursively get all image files
 function getImageFiles(dir: string): string[] {
   const files: string[] = [];
   const items = fs.readdirSync(dir);
@@ -45,23 +40,23 @@ function getImageFiles(dir: string): string[] {
       files.push(fullPath);
     }
   }
+
   return files;
 }
 
-// Function to get relative path from original dir
 function getRelativePath(filePath: string): string {
   return path.relative(ORIGINAL_DIR, filePath);
 }
 
-// Function to get folders and filename without extension
+// Get folders and filename without extension.
 function getPromptParts(relativePath: string): string {
   const parsed = path.parse(relativePath);
   const folders = parsed.dir.split(path.sep).filter((f) => f);
   const name = parsed.name;
+
   return [...folders, name].join(", ");
 }
 
-// Function to generate image using Imagen
 async function generateImage(originalPath: string): Promise<Buffer> {
   const relativePath = getRelativePath(originalPath);
   const promptParts = getPromptParts(relativePath);
@@ -82,25 +77,30 @@ async function generateImage(originalPath: string): Promise<Buffer> {
     throw new Error(`Unsupported image format: ${ext}`);
   }
 
-  // Use Imagen for image generation with conditioning
-  const imagenModel = vertexAI.imageGeneration("imagen-3.0-generate-001");
-
-  const request = {
-    prompt: fullPrompt,
-    image: {
-      bytesBase64Encoded: imageBase64,
-      mimeType,
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash-image",
+    contents: {
+      parts: [
+        { text: fullPrompt },
+        { inlineData: { mimeType, data: imageBase64 } },
+      ],
     },
-    // Other parameters like aspectRatio, etc. can be added
-  };
+  });
 
-  const response = await imagenModel.generateImage(request);
-  // Assuming response has image data
-  const generatedImageBase64 = response.generatedImages[0].bytesBase64Encoded;
-  return Buffer.from(generatedImageBase64, "base64");
+  for (const part of response.candidates?.[0]?.content?.parts ?? []) {
+    if (part.inlineData) {
+      const imageData = part.inlineData.data;
+      if (!imageData) {
+        throw new Error("No image data");
+      }
+
+      return Buffer.from(imageData, "base64");
+    }
+  }
+
+  throw new Error("No image generated");
 }
 
-// Main function
 async function main() {
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   for (const file of imageFiles) {
@@ -108,12 +108,10 @@ async function main() {
     const outputPath = path.join(REDRAW_DIR, relativePath);
     const outputDir = path.dirname(outputPath);
 
-    // Ensure output directory exists
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    // Check if already exists
     if (fs.existsSync(outputPath)) {
       console.log(`Skipping ${relativePath}, already exists.`);
       continue;

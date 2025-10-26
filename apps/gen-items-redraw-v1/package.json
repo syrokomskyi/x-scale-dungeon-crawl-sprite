@@ -6,7 +6,7 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "@google-cloud/vertexai": "^1.0.0",
+    "@google/genai": "^1.27.0",
     "ts-node": "^10.9.0"
   },
   "devDependencies": {
