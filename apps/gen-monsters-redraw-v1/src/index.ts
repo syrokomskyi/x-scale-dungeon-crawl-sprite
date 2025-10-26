@@ -3,6 +3,7 @@ import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
 import { generateSlug } from "gen-shared";
+import { generateRandomLetterString } from "gen-shared/src/tool";
 import sharp from "sharp";
 
 config({ path: ".env.local" });
@@ -61,7 +62,7 @@ Use the name and description to understand the creature's appearance and behavio
 
 Aspect ratio: ${imageConfig.aspectRatio}.
 
-${randomPrompt ? `${Math.random()}:${Date.now()}` : ""}
+${randomPrompt ? `${generateRandomLetterString()}` : ""}
 `;
 }
 
