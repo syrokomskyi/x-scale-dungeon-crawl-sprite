@@ -133,7 +133,7 @@ async function main() {
         console.warn(`Skipping ${relativePath}: no output format specified.`);
       }
     } catch (error) {
-      console.error(`Error generating ${relativePath}:`, error);
+      console.error(`Error generating ${itemName}:`, error);
     }
 
     // test
