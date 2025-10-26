@@ -20,23 +20,63 @@ See `README.md` in every `./sprites/work/` folder.
 
 For transfrom sprites run the script in terminal.
 
-### TODO Hugging Face Diffusers
+### Demo
 
-```python
-import requests
+### [Monsters](./apps/sprites/work/redraw-v1/mon)
 
-API_URL = "https://api-inference.huggingface.co/models/stable-diffusion-v1-5"
-headers = {"Authorization": f"Bearer {API_TOKEN}"}
+#### [Humanoids](./apps/sprites/work/redraw-v1/mon/humanoids)
 
-def query(payload):
-    response = requests.post(API_URL, headers=headers, json=payload)
-    return response.content
+![juggernaut](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/giants/juggernaut.webp)
 
-image_bytes = query({
-    "inputs": "Astronaut riding a horse",
-    "parameters": {"guidance_scale": 7.5}
-})
-```
+![water_nymph](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/water_nymph.webp)
+
+![troll](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/troll.webp)
+
+![eleionoma](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/eleionoma.webp)
+
+![spriggan_rider](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/spriggans/spriggan_rider.webp)
+
+![occultist](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/humans/occultist.webp)
+
+#### [Eyes](./apps/sprites/work/redraw-v1/mon/eyes)
+
+![golden_eye](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/eyes/golden_eye.webp)
+
+![glass_eye](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/eyes/glass_eye.webp)
+
+#### [Dragons](./apps/sprites/work/redraw-v1/mon/dragons)
+
+![wind_drake](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/dragons/wind_drake.webp)
+
+![lindwurm](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/dragons/lindwurm.webp)
+
+#### [Aquatic](./apps/sprites/work/redraw-v1/mon/aquatic)
+
+![rock_fish](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/aquatic/rock_fish.webp)
+
+![swamp_worm](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/aquatic/swamp_worm.webp)
+
+#### [Abyss](./apps/sprites/work/redraw-v1/mon/abyss)
+
+![tentacled_starspawn](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/abyss/tentacled_starspawn.webp)
+
+![wretched_star](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/abyss/wretched_star.webp)
+
+#### [Unique](./apps/sprites/work/redraw-v1/mon/unique)
+
+![erica](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/erica.webp)
+
+![robin](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/robin.webp)
+
+![arachne](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/arachne.webp)
+
+![mennas](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/mennas.webp)
+
+![enchantress](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/enchantress.webp)
+
+![kirke](https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/kirke.webp)
+
+---
 
 Created [with ❤️](https://syrokomskyi.com "Andrii Syrokomskyi")
 
