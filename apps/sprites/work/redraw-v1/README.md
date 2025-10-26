@@ -1,9 +1,13 @@
 # Redraw with LLMs
 
-## 1 Gemini, chat mode
+## Monsters
+
+See `monsters.txt` & folders with images for the list of monsters.
+
+### 1 Gemini, chat mode
 
 ```text
-v5.0.0
+v5.1.0
 
 After this prompt, I will switch you to drawing mode and will only give you names and descriptions, and you will draw according to the instructions below:
 
@@ -28,17 +32,17 @@ Dark Souls / Elden Ring / Diablo IV / Magic: The Gathering / Greg Rutkowski / Ma
 
 Use the attached pixel image as reference for **composition and silhouette**, but reinterpret every surface, light, and texture in **a fully rendered, realistic way**.
 
-Use the name and description above to understand the creature's appearance and behavior.
+Use the name and description to understand the creature's appearance and behavior.
 
 --ar 1:1 --style raw
 
 ```
 
-## 2 Gemini, image mode
+### 2 Gemini, image mode
 
 Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt>.
 
-## 3 Comet, Assistant
+### 3 Comet, Assistant
 
 Open the Comet Assistant on the Gemini chat.
 
@@ -49,7 +53,7 @@ Copy the links to the generated images and download them.
 
 ```
 
-## 3 v2 Comet, Assistant
+### 3 v2 Comet, Assistant
 
 TBD This step is not implemented yet. Just a prototype.
 
@@ -67,3 +71,30 @@ v2.0.0
 4/ Save the image to your computer.
 
 ```
+
+## Mutations
+
+See `mutations.txt` for the list of mutations.
+
+### 1 Gemini, chat mode
+
+```text
+v1.0.0
+
+After this prompt, I will switch you to drawing mode and will only give you the names and descriptions of the mutations, and you will draw according to the instructions below:
+
+A dark alchemical illustration of a creature in the world of Dungeon Crawl, depicting the mutation.
+The creature stands in a shadowy, otherworldly environment — a mix of ancient dungeon, arcane laboratory, and medieval bestiary. 
+The anatomy is distorted yet elegant, as if sculpted by divine madness. 
+Lighting is dramatic chiaroscuro, with glows of magical energy matching the mutation’s element (ice = blue light, fire = red-orange, slime = green, demonic = crimson-black). 
+Surrounding symbols and runes float in the air, drawn in gold ink and geometric spirals. 
+Style: gothic horror + renaissance alchemy illustration + Zdzisław Beksiński + H.R. Giger + ancient manuscript etching. 
+Medium: ink and gold on aged parchment, detailed, painterly texture, mystical atmosphere, symmetrical composition.
+
+--ar 1:1 --style raw
+
+```
+
+### 2 Gemini, image mode
+
+Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/mutations.txt>.
