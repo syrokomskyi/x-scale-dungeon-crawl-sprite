@@ -119,12 +119,12 @@ async function main() {
   const nonFatalReasons: string[] = [];
   for (const god of gods) {
     const slugName = generateSlug(god.name, "");
-    const fileName = `${slugName}.png`;
+    const fileName = `${slugName}.webp`;
     const file = path.join(DRAW_DIR, fileName);
 
     const r = await aiImageProcessing({
       name: god.name,
-      originalDir: "",
+      originalDir: DRAW_DIR,
       drawDir: DRAW_DIR,
       file,
       generateImageOptions: {
@@ -154,7 +154,7 @@ async function main() {
     // next item
 
     // test
-    //break;
+    break;
   }
 
   showNonFatalReasons(nonFatalReasons);
