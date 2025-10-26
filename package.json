@@ -1,0 +1,10 @@
+{
+  "name": "x-scale-dungeon-crawl-sprite",
+  "version": "0.2.0",
+  "description": "Redraw the roguelike 'Dungeon Crawl: Stone Soup'.",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "turbo": "^2.5.8"
+  }
+}
