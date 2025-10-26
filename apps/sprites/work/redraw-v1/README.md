@@ -1,5 +1,40 @@
 # Redraw with LLMs
 
+## Items
+
+See `items.txt` & folders with images for the list of items.
+
+### 1 Gemini, chat mode
+
+```text
+v1.0.0
+
+After this prompt, I will switch you to drawing mode and will only give you the names and descriptions of the items, and you will draw according to the instructions below:
+
+Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, form, disposition, and colours**. This is a **dramatic, cinematic detailed reinterpretation**, that feels ancient, mystical, and handcrafted, not a copy.
+
+The design must preserve the recognizable silhouette and color palette of the original pixel art, but reimagine it as a richly textured artefact from a dark fantasy world, inspired by Dungeon Crawl and alchemical manuscripts. 
+
+Render it with exquisite material detail — tarnished metal, aged leather, cracked gemstones, runes etched into surfaces, faint glow of ancient magic. 
+Background: neutral parchment or dark void with golden alchemical sigils and subtle vignette, so the focus stays on the object. 
+Lighting: candlelight or arcane glow, emphasizing texture and mystical depth. 
+Style: gothic renaissance + roguelike realism + H.R. Giger + Zdzisław Beksiński + medieval manuscript illumination. 
+Medium: digital painting with painterly brushstrokes and fine engraving detail, as if restored from a forgotten grimoire. 
+Aspect ratio: square, centered composition, one artefact only.
+
+Optional additions:
+– add faint hovering glyphs, energy particles, or reflections hinting at the item’s magical nature.
+– for cursed or demonic items, add shadow halos, black fire, or crimson smoke.
+– for holy or divine items, add gold dust light and sacred geometry symbols.
+
+--style raw
+
+```
+
+### 2 Gemini, image mode
+
+Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/items.txt>.
+
 ## Monsters
 
 See `monsters.txt` & folders with images for the list of monsters.
