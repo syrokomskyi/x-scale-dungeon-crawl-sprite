@@ -111,7 +111,7 @@ function getImageFiles(dir: string): string[] {
   return files;
 }
 
-function findMonsterImage(name: string): string | null {
+function findImage(name: string): string | null {
   const pname = name.toLowerCase().replace("the ", "");
   const slugName = generateSlug(pname, "");
   const imageFiles = getImageFiles(ORIGINAL_DIR);
@@ -232,7 +232,7 @@ async function main() {
 
   const nonFatalReasons: string[] = [];
   for (const monster of monsters) {
-    const originalPath = findMonsterImage(monster.name);
+    const originalPath = findImage(monster.name);
     if (!originalPath) {
       console.log(`No image found for ${monster.name}, skipping.`);
       continue;
