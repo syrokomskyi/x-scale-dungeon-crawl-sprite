@@ -111,6 +111,7 @@ export async function generateImage(
 
   const c = {
     model,
+    config: { imageConfig: options.imageConfig },
     contents: {
       parts:
         imageBase64 && mimeType
@@ -122,10 +123,9 @@ export async function generateImage(
             ]
           : [{ text: fullPrompt }],
     },
-    config: { imageConfig: options.imageConfig },
   };
 
-  console.log(`${JSON.stringify(c, null, 2)}\n`);
+  console.log(`${JSON.stringify(c, null, 2).substring(0, 1200)}\n`);
 
   try {
     const response = await options.ai.models.generateContent(c);
