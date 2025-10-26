@@ -28,16 +28,13 @@ importers:
       gen-shared:
         specifier: workspace:*
         version: link:../../packages/gen-shared
-      sharp:
-        specifier: ^0.34.4
-        version: 0.34.4
-      tsx:
-        specifier: ^4.0.0
-        version: 4.20.6
     devDependencies:
       '@types/node':
         specifier: ^20.0.0
         version: 20.19.23
+      tsx:
+        specifier: ^4.0.0
+        version: 4.20.6
       typescript:
         specifier: ^5.0.0
         version: 5.9.3
@@ -53,16 +50,13 @@ importers:
       gen-shared:
         specifier: workspace:*
         version: link:../../packages/gen-shared
-      sharp:
-        specifier: ^0.34.4
-        version: 0.34.4
-      tsx:
-        specifier: ^4.0.0
-        version: 4.20.6
     devDependencies:
       '@types/node':
         specifier: ^20.0.0
         version: 20.19.23
+      tsx:
+        specifier: ^4.0.0
+        version: 4.20.6
       typescript:
         specifier: ^5.0.0
         version: 5.9.3
@@ -78,13 +72,13 @@ importers:
       gen-shared:
         specifier: workspace:*
         version: link:../../packages/gen-shared
-      tsx:
-        specifier: ^4.0.0
-        version: 4.20.6
     devDependencies:
       '@types/node':
         specifier: ^20.0.0
         version: 20.19.23
+      tsx:
+        specifier: ^4.0.0
+        version: 4.20.6
       typescript:
         specifier: ^5.0.0
         version: 5.9.3
