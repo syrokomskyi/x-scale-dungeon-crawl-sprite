@@ -20,7 +20,7 @@ See `README.md` in every `./sprites/work/` folder.
 
 For transfrom sprites run the script in terminal.
 
-### Demo
+---
 
 ### [Monsters](./apps/sprites/work/redraw-v1/mon)
 
