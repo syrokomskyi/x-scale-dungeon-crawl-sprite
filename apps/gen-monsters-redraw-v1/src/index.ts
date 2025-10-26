@@ -2,8 +2,8 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
+import { generateSlug } from "gen-shared";
 import sharp from "sharp";
-import slug from "slug";
 
 config({ path: ".env.local" });
 
@@ -112,7 +112,7 @@ function getImageFiles(dir: string): string[] {
 
 function findMonsterImage(monsterName: string): string | null {
   const pname = monsterName.toLowerCase().replace("the ", "");
-  const slugName = slug(pname, { lower: true });
+  const slugName = generateSlug(pname, "");
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   for (const file of imageFiles) {
     const baseName = path.basename(file, path.extname(file));
