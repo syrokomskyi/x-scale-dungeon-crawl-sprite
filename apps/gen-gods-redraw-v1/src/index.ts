@@ -29,10 +29,10 @@ const ai = new GoogleGenAI({
   project: process.env.GEMINI_PROJECT_ID,
 });
 
-// v2.5.0
+// v2.6.0
 function prompt(godName: string, godDescription: string) {
   return `
-${godName} — divine portrait illustration in the world of Dungeon Crawl.
+Draw "${godName}" — divine portrait illustration in the world of Dungeon Crawl.
 
 A digital painting, roguelike epic fantasy style, high detail, painterly texture, chiaroscuro lighting. 
 
