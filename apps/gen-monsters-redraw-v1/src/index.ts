@@ -111,7 +111,8 @@ function getImageFiles(dir: string): string[] {
 }
 
 function findMonsterImage(monsterName: string): string | null {
-  const slugName = slug(monsterName, { lower: true });
+  const pname = monsterName.toLowerCase().replace("the ", "");
+  const slugName = slug(pname, { lower: true });
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   for (const file of imageFiles) {
     const baseName = path.basename(file, path.extname(file));
@@ -120,7 +121,7 @@ function findMonsterImage(monsterName: string): string | null {
     }
   }
 
-  console.warn(`No image found for ${monsterName} -> ${slugName}.`);
+  console.warn(`No image found for ${monsterName} -> ${pname} -> ${slugName}.`);
 
   return null;
 }
@@ -250,7 +251,7 @@ async function main() {
       continue;
     }
 
-    console.log(`Generating ${monster.name} with ${relativePath}...`);
+    console.log(`Generating '${monster.name}' with ${relativePath}...`);
     try {
       const buffer = await generateImage(
         monster.name,
