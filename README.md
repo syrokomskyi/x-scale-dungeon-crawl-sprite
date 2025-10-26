@@ -66,15 +66,15 @@ For transfrom sprites run the script in terminal.
 
 | ![Erica](./apps/sprites/work/redraw-v1/mon/unique/erica.webp) | ![Robin](./apps/sprites/work/redraw-v1/mon/unique/robin.webp) |
 |:---:|:---:|
-| **Erica** | **Robin** |
+| **Erica**<br>A wild-tempered adventuress. She's quite prideful for an octopode, and brandishes their venomous capacity and camouflage talents with cruel force. | **Robin**<br>A mountain hobgoblin, recently come in search of the legendary Orb. Not foolhardy or reckless enough to delve into the depths of the Dungeon alone, Robin has built a small army of minions. Potential competitors will quickly find a stream of screaming goblins flying toward them! |
 
 | ![Arachne](./apps/sprites/work/redraw-v1/mon/unique/arachne.webp) | ![Mennas](./apps/sprites/work/redraw-v1/mon/unique/mennas.webp) |
 |:---:|:---:|
-| **Arachne**<br>Once a talented human weaver, Arachne was transformed into a monstrous half-spider by a jealous rival's curse. Driven out of her village, she found sanctuary for a time among the jorogumo before a bitter feud forced her to flee once more. Now she wanders other corners of the dungeon with a small retinue of loyal students in tow, seeking a new domain in which they can spin their peerless tapestries in peace. | **Mennas** |
+| **Arachne**<br>Once a talented human weaver, Arachne was transformed into a monstrous half-spider by a jealous rival's curse. Driven out of her village, she found sanctuary for a time among the jorogumo before a bitter feud forced her to flee once more. Now she wanders other corners of the dungeon with a small retinue of loyal students in tow, seeking a new domain in which they can spin their peerless tapestries in peace. | **Mennas**<br>There was once a human priest named Mennas. He travelled far and wide as a missionary of Zin, often venturing even into Orcish lands. He beseeched the orcs to abandon their false tribes and return to the peoples of their birth; only Zin's light could truly cleanse the weight of sin that had twisted their bodies. |
 
 | ![Enchantress](./apps/sprites/work/redraw-v1/mon/unique/enchantress.webp) | ![Kirke](./apps/sprites/work/redraw-v1/mon/unique/kirke.webp) |
 |:---:|:---:|
-| **Enchantress** | **Kirke** |
+| **Enchantress**<br>First and most fearful of her kind, the Enchantress rules over the spriggans of the dungeon. She wears an opalescent outfit made of dragon skin that shimmers with many colours. | **Kirke**<br>A master of transformation and treachery. Beware, or you may be the next swine to join her herd! |
 
 ---
 
