@@ -41,7 +41,6 @@ const ORIGINAL_DIR = path.join(
   "..",
   "crawl-ref",
   "source",
-  "dat",
   "rltiles",
   "item",
 );
