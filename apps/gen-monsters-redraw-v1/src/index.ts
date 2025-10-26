@@ -2,10 +2,12 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
-import { findImage } from "gen-shared";
-import { generateImage } from "gen-shared/src/gen";
-import { generateRandomLetterString } from "gen-shared/src/tool";
-import sharp from "sharp";
+import {
+  aiImageProcessing,
+  findImage,
+  generateRandomLetterString,
+  showNonFatalReasons,
+} from "gen-shared";
 
 config({ path: ".env.local" });
 
@@ -86,7 +88,7 @@ const ORIGINAL_DIR = path.join(
   "rltiles",
   "mon",
 );
-const DRAW_DIR = path.join(
+const REDRAW_DIR = path.join(
   __dirname,
   "..",
   "..",
@@ -138,81 +140,54 @@ async function main() {
 
   console.log(`Found ${monsters.length} monsters.\n`);
 
-  if (!fs.existsSync(DRAW_DIR)) {
-    fs.mkdirSync(DRAW_DIR, { recursive: true });
+  if (!fs.existsSync(REDRAW_DIR)) {
+    fs.mkdirSync(REDRAW_DIR, { recursive: true });
   }
 
   const nonFatalReasons: string[] = [];
   for (const monster of monsters) {
-    const originalPath = findImage(ORIGINAL_DIR, monster.name);
-    if (!originalPath) {
+    const file = findImage(ORIGINAL_DIR, monster.name);
+    if (!file) {
       console.log(`No image found for ${monster.name}, skipping.`);
       continue;
     }
 
-    const relativePath = path.relative(ORIGINAL_DIR, originalPath);
-    const outputPath = path.join(DRAW_DIR, relativePath);
-    const outputDir = path.dirname(outputPath);
-
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    const webpPath = outputPath.replace(/\.[^/.]+$/, ".webp");
-    if (fs.existsSync(outputPath) || fs.existsSync(webpPath)) {
-      console.log(`Skipping ${relativePath}, already exists.`);
-      continue;
-    }
-
-    console.log(`Generating '${monster.name}' with ${relativePath}...`);
-    try {
-      const buffer = await generateImage({
+    const r = await aiImageProcessing({
+      name: monster.name,
+      originalDir: ORIGINAL_DIR,
+      redrawDir: REDRAW_DIR,
+      file,
+      generateImageOptions: {
         ai,
         imageConfig,
         name: monster.name,
         description: monster.description,
-        originalImagePath: originalPath,
+        originalImagePath: file,
         promptBuilder: prompt,
-      });
-      if (!buffer) {
-        nonFatalReasons.push(relativePath);
-        console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
-        continue;
-      }
-
-      // save as original
-      if (saveAsOriginal) {
-        fs.writeFileSync(outputPath, buffer);
-        console.log(`Saved ${outputPath}`);
-      }
-
-      // save as webp
-      if (saveAsWebp) {
-        await sharp(buffer)
-          .webp({ lossless: webpLossless, quality: webpQuality })
-          .toFile(webpPath);
-        console.log(`Saved ${webpPath}`);
-      }
-
-      if (!saveAsOriginal && !saveAsWebp) {
-        console.warn(`Skipping ${relativePath}: no output format specified.`);
-      }
-    } catch (error) {
-      console.error(`Error generating ${monster.name}:`, error);
+      },
+      // config
+      saveAsOriginal,
+      saveAsWebp,
+      webpLossless,
+      webpQuality,
+      // service
+      nonFatalReasons,
+    });
+    if (["skipped"].includes(r)) {
+      continue;
     }
+
+    if (["throwed"].includes(r)) {
+      break;
+    }
+
+    // next monster
 
     // test
     break;
   }
 
-  if (nonFatalReasons.length > 0) {
-    console.log(
-      `\nSkipped ${nonFatalReasons.length} generations due to non-fatal reasons.`,
-    );
-    for (const relativePath of nonFatalReasons) {
-      console.log(`\t${relativePath}`);
-    }
-  }
+  showNonFatalReasons(nonFatalReasons);
 }
 
 main().catch(console.error);

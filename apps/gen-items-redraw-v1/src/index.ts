@@ -1,11 +1,13 @@
-import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
-import { getImageFiles, getRelativePath } from "gen-shared";
-import { generateImage } from "gen-shared/src/gen";
-import { generateRandomLetterString } from "gen-shared/src/tool";
-import sharp from "sharp";
+import {
+  aiImageProcessing,
+  generateRandomLetterString,
+  getImageFiles,
+  getRelativePath,
+  showNonFatalReasons,
+} from "gen-shared";
 
 config({ path: ".env.local" });
 
@@ -84,70 +86,40 @@ async function main() {
   const nonFatalReasons: string[] = [];
   for (const file of imageFiles) {
     const relativePath = getRelativePath(ORIGINAL_DIR, file);
-    const outputPath = path.join(REDRAW_DIR, relativePath);
-    const outputDir = path.dirname(outputPath);
-
     const itemName = relativePath.replace(/[\\/_]/g, " ");
 
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    const webpPath = outputPath.replace(/\.[^/.]+$/, ".webp");
-    if (fs.existsSync(outputPath) || fs.existsSync(webpPath)) {
-      console.log(`Skipping ${relativePath}, already exists.`);
-      continue;
-    }
-
-    console.log(`Generating '${itemName}' with ${relativePath}...`);
-    try {
-      const buffer = await generateImage({
+    const r = await aiImageProcessing({
+      name: itemName,
+      originalDir: ORIGINAL_DIR,
+      redrawDir: REDRAW_DIR,
+      file,
+      generateImageOptions: {
         ai,
         imageConfig,
         name: itemName,
         description: "",
         originalImagePath: file,
         promptBuilder: prompt,
-      });
-      if (!buffer) {
-        nonFatalReasons.push(relativePath);
-        console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
-        continue;
-      }
-
-      // save as original
-      if (saveAsOriginal) {
-        fs.writeFileSync(outputPath, buffer);
-        console.log(`Saved ${outputPath}`);
-      }
-
-      // save as webp
-      if (saveAsWebp) {
-        await sharp(buffer)
-          .webp({ lossless: webpLossless, quality: webpQuality })
-          .toFile(webpPath);
-        console.log(`Saved ${webpPath}`);
-      }
-
-      if (!saveAsOriginal && !saveAsWebp) {
-        console.warn(`Skipping ${relativePath}: no output format specified.`);
-      }
-    } catch (error) {
-      console.error(`Error generating ${itemName}:`, error);
+      },
+      // config
+      saveAsOriginal,
+      saveAsWebp,
+      webpLossless,
+      webpQuality,
+      // service
+      nonFatalReasons,
+    });
+    if (["skipped", "throwed"].includes(r)) {
+      continue;
     }
+
+    // next item
 
     // test
     break;
   }
 
-  if (nonFatalReasons.length > 0) {
-    console.log(
-      `\nSkipped ${nonFatalReasons.length} generations due to non-fatal reasons.`,
-    );
-    for (const relativePath of nonFatalReasons) {
-      console.log(`\t${relativePath}`);
-    }
-  }
+  showNonFatalReasons(nonFatalReasons);
 }
 
 main().catch(console.error);

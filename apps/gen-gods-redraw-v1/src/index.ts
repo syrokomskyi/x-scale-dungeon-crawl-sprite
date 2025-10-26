@@ -2,9 +2,11 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
-import { generateSlug } from "gen-shared";
-import { generateImage } from "gen-shared/src/gen";
-import { generateRandomLetterString } from "gen-shared/src/tool";
+import {
+  generateImage,
+  generateRandomLetterString,
+  generateSlug,
+} from "gen-shared";
 import sharp from "sharp";
 
 config({ path: ".env.local" });

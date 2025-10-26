@@ -1,6 +1,80 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import type { GoogleGenAI, ImageConfig } from "@google/genai";
+import sharp from "sharp";
+import { getRelativePath } from "./search";
+
+export interface AiImageProcessing {
+  // monster, item, god, etc.
+  name: string;
+
+  originalDir: string;
+  redrawDir: string;
+  file: string;
+
+  generateImageOptions: GenerateImageOptions;
+
+  // config
+  saveAsOriginal: boolean;
+  saveAsWebp: boolean;
+  webpLossless: boolean;
+  webpQuality: number;
+
+  // service
+  nonFatalReasons: string[];
+}
+
+export type skippedOrProcessed = "skipped" | "processed" | "throwed";
+
+export async function aiImageProcessing(
+  options: AiImageProcessing,
+): Promise<skippedOrProcessed> {
+  const relativePath = getRelativePath(options.originalDir, options.file);
+  const outputPath = path.join(options.redrawDir, relativePath);
+  const outputDir = path.dirname(outputPath);
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  const webpPath = outputPath.replace(/\.[^/.]+$/, ".webp");
+  if (fs.existsSync(outputPath) || fs.existsSync(webpPath)) {
+    console.log(`Skipping ${relativePath}, already exists.`);
+    return "skipped";
+  }
+
+  console.log(`Generating '${options.name}' with ${relativePath}...`);
+  try {
+    const buffer = await generateImage(options.generateImageOptions);
+    if (!buffer) {
+      options.nonFatalReasons.push(relativePath);
+      console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
+      return "skipped";
+    }
+
+    // save as original
+    if (options.saveAsOriginal) {
+      fs.writeFileSync(outputPath, buffer);
+      console.log(`Saved ${outputPath}`);
+    }
+
+    // save as webp
+    if (options.saveAsWebp) {
+      await sharp(buffer)
+        .webp({ lossless: options.webpLossless, quality: options.webpQuality })
+        .toFile(webpPath);
+      console.log(`Saved ${webpPath}`);
+    }
+
+    if (!options.saveAsOriginal && !options.saveAsWebp) {
+      console.warn(`Skipping '${relativePath}': no output format specified.`);
+    }
+    return "processed";
+  } catch (error) {
+    console.error(`Error generating ${options.name}:`, error);
+    return "throwed";
+  }
+}
 
 export interface GenerateImageOptions {
   ai: GoogleGenAI;
