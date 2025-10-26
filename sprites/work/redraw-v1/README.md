@@ -1,7 +1,5 @@
 # Redraw with LLMs
 
-## Prompt
-
 ## 1 Gemini, chat mode
 
 ```text
@@ -39,3 +37,22 @@ Use the name and description above to understand the creature's appearance and b
 ## 2 Gemini, image mode
 
 Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt>.
+
+## 3 Comet, Assistant
+
+TBD This step is not implemented yet. Just a prototype.
+
+Open the Comet Assistant on the Gemini chat.
+
+```text
+v2.0.0
+
+1/ Read the name of the prototype file from the prompt located in front of the generated image.
+
+2/ Click the download button for the generated image.
+
+3/ Set the file name to be the same as the prototype file name (from step 1).
+
+4/ Save the image to your computer.
+
+```
