@@ -7,10 +7,33 @@ config({ path: ".env.local" });
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
+  project: process.env.GEMINI_PROJECT_ID,
 });
 
-const STATIC_PROMPT =
-  "Redraw this dungeon crawl sprite in a modern pixel art style.";
+// v1.2.0
+function prompt(description: string) {
+  return `
+Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and this description:
+
+${description}
+
+The design must preserve the recognizable silhouette and color palette of the original art, but reimagine it as a richly textured artefact from a dark fantasy world, inspired by Dungeon Crawl and alchemical manuscripts. This is a **dramatic, cinematic detailed reinterpretation**, that feels ancient, mystical, and handcrafted, not a copy.
+
+Render it with exquisite material detail — tarnished metal, aged leather, cracked gemstones, runes etched into surfaces, faint glow of ancient magic. 
+Background: neutral parchment or dark void with golden alchemical sigils and subtle vignette, so the focus stays on the object. 
+Lighting: candlelight or arcane glow, emphasizing texture and mystical depth. 
+Style: gothic renaissance + roguelike realism + H.R. Giger + Zdzisław Beksiński + medieval manuscript illumination. 
+Medium: digital painting with painterly brushstrokes and fine engraving detail, as if restored from a forgotten grimoire. 
+Aspect ratio: square, centered composition, one artefact only.
+
+Optional additions:
+– add faint hovering glyphs, energy particles, or reflections hinting at the item’s magical nature.
+– for cursed or demonic items, add shadow halos, black fire, or crimson smoke.
+– for holy or divine items, add gold dust light and sacred geometry symbols.
+
+--style raw
+`;
+}
 
 const ORIGINAL_DIR = path.join(
   __dirname,
@@ -63,13 +86,11 @@ function getPromptParts(relativePath: string): string {
 async function generateImage(originalPath: string): Promise<Buffer> {
   const relativePath = getRelativePath(originalPath);
   const promptParts = getPromptParts(relativePath);
-  const fullPrompt = `${STATIC_PROMPT}: ${promptParts}`;
+  const fullPrompt = prompt(promptParts);
 
-  // Read image as base64
   const imageBuffer = fs.readFileSync(originalPath);
   const imageBase64 = imageBuffer.toString("base64");
 
-  // Determine mimeType
   const ext = path.extname(originalPath).toLowerCase();
   let mimeType: string;
   if (ext === ".png") {
