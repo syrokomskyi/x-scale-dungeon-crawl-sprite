@@ -1,19 +1,36 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import { VertexAI } from '@google-cloud/vertexai';
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { VertexAI } from "@google-cloud/vertexai";
 
 // Initialize VertexAI
 const vertexAI = new VertexAI({
-  project: process.env.GOOGLE_CLOUD_PROJECT || 'your-project-id',
-  location: 'us-central1',
+  project: process.env.GOOGLE_CLOUD_PROJECT || "your-project-id",
+  location: "us-central1",
 });
 
 // Static prompt part
-const STATIC_PROMPT = 'Redraw this dungeon crawl sprite in a modern pixel art style';
+const STATIC_PROMPT =
+  "Redraw this dungeon crawl sprite in a modern pixel art style";
 
 // Directories
-const ORIGINAL_DIR = path.join(__dirname, '..', '..', 'sprites', 'work', 'original', 'item');
-const REDRAW_DIR = path.join(__dirname, '..', '..', 'sprites', 'work', 'redraw-v1', 'item');
+const ORIGINAL_DIR = path.join(
+  __dirname,
+  "..",
+  "..",
+  "sprites",
+  "work",
+  "original",
+  "item",
+);
+const REDRAW_DIR = path.join(
+  __dirname,
+  "..",
+  "..",
+  "sprites",
+  "work",
+  "redraw-v1",
+  "item",
+);
 
 // Function to recursively get all image files
 function getImageFiles(dir: string): string[] {
@@ -39,9 +56,9 @@ function getRelativePath(filePath: string): string {
 // Function to get folders and filename without extension
 function getPromptParts(relativePath: string): string {
   const parsed = path.parse(relativePath);
-  const folders = parsed.dir.split(path.sep).filter(f => f);
+  const folders = parsed.dir.split(path.sep).filter((f) => f);
   const name = parsed.name;
-  return [...folders, name].join(', ');
+  return [...folders, name].join(", ");
 }
 
 // Function to generate image using Imagen
@@ -52,21 +69,21 @@ async function generateImage(originalPath: string): Promise<Buffer> {
 
   // Read image as base64
   const imageBuffer = fs.readFileSync(originalPath);
-  const imageBase64 = imageBuffer.toString('base64');
+  const imageBase64 = imageBuffer.toString("base64");
 
   // Determine mimeType
   const ext = path.extname(originalPath).toLowerCase();
   let mimeType: string;
-  if (ext === '.png') {
-    mimeType = 'image/png';
-  } else if (ext === '.jpg' || ext === '.jpeg') {
-    mimeType = 'image/jpeg';
+  if (ext === ".png") {
+    mimeType = "image/png";
+  } else if (ext === ".jpg" || ext === ".jpeg") {
+    mimeType = "image/jpeg";
   } else {
     throw new Error(`Unsupported image format: ${ext}`);
   }
 
   // Use Imagen for image generation with conditioning
-  const imagenModel = vertexAI.imageGeneration('imagen-3.0-generate-001');
+  const imagenModel = vertexAI.imageGeneration("imagen-3.0-generate-001");
 
   const request = {
     prompt: fullPrompt,
@@ -80,7 +97,7 @@ async function generateImage(originalPath: string): Promise<Buffer> {
   const response = await imagenModel.generateImage(request);
   // Assuming response has image data
   const generatedImageBase64 = response.generatedImages[0].bytesBase64Encoded;
-  return Buffer.from(generatedImageBase64, 'base64');
+  return Buffer.from(generatedImageBase64, "base64");
 }
 
 // Main function
