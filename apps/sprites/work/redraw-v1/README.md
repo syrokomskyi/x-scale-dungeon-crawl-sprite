@@ -7,11 +7,11 @@ See `items.txt` & folders with images for the list of items.
 ### 1 Gemini, chat mode
 
 ```text
-v1.1.0
+v1.4.0
 
 After this prompt, I will switch you to drawing mode and will only give you the names and descriptions of the items, and you will draw according to the instructions below:
 
-Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, form, disposition, and colours**. This is a **dramatic, cinematic detailed reinterpretation**, that feels ancient, mystical, and handcrafted, not a copy.
+Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, form, disposition, and colours**. This is a **dramatic, cinematic detailed reinterpretation**, that feels ancient, mystical, and handcrafted, not a copy, not a pixel-art.
 
 The design must preserve the recognizable silhouette and color palette of the original art, but reimagine it as a richly textured artefact from a dark fantasy world, inspired by Dungeon Crawl and alchemical manuscripts. 
 
@@ -21,6 +21,8 @@ Lighting: candlelight or arcane glow, emphasizing texture and mystical depth.
 Style: gothic renaissance + roguelike realism + H.R. Giger + Zdzisław Beksiński + medieval manuscript illumination. 
 Medium: digital painting with painterly brushstrokes and fine engraving detail, as if restored from a forgotten grimoire. 
 Aspect ratio: square, centered composition, one artefact only.
+
+There should be no inscriptions or signatures on the image.
 
 Optional additions:
 – add faint hovering glyphs, energy particles, or reflections hinting at the item’s magical nature.
@@ -42,11 +44,11 @@ See `monsters.txt` & folders with images for the list of monsters.
 ### 1 Gemini, chat mode
 
 ```text
-v5.2.0
+v5.3.0
 
 After this prompt, I will switch you to drawing mode and will only give you names and descriptions, and you will draw according to the instructions below:
 
-Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, silhouette, pose, and colours**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy.
+Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, silhouette, pose, and colours**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy, not a pixel-art.
 
 Render the creature (item, object, building, etc.), its armor, and surroundings with:
 - **Realistic materials** (metal, bone, leather, fabric, stone, mist, etc.) in the colours of the provided image.
