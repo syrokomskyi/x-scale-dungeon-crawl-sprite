@@ -1,5 +1,51 @@
 # Redraw with LLMs
 
+## Branches
+
+See `branches.txt` for the list of branches.
+
+### 1 Gemini, chat mode
+
+```text
+v2.1.0
+
+After this prompt, I will switch you to drawing mode and will only give you names and descriptions, and you will draw according to the instructions below:
+
+A magnificent, detailed illustration of a dark fantasy location in the world of Dungeon Crawl.
+
+The scene should preserve the essence of roguelike design — mysterious, deadly, yet filled with divine and arcane beauty.
+Architecture and landscape should appear both real and symbolic, as if drawn by a medieval alchemist mapping the soul of the underworld.
+Perspective is vertical and flattened, reminiscent of illuminated manuscripts or sacred frescoes.
+Lighting should emanate from within the scene — magical sources, runes, lava, or ghostly light — never daylight.
+
+Textures: ancient stone, bone, tarnished metal, organic matter, smoke, salt, and arcane energy. 
+Include subtle sigils, glowing symbols, and faint inscriptions around the edges of the frame, as if the image were a holy diagram. 
+
+Style: gothic renaissance + roguelike realism + medieval alchemical manuscript + Zdzisław Beksiński + Moebius.
+Mood: solemn, haunting, majestic, mystical.
+Medium: digital painting imitating ink, gold leaf, and aged parchment, with deep shadows and fine engraving detail.
+
+– cinematic wide shot, ultra-wide aspect ratio (16:9), panoramic composition, epic scale, distant perspective.
+– the scene fills the horizontal space, showing both near and far elements with clear atmospheric depth.
+– composition: wide framing with central focal point and secondary elements extending into the distance.
+
+There should be no inscriptions or signatures on the image.
+
+Stylistic cues (depending on location type):
+– For divine or sacred places (Temple, Ziggurat, Bazaar): use warm gold, marble light, and symmetry.
+– For infernal or cursed places (Hell, Dis, Tartarus, Crypt): use shadowed reds, black iron, green fire, and skull motifs.
+– For natural or bestial places (Lair, Swamp, Shoals, Snake Pit, Spider Nest): use organic shapes, bioluminescence, and mist.
+– For arcane or cosmic places (Zot, Abyss, Pandemonium, Wizlab): use shifting geometry, fractal light, floating stones, and color auras.
+– For ruins and decay (Desolation, Vaults, Necropolis): use erosion, dust, and muted tones of stone and bone.
+
+--ar 16:9 --style raw
+
+```
+
+### 2 Gemini, image mode
+
+Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/branches.txt>.
+
 ## Items
 
 See `items.txt` & folders with images for the list of items.
@@ -44,7 +90,7 @@ See `monsters.txt` & folders with images for the list of monsters.
 ### 1 Gemini, chat mode
 
 ```text
-v5.3.0
+v5.4.0
 
 After this prompt, I will switch you to drawing mode and will only give you names and descriptions, and you will draw according to the instructions below:
 
@@ -68,6 +114,8 @@ Do not try to make the creature biologically plausible — interpret it artistic
 Dark Souls / Elden Ring / Diablo IV / Magic: The Gathering / Greg Rutkowski / Magali Villeneuve / Wētā Workshop concept art.
 
 Use the attached image as reference for **composition and silhouette**, but reinterpret every surface, light, and texture in **a fully rendered, realistic way**.
+
+There should be no inscriptions or signatures on the image.
 
 Use the name and description to understand the creature's appearance and behavior.
 
