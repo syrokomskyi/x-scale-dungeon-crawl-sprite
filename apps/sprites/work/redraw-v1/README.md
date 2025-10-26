@@ -87,6 +87,42 @@ Mood: mysterious, volatile, sacred, or dangerous, depending on the type of magic
 
 Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/branches.txt>.
 
+## Gods
+
+See `gods.txt` for the list of gods.
+
+### 1 Gemini, chat mode
+
+```text
+v1.0.0
+
+{name_god} — divine portrait illustration in the world of Dungeon Crawl.
+
+A widescreen digital painting, roguelike epic fantasy style, high detail, painterly texture, chiaroscuro lighting. 
+
+Depict the god {name_god} according to this description:
+
+"{description_god}"
+
+Scene should reflect their divine domain, powers, and temperament.
+
+The composition must show the god’s presence as both symbol and myth — not just humanoid but embodying the essence of their magic (for example: Ashenzari bound in celestial chains, Dithmenos half-seen in shifting shadows, Fedhas surrounded by fungal growths).
+
+Background should show the atmosphere of the Dungeon: vast cavernous darkness, fragments of ancient altars, runes, relics, and worshippers in trance. 
+
+Use dramatic light to separate divine figure from darkness.
+
+Color palette should match the nature of the god (holy → gold and white; chaos → prismatic distortion; decay → green and black; time → bronze and dusk tones, etc.).
+
+Ultra-realistic rendering, mythic energy, visual storytelling.
+
+There should be no inscriptions or signatures on the image.
+
+--wide aspect ratio, 16:9, cinematic composition, hyper-detailed, concept art, artstation, 8K fantasy illustration.
+--style raw
+
+```
+
 ## Items
 
 See `items.txt` & folders with images for the list of items.
