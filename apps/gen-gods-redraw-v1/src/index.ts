@@ -1,22 +1,26 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
 import slug from "slug";
 
 config({ path: ".env.local" });
+
+const imageConfig: ImageConfig = {
+  aspectRatio: "16:9",
+};
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
   project: process.env.GEMINI_PROJECT_ID,
 });
 
-// v1.1.0
+// v2.5.0
 function prompt(godName: string, godDescription: string) {
   return `
 ${godName} — divine portrait illustration in the world of Dungeon Crawl.
 
-A widescreen digital painting, roguelike epic fantasy style, high detail, painterly texture, chiaroscuro lighting. 
+A digital painting, roguelike epic fantasy style, high detail, painterly texture, chiaroscuro lighting. 
 
 Depict the god ${godName} according to this description:
 
@@ -36,9 +40,9 @@ Ultra-realistic rendering, mythic energy, visual storytelling.
 
 There should be no inscriptions or signatures on the image.
 
-Cinematic composition, hyper-detailed, concept art, artstation, 8K fantasy illustration.
+Organic composition, hyper-detailed, concept art, artstation, fantasy illustration.
 
---ar 1:1 --style raw
+Aspect ratio: ${imageConfig.aspectRatio}
 `;
 }
 
@@ -73,6 +77,7 @@ async function generateImage(
     contents: {
       parts: [{ text }],
     },
+    config: { imageConfig },
   });
 
   for (const part of response.candidates?.[0]?.content?.parts ?? []) {
@@ -142,7 +147,7 @@ async function main() {
     }
 
     // test
-    break;
+    //break;
   }
 }
 
