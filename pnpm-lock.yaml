@@ -28,6 +28,9 @@ importers:
       gen-shared:
         specifier: workspace:*
         version: link:../../packages/gen-shared
+      sharp:
+        specifier: ^0.34.4
+        version: 0.34.4
       tsx:
         specifier: ^4.0.0
         version: 4.20.6

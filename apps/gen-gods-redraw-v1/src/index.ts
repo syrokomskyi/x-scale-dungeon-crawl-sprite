@@ -3,7 +3,9 @@ import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
 import { generateSlug } from "gen-shared";
+import { generateImage } from "gen-shared/src/gen";
 import { generateRandomLetterString } from "gen-shared/src/tool";
+import sharp from "sharp";
 
 config({ path: ".env.local" });
 
@@ -11,6 +13,16 @@ const imageConfig: ImageConfig = {
   aspectRatio: "16:9",
 };
 
+// save as png
+const saveAsOriginal = false;
+
+// save as webp
+const saveAsWebp = true;
+const webpLossless = false;
+const webpQuality = 100;
+
+// set the random value to each prompt for more randomized images
+// reason: break the cache
 const randomPrompt = true;
 
 const ai = new GoogleGenAI({
@@ -71,34 +83,6 @@ const DRAW_DIR = path.join(
   "god",
 );
 
-async function generateImage(
-  name: string,
-  description: string,
-): Promise<Buffer> {
-  const text = prompt(name, description);
-
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash-image",
-    contents: {
-      parts: [{ text }],
-    },
-    config: { imageConfig },
-  });
-
-  for (const part of response.candidates?.[0]?.content?.parts ?? []) {
-    if (part.inlineData) {
-      const imageData = part.inlineData.data;
-      if (!imageData) {
-        throw new Error("No image data");
-      }
-
-      return Buffer.from(imageData, "base64");
-    }
-  }
-
-  throw new Error("No image generated");
-}
-
 async function main() {
   const godsText = fs.readFileSync(ORIGINAL_FILE, "utf8");
   const sections = godsText.split("%%%%");
@@ -133,27 +117,72 @@ async function main() {
     fs.mkdirSync(DRAW_DIR, { recursive: true });
   }
 
+  const nonFatalReasons: string[] = [];
   for (const god of gods) {
     const slugName = generateSlug(god.name, "");
     const fileName = `${slugName}.png`;
-    const outputPath = path.join(DRAW_DIR, fileName);
 
-    if (fs.existsSync(outputPath)) {
-      console.log(`Skipping ${fileName}, already exists.`);
+    const relativePath = path.relative(DRAW_DIR, fileName);
+    const outputPath = path.join(DRAW_DIR, relativePath);
+    const outputDir = path.dirname(outputPath);
+
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    const webpPath = outputPath.replace(/\.[^/.]+$/, ".webp");
+    if (fs.existsSync(outputPath) || fs.existsSync(webpPath)) {
+      console.log(`Skipping ${relativePath}, already exists.`);
       continue;
     }
 
     console.log(`Generating '${god.name}'...`);
     try {
-      const buffer = await generateImage(god.name, god.description);
-      fs.writeFileSync(outputPath, buffer);
-      console.log(`Saved ${outputPath}`);
+      const buffer = await generateImage({
+        ai,
+        imageConfig,
+        name: god.name,
+        description: god.description,
+        promptBuilder: prompt,
+      });
+      if (!buffer) {
+        nonFatalReasons.push(relativePath);
+        console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
+        continue;
+      }
+
+      // save as original
+      if (saveAsOriginal) {
+        fs.writeFileSync(outputPath, buffer);
+        console.log(`Saved ${outputPath}`);
+      }
+
+      // save as webp
+      if (saveAsWebp) {
+        await sharp(buffer)
+          .webp({ lossless: webpLossless, quality: webpQuality })
+          .toFile(webpPath);
+        console.log(`Saved ${webpPath}`);
+      }
+
+      if (!saveAsOriginal && !saveAsWebp) {
+        console.warn(`Skipping ${relativePath}: no output format specified.`);
+      }
     } catch (error) {
       console.error(`Error generating ${god.name}:`, error);
     }
 
     // test
     //break;
+  }
+
+  if (nonFatalReasons.length > 0) {
+    console.log(
+      `\nSkipped ${nonFatalReasons.length} generations due to non-fatal reasons.`,
+    );
+    for (const relativePath of nonFatalReasons) {
+      console.log(`\t${relativePath}`);
+    }
   }
 }
 
