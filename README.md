@@ -26,43 +26,55 @@ For transfrom sprites run the script in terminal.
 
 #### [Humanoids](./apps/sprites/work/redraw-v1/mon/humanoids)
 
-| | |
-|:---:|:---:|
 | ![juggernaut](./apps/sprites/work/redraw-v1/mon/humanoids/giants/juggernaut.webp) | ![water_nymph](./apps/sprites/work/redraw-v1/mon/humanoids/water_nymph.webp) |
+|:---:|:---:|
+| Juggernaut | Water Nymph |
+
 | ![troll](./apps/sprites/work/redraw-v1/mon/humanoids/troll.webp) | ![eleionoma](./apps/sprites/work/redraw-v1/mon/humanoids/eleionoma.webp) |
+|:---:|:---:|
+| Troll | Eleionoma |
+
 | ![spriggan_rider](./apps/sprites/work/redraw-v1/mon/humanoids/spriggans/spriggan_rider.webp) | ![occultist](./apps/sprites/work/redraw-v1/mon/humanoids/humans/occultist.webp) |
+|:---:|:---:|
+| Spriggan Rider | Occultist |
 
 #### [Eyes](./apps/sprites/work/redraw-v1/mon/eyes)
 
-| | |
-|:---:|:---:|
 | ![golden_eye](./apps/sprites/work/redraw-v1/mon/eyes/golden_eye.webp) | ![glass_eye](./apps/sprites/work/redraw-v1/mon/eyes/glass_eye.webp) |
+|:---:|:---:|
+| Golden Eye | Glass Eye |
 
 #### [Dragons](./apps/sprites/work/redraw-v1/mon/dragons)
 
-| | |
-|:---:|:---:|
 | ![wind_drake](./apps/sprites/work/redraw-v1/mon/dragons/wind_drake.webp) | ![lindwurm](./apps/sprites/work/redraw-v1/mon/dragons/lindwurm.webp) |
+|:---:|:---:|
+| Wind Drake | Lindwurm |
 
 #### [Aquatic](./apps/sprites/work/redraw-v1/mon/aquatic)
 
-| | |
-|:---:|:---:|
 | ![rock_fish](./apps/sprites/work/redraw-v1/mon/aquatic/rock_fish.webp) | ![swamp_worm](./apps/sprites/work/redraw-v1/mon/aquatic/swamp_worm.webp) |
+|:---:|:---:|
+| Rock Fish | Swamp Worm |
 
 #### [Abyss](./apps/sprites/work/redraw-v1/mon/abyss)
 
-| | |
-|:---:|:---:|
 | ![tentacled_starspawn](./apps/sprites/work/redraw-v1/mon/abyss/tentacled_starspawn.webp) | ![wretched_star](./apps/sprites/work/redraw-v1/mon/abyss/wretched_star.webp) |
+|:---:|:---:|
+| Tentacled Starspawn | Wretched Star |
 
 #### [Unique](./apps/sprites/work/redraw-v1/mon/unique)
 
-| | |
-|:---:|:---:|
 | ![erica](./apps/sprites/work/redraw-v1/mon/unique/erica.webp) | ![robin](./apps/sprites/work/redraw-v1/mon/unique/robin.webp) |
+|:---:|:---:|
+| Erica | Robin |
+
 | ![arachne](./apps/sprites/work/redraw-v1/mon/unique/arachne.webp) | ![mennas](./apps/sprites/work/redraw-v1/mon/unique/mennas.webp) |
+|:---:|:---:|
+| Arachne | Mennas |
+
 | ![enchantress](./apps/sprites/work/redraw-v1/mon/unique/enchantress.webp) | ![kirke](./apps/sprites/work/redraw-v1/mon/unique/kirke.webp) |
+|:---:|:---:|
+| Enchantress | Kirke |
 
 ---
 
