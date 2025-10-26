@@ -2,12 +2,21 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
+import sharp from "sharp";
 
 config({ path: ".env.local" });
 
 const imageConfig: ImageConfig = {
   aspectRatio: "1:1",
 };
+
+// save as png
+const saveAsOriginal = false;
+
+// save as webp
+const saveAsWebp = true;
+const webpLossless = false;
+const webpQuality = 100;
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -92,7 +101,7 @@ function getPromptParts(relativePath: string): string {
   return [...folders, name].join(", ");
 }
 
-async function generateImage(originalPath: string): Promise<Buffer> {
+async function generateImage(originalPath: string): Promise<Buffer | null> {
   const relativePath = getRelativePath(originalPath);
   const promptParts = getPromptParts(relativePath);
   const fullPrompt = prompt(promptParts);
@@ -110,33 +119,46 @@ async function generateImage(originalPath: string): Promise<Buffer> {
     throw new Error(`Unsupported image format: ${ext}`);
   }
 
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash-image",
-    contents: {
-      parts: [
-        { text: fullPrompt },
-        { inlineData: { mimeType, data: imageBase64 } },
-      ],
-    },
-    config: { imageConfig },
-  });
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash-image",
+      contents: {
+        parts: [
+          { text: fullPrompt },
+          { inlineData: { mimeType, data: imageBase64 } },
+        ],
+      },
+      config: { imageConfig },
+    });
 
-  for (const part of response.candidates?.[0]?.content?.parts ?? []) {
-    if (part.inlineData) {
-      const imageData = part.inlineData.data;
-      if (!imageData) {
-        throw new Error("No image data");
+    for (const part of response.candidates?.[0]?.content?.parts ?? []) {
+      if (part.inlineData) {
+        const imageData = part.inlineData.data;
+        if (!imageData) {
+          throw new Error("No image data");
+        }
+
+        return Buffer.from(imageData, "base64");
       }
-
-      return Buffer.from(imageData, "base64");
     }
-  }
 
-  throw new Error("No image generated");
+    // non-fatal image reasons
+    const finishReason = response.candidates?.[0]?.finishReason;
+    if (finishReason === "IMAGE_SAFETY") {
+      console.warn(`\tImage safety reason for ${name}.\n`, fullPrompt);
+      return null;
+    }
+
+    throw new Error("No image generated", { cause: JSON.stringify(response) });
+  } catch (error) {
+    console.error(`Error generating ${name}:`, error);
+    throw new Error("No image generated", { cause: error });
+  }
 }
 
 async function main() {
   const imageFiles = getImageFiles(ORIGINAL_DIR);
+  const nonFatalReasons: string[] = [];
   for (const file of imageFiles) {
     const relativePath = getRelativePath(file);
     const outputPath = path.join(REDRAW_DIR, relativePath);
@@ -146,22 +168,54 @@ async function main() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    if (fs.existsSync(outputPath)) {
+    const webpPath = outputPath.replace(/\.[^/.]+$/, ".webp");
+    if (fs.existsSync(outputPath) || fs.existsSync(webpPath)) {
       console.log(`Skipping ${relativePath}, already exists.`);
       continue;
     }
 
     console.log(`Generating ${relativePath}...`);
     try {
-      const generatedBuffer = await generateImage(file);
-      fs.writeFileSync(outputPath, generatedBuffer);
-      console.log(`Saved ${relativePath}`);
+      const buffer = await generateImage(file);
+
+      if (!buffer) {
+        nonFatalReasons.push(relativePath);
+        console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
+        continue;
+      }
+
+      // save as original
+      if (saveAsOriginal) {
+        fs.writeFileSync(outputPath, buffer);
+        console.log(`Saved ${outputPath}`);
+      }
+
+      // save as webp
+      if (saveAsWebp) {
+        await sharp(buffer)
+          .webp({ lossless: webpLossless, quality: webpQuality })
+          .toFile(webpPath);
+        console.log(`Saved ${webpPath}`);
+      }
+
+      if (!saveAsOriginal && !saveAsWebp) {
+        console.warn(`Skipping ${relativePath}: no output format specified.`);
+      }
     } catch (error) {
       console.error(`Error generating ${relativePath}:`, error);
     }
 
     // test
     break;
+  }
+
+  if (nonFatalReasons.length > 0) {
+    console.log(
+      `\nSkipped ${nonFatalReasons.length} generations due to non-fatal reasons.`,
+    );
+    for (const relativePath of nonFatalReasons) {
+      console.log(`\t${relativePath}`);
+    }
   }
 }
 
