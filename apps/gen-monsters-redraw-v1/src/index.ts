@@ -111,8 +111,8 @@ function getImageFiles(dir: string): string[] {
   return files;
 }
 
-function findMonsterImage(monsterName: string): string | null {
-  const pname = monsterName.toLowerCase().replace("the ", "");
+function findMonsterImage(name: string): string | null {
+  const pname = name.toLowerCase().replace("the ", "");
   const slugName = generateSlug(pname, "");
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   for (const file of imageFiles) {
@@ -122,7 +122,7 @@ function findMonsterImage(monsterName: string): string | null {
     }
   }
 
-  console.warn(`No image found for ${monsterName} -> ${pname} -> ${slugName}.`);
+  console.warn(`No image found for ${name} -> ${pname} -> ${slugName}.`);
 
   return null;
 }
