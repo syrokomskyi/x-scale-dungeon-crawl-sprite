@@ -113,6 +113,9 @@ function findMonsterImage(monsterName: string): string | null {
       return file;
     }
   }
+
+  console.warn(`No image found for ${monsterName} -> ${slugName}.`);
+
   return null;
 }
 
@@ -276,7 +279,7 @@ async function main() {
     }
 
     // test
-    break;
+    // break;
   }
 
   if (nonFatalReasons.length > 0) {
