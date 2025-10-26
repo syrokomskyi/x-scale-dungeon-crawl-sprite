@@ -184,7 +184,7 @@ async function main() {
     // next monster
 
     // test
-    break;
+    //break;
   }
 
   showNonFatalReasons(nonFatalReasons);
