@@ -19,6 +19,10 @@ const saveAsWebp = true;
 const webpLossless = false;
 const webpQuality = 100;
 
+// set the random value to each prompt for more randomized images
+// reason: break the cache
+const randomPrompt = true;
+
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
   project: process.env.GEMINI_PROJECT_ID,
@@ -56,6 +60,8 @@ There should be no inscriptions or signatures on the image.
 Use the name and description to understand the creature's appearance and behavior.
 
 Aspect ratio: ${imageConfig.aspectRatio}.
+
+${randomPrompt ? `${Math.random()}:${Date.now()}` : ""}
 `;
 }
 
