@@ -1,7 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { config } from "dotenv";
 import { GoogleGenAI } from "@google/genai";
+import { config } from "dotenv";
 
 config({ path: ".env.local" });
 
@@ -39,9 +39,10 @@ const ORIGINAL_DIR = path.join(
   __dirname,
   "..",
   "..",
-  "sprites",
-  "work",
-  "original",
+  "crawl-ref",
+  "source",
+  "dat",
+  "rltiles",
   "item",
 );
 const REDRAW_DIR = path.join(
