@@ -1,0 +1,15 @@
+{
+  "name": "gen-shared",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Core utilities shared across this repository.",
+  "author": "Andrii Syrokomskyi",
+  "license": "MIT",
+  "dependencies": {
+    "slug": "^11.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "@types/slug": "^5.0.9"
+  }
+}
