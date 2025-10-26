@@ -3,6 +3,7 @@ import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
 import { findImage } from "gen-shared";
+import { generateImage } from "gen-shared/src/gen";
 import { generateRandomLetterString } from "gen-shared/src/tool";
 import sharp from "sharp";
 
@@ -95,63 +96,6 @@ const DRAW_DIR = path.join(
   "mon",
 );
 
-async function generateImage(
-  name: string,
-  description: string,
-  originalPath: string,
-): Promise<Buffer | null> {
-  const fullPrompt = prompt(name, description);
-
-  const imageBuffer = fs.readFileSync(originalPath);
-  const imageBase64 = imageBuffer.toString("base64");
-
-  const ext = path.extname(originalPath).toLowerCase();
-  let mimeType: string;
-  if (ext === ".png") {
-    mimeType = "image/png";
-  } else if (ext === ".jpg" || ext === ".jpeg") {
-    mimeType = "image/jpeg";
-  } else {
-    throw new Error(`Unsupported image format: ${ext}`);
-  }
-
-  try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-image",
-      contents: {
-        parts: [
-          { text: fullPrompt },
-          { inlineData: { mimeType, data: imageBase64 } },
-        ],
-      },
-      config: { imageConfig },
-    });
-
-    for (const part of response.candidates?.[0]?.content?.parts ?? []) {
-      if (part.inlineData) {
-        const imageData = part.inlineData.data;
-        if (!imageData) {
-          throw new Error("No image data");
-        }
-
-        return Buffer.from(imageData, "base64");
-      }
-    }
-
-    // non-fatal image reasons
-    const finishReason = response.candidates?.[0]?.finishReason;
-    if (finishReason === "IMAGE_SAFETY") {
-      console.warn(`\tImage safety reason for ${name}.\n`, fullPrompt);
-      return null;
-    }
-
-    throw new Error("No image generated", { cause: JSON.stringify(response) });
-  } catch (error) {
-    console.error(`Error generating ${name}:`, error);
-    throw new Error("No image generated", { cause: error });
-  }
-}
-
 async function main() {
   const monstersText = fs.readFileSync(MONSTERS_FILE, "utf8");
   const sections = monstersText.split("%%%%");
@@ -222,11 +166,14 @@ async function main() {
 
     console.log(`Generating '${monster.name}' with ${relativePath}...`);
     try {
-      const buffer = await generateImage(
-        monster.name,
-        monster.description,
+      const buffer = await generateImage({
+        ai,
+        imageConfig,
+        name: monster.name,
+        description: monster.description,
         originalPath,
-      );
+        promptBuilder: prompt,
+      });
       if (!buffer) {
         nonFatalReasons.push(relativePath);
         console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
@@ -255,7 +202,7 @@ async function main() {
     }
 
     // test
-    // break;
+    break;
   }
 
   if (nonFatalReasons.length > 0) {

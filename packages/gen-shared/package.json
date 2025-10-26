@@ -6,6 +6,7 @@
   "author": "Andrii Syrokomskyi",
   "license": "MIT",
   "dependencies": {
+    "@google/genai": "^1.27.0",
     "slug": "^11.0.0"
   },
   "devDependencies": {
