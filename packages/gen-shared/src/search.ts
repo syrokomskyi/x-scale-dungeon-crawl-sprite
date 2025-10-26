@@ -33,3 +33,16 @@ export function findImage(dir: string, name: string): string | null {
 
   return null;
 }
+
+export function getRelativePath(baseDir: string, filePath: string): string {
+  return path.relative(baseDir, filePath);
+}
+
+// Get folders and filename without extension.
+export function getPromptParts(relativePath: string): string {
+  const parsed = path.parse(relativePath);
+  const folders = parsed.dir.split(path.sep).filter((f) => f);
+  const name = parsed.name;
+
+  return [...folders, name].join(", ");
+}

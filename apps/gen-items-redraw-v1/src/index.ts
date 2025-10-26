@@ -2,6 +2,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
+import { getImageFiles, getPromptParts, getRelativePath } from "gen-shared";
 import { generateRandomLetterString } from "gen-shared/src/tool";
 import sharp from "sharp";
 
@@ -77,37 +78,8 @@ const REDRAW_DIR = path.join(
   "item",
 );
 
-function getImageFiles(dir: string): string[] {
-  const files: string[] = [];
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      files.push(...getImageFiles(fullPath));
-    } else if (/\.(png|jpg|jpeg)$/i.test(item)) {
-      files.push(fullPath);
-    }
-  }
-
-  return files;
-}
-
-function getRelativePath(filePath: string): string {
-  return path.relative(ORIGINAL_DIR, filePath);
-}
-
-// Get folders and filename without extension.
-function getPromptParts(relativePath: string): string {
-  const parsed = path.parse(relativePath);
-  const folders = parsed.dir.split(path.sep).filter((f) => f);
-  const name = parsed.name;
-
-  return [...folders, name].join(", ");
-}
-
 async function generateImage(originalPath: string): Promise<Buffer | null> {
-  const relativePath = getRelativePath(originalPath);
+  const relativePath = getRelativePath(ORIGINAL_DIR, originalPath);
   const promptParts = getPromptParts(relativePath);
   const fullPrompt = prompt(promptParts);
 
@@ -165,7 +137,7 @@ async function main() {
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   const nonFatalReasons: string[] = [];
   for (const file of imageFiles) {
-    const relativePath = getRelativePath(file);
+    const relativePath = getRelativePath(ORIGINAL_DIR, file);
     const outputPath = path.join(REDRAW_DIR, relativePath);
     const outputDir = path.dirname(outputPath);
 

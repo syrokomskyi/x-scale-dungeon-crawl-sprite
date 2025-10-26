@@ -1,2 +1,7 @@
-export { findImage, getImageFiles } from "./src/search";
+export {
+  findImage,
+  getImageFiles,
+  getPromptParts,
+  getRelativePath,
+} from "./src/search";
 export { generateSlug } from "./src/tool";
