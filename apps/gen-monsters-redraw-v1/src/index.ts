@@ -171,7 +171,7 @@ async function main() {
         imageConfig,
         name: monster.name,
         description: monster.description,
-        originalPath,
+        originalImagePath: originalPath,
         promptBuilder: prompt,
       });
       if (!buffer) {

@@ -9,7 +9,7 @@ export interface GenerateImageOptions {
   name: string;
   description: string;
   // no path = no image
-  originalPath?: string;
+  originalImagePath?: string;
   promptBuilder: (name: string, description: string) => string;
 }
 
@@ -21,11 +21,11 @@ export async function generateImage(
 
   let imageBase64: string | undefined;
   let mimeType: string | undefined;
-  if (options.originalPath) {
-    const imageBuffer = fs.readFileSync(options.originalPath);
+  if (options.originalImagePath) {
+    const imageBuffer = fs.readFileSync(options.originalImagePath);
     imageBase64 = imageBuffer.toString("base64");
 
-    const ext = path.extname(options.originalPath).toLowerCase();
+    const ext = path.extname(options.originalImagePath).toLowerCase();
     if (ext === ".png") {
       mimeType = "image/png";
     } else if (ext === ".jpg" || ext === ".jpeg") {

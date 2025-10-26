@@ -143,6 +143,7 @@ async function main() {
         imageConfig,
         name: god.name,
         description: god.description,
+        originalImagePath: undefined,
         promptBuilder: prompt,
       });
       if (!buffer) {

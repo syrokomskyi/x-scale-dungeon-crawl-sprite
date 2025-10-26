@@ -87,6 +87,8 @@ async function main() {
     const outputPath = path.join(REDRAW_DIR, relativePath);
     const outputDir = path.dirname(outputPath);
 
+    const itemName = relativePath.replace(/[\\/_]/g, " ");
+
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
@@ -97,7 +99,6 @@ async function main() {
       continue;
     }
 
-    const itemName = relativePath.replace(/[\\/_]/g, " ");
     console.log(`Generating '${itemName}' with ${relativePath}...`);
     try {
       const buffer = await generateImage({
@@ -105,10 +106,9 @@ async function main() {
         imageConfig,
         name: itemName,
         description: "",
-        originalPath: file,
+        originalImagePath: file,
         promptBuilder: prompt,
       });
-
       if (!buffer) {
         nonFatalReasons.push(relativePath);
         console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
