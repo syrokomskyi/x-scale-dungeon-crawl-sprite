@@ -2,7 +2,8 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
-import { getImageFiles, getPromptParts, getRelativePath } from "gen-shared";
+import { getImageFiles, getRelativePath } from "gen-shared";
+import { generateImage } from "gen-shared/src/gen";
 import { generateRandomLetterString } from "gen-shared/src/tool";
 import sharp from "sharp";
 
@@ -78,61 +79,6 @@ const REDRAW_DIR = path.join(
   "item",
 );
 
-async function generateImage(originalPath: string): Promise<Buffer | null> {
-  const relativePath = getRelativePath(ORIGINAL_DIR, originalPath);
-  const promptParts = getPromptParts(relativePath);
-  const fullPrompt = prompt(promptParts);
-
-  const imageBuffer = fs.readFileSync(originalPath);
-  const imageBase64 = imageBuffer.toString("base64");
-
-  const ext = path.extname(originalPath).toLowerCase();
-  let mimeType: string;
-  if (ext === ".png") {
-    mimeType = "image/png";
-  } else if (ext === ".jpg" || ext === ".jpeg") {
-    mimeType = "image/jpeg";
-  } else {
-    throw new Error(`Unsupported image format: ${ext}`);
-  }
-
-  try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-image",
-      contents: {
-        parts: [
-          { text: fullPrompt },
-          { inlineData: { mimeType, data: imageBase64 } },
-        ],
-      },
-      config: { imageConfig },
-    });
-
-    for (const part of response.candidates?.[0]?.content?.parts ?? []) {
-      if (part.inlineData) {
-        const imageData = part.inlineData.data;
-        if (!imageData) {
-          throw new Error("No image data");
-        }
-
-        return Buffer.from(imageData, "base64");
-      }
-    }
-
-    // non-fatal image reasons
-    const finishReason = response.candidates?.[0]?.finishReason;
-    if (finishReason === "IMAGE_SAFETY") {
-      console.warn(`\tImage safety reason for ${name}.\n`, fullPrompt);
-      return null;
-    }
-
-    throw new Error("No image generated", { cause: JSON.stringify(response) });
-  } catch (error) {
-    console.error(`Error generating ${name}:`, error);
-    throw new Error("No image generated", { cause: error });
-  }
-}
-
 async function main() {
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   const nonFatalReasons: string[] = [];
@@ -151,9 +97,17 @@ async function main() {
       continue;
     }
 
-    console.log(`Generating '${relativePath}'...`);
+    const itemName = relativePath.replace(/[\\/_]/g, " ");
+    console.log(`Generating '${itemName}' with ${relativePath}...`);
     try {
-      const buffer = await generateImage(file);
+      const buffer = await generateImage({
+        ai,
+        imageConfig,
+        name: itemName,
+        description: "",
+        originalPath: file,
+        promptBuilder: prompt,
+      });
 
       if (!buffer) {
         nonFatalReasons.push(relativePath);
