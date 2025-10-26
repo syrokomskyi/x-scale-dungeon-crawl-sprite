@@ -2,6 +2,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
+import sharp from "sharp";
 import slug from "slug";
 
 config({ path: ".env.local" });
@@ -9,6 +10,14 @@ config({ path: ".env.local" });
 const imageConfig: ImageConfig = {
   aspectRatio: "1:1",
 };
+
+// save as png
+const saveAsOriginal = true;
+
+// save as webp
+const saveAsWebp = true;
+const webpLossless = false;
+const webpQuality = 100;
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -226,7 +235,8 @@ async function main() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    if (fs.existsSync(outputPath)) {
+    const webpPath = outputPath.replace(/\.[^/.]+$/, ".webp");
+    if (fs.existsSync(outputPath) || fs.existsSync(webpPath)) {
       console.log(`Skipping ${relativePath}, already exists.`);
       continue;
     }
@@ -244,8 +254,23 @@ async function main() {
         continue;
       }
 
-      fs.writeFileSync(outputPath, buffer);
-      console.log(`Saved ${outputPath}`);
+      // save as original
+      if (saveAsOriginal) {
+        fs.writeFileSync(outputPath, buffer);
+        console.log(`Saved ${outputPath}`);
+      }
+
+      // save as webp
+      if (saveAsWebp) {
+        await sharp(buffer)
+          .webp({ lossless: webpLossless, quality: webpQuality })
+          .toFile(webpPath);
+        console.log(`Saved ${webpPath}`);
+      }
+
+      if (!saveAsOriginal && !saveAsWebp) {
+        console.warn(`Skipping ${relativePath}: no output format specified.`);
+      }
     } catch (error) {
       console.error(`Error generating ${monster.name}:`, error);
     }
