@@ -2,13 +2,16 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
-import slug from "slug";
+import { generateSlug } from "gen-shared";
+import { generateRandomLetterString } from "gen-shared/src/tool";
 
 config({ path: ".env.local" });
 
 const imageConfig: ImageConfig = {
   aspectRatio: "16:9",
 };
+
+const randomPrompt = true;
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -43,6 +46,8 @@ There should be no inscriptions or signatures on the image.
 Organic composition, hyper-detailed, concept art, artstation, fantasy illustration.
 
 Aspect ratio: ${imageConfig.aspectRatio}
+
+${randomPrompt ? `${generateRandomLetterString()}` : ""}
 `;
 }
 
@@ -129,7 +134,8 @@ async function main() {
   }
 
   for (const god of gods) {
-    const fileName = `${slug(god.name)}.png`;
+    const slugName = generateSlug(god.name, "");
+    const fileName = `${slugName}.png`;
     const outputPath = path.join(DRAW_DIR, fileName);
 
     if (fs.existsSync(outputPath)) {
