@@ -38,7 +38,7 @@ Stylistic cues (depending on location type):
 – For arcane or cosmic places (Zot, Abyss, Pandemonium, Wizlab): use shifting geometry, fractal light, floating stones, and color auras.
 – For ruins and decay (Desolation, Vaults, Necropolis): use erosion, dust, and muted tones of stone and bone.
 
---ar 16:9 --style raw
+--ar 16:9
 
 ```
 
@@ -79,8 +79,6 @@ Composition: centered or asymmetrical, with tendrils of mist extending outward.
 Aspect ratio: square or 16:9 panoramic depending on scene scale.
 Mood: mysterious, volatile, sacred, or dangerous, depending on the type of magic.
 
---style raw
-
 ```
 
 ### 2 Gemini, image mode
@@ -119,7 +117,6 @@ Ultra-realistic rendering, mythic energy, visual storytelling.
 There should be no inscriptions or signatures on the image.
 
 --wide aspect ratio, 16:9, cinematic composition, hyper-detailed, concept art, artstation, 8K fantasy illustration.
---style raw
 
 ```
 
@@ -151,8 +148,6 @@ Optional additions:
 – add faint hovering glyphs, energy particles, or reflections hinting at the item’s magical nature.
 – for cursed or demonic items, add shadow halos, black fire, or crimson smoke.
 – for holy or divine items, add gold dust light and sacred geometry symbols.
-
---style raw
 
 ```
 
@@ -196,7 +191,7 @@ There should be no inscriptions or signatures on the image.
 
 Use the name and description to understand the creature's appearance and behavior.
 
---ar 1:1 --style raw
+--ar 1:1
 
 ```
 
@@ -253,7 +248,7 @@ Surrounding symbols and runes float in the air, drawn in gold ink and geometric 
 Style: gothic horror + renaissance alchemy illustration + Zdzisław Beksiński + H.R. Giger + ancient manuscript etching. 
 Medium: ink and gold on aged parchment, detailed, painterly texture, mystical atmosphere, symmetrical composition.
 
---ar 1:1 --style raw
+--ar 1:1
 
 ```
 
