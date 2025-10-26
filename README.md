@@ -26,55 +26,125 @@ For transfrom sprites run the script in terminal.
 
 #### [Humanoids](./apps/sprites/work/redraw-v1/mon/humanoids)
 
-| ![Juggernaut](./apps/sprites/work/redraw-v1/mon/humanoids/giants/juggernaut.webp) | ![Water Nymph](./apps/sprites/work/redraw-v1/mon/humanoids/water_nymph.webp) |
-|:---:|:---:|
-| **Juggernaut**<br>A gigantic humanoid with thick iron plates welded to its skin. It moves with alarming speed and deals incredible damage with its immense fists, but must rest between blows. | **Water Nymph**<br>A capricious nature spirit, deeply bonded with the waters in which it lives. Wherever they flow, so may it, and ponds and rivers surge and leap at its whim. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/humanoids/giants/juggernaut.webp" alt="Juggernaut"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/humanoids/water_nymph.webp" alt="Water Nymph"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Juggernaut</strong><br>A gigantic humanoid with thick iron plates welded to its skin. It moves with alarming speed and deals incredible damage with its immense fists, but must rest between blows.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Water Nymph</strong><br>A capricious nature spirit, deeply bonded with the waters in which it lives. Wherever they flow, so may it, and ponds and rivers surge and leap at its whim.</td>
+  </tr>
+</table>
 
-| ![Troll](./apps/sprites/work/redraw-v1/mon/humanoids/troll.webp) | ![Eleionoma](./apps/sprites/work/redraw-v1/mon/humanoids/eleionoma.webp) |
-|:---:|:---:|
-| **Troll**<br>A huge and physically powerful humanoid creature. Short on intelligence but long on brawn, its thick knobbly hide heals rapidly from most wounds. | **Eleionoma**<br>Spirits of marshes and bogs. From the cypresses and willows of the fens stems the power of these fierce protective spirits. With the boughs and branches they flow, emerging from trees near their foes to strike. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/humanoids/troll.webp" alt="Troll"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/humanoids/eleionoma.webp" alt="Eleionoma"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Troll</strong><br>A huge and physically powerful humanoid creature. Short on intelligence but long on brawn, its thick knobbly hide heals rapidly from most wounds.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Eleionoma</strong><br>Spirits of marshes and bogs. From the cypresses and willows of the fens stems the power of these fierce protective spirits. With the boughs and branches they flow, emerging from trees near their foes to strike.</td>
+  </tr>
+</table>
 
-| ![Spriggan Rider](./apps/sprites/work/redraw-v1/mon/humanoids/spriggans/spriggan_rider.webp) | ![Occultist](./apps/sprites/work/redraw-v1/mon/humanoids/humans/occultist.webp) |
-|:---:|:---:|
-| **Spriggan Rider**<br>A spriggan that has tamed a hornet as its mount, and is tasked with protecting the spriggan fens and cairns from intruders. | **Occultist**<br>A wizard fond of illusion and treachery. They scorn the crudeness of other magicians, who hurl wild conjurations toward their foes rather than cunningly exploiting their greatest weaknesses. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/humanoids/spriggans/spriggan_rider.webp" alt="Spriggan Rider"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/humanoids/humans/occultist.webp" alt="Occultist"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Spriggan Rider</strong><br>A spriggan that has tamed a hornet as its mount, and is tasked with protecting the spriggan fens and cairns from intruders.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Occultist</strong><br>A wizard fond of illusion and treachery. They scorn the crudeness of other magicians, who hurl wild conjurations toward their foes rather than cunningly exploiting their greatest weaknesses.</td>
+  </tr>
+</table>
 
 #### [Eyes](./apps/sprites/work/redraw-v1/mon/eyes)
 
-| ![Golden Eye](./apps/sprites/work/redraw-v1/mon/eyes/golden_eye.webp) | ![Glass Eye](./apps/sprites/work/redraw-v1/mon/eyes/glass_eye.webp) |
-|:---:|:---:|
-| **Golden Eye**<br>A tiny and shimmering floating eye, swift as the wind and glistening like gold. It has a peculiarly hypnotic look. | **Glass Eye**<br>A floating eyeball formed from living glass. Only the divine Jiyva could form such a curious servitor. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/eyes/golden_eye.webp" alt="Golden Eye"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/eyes/glass_eye.webp" alt="Glass Eye"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Golden Eye</strong><br>A tiny and shimmering floating eye, swift as the wind and glistening like gold. It has a peculiarly hypnotic look.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Glass Eye</strong><br>A floating eyeball formed from living glass. Only the divine Jiyva could form such a curious servitor.</td>
+  </tr>
+</table>
 
 #### [Dragons](./apps/sprites/work/redraw-v1/mon/dragons)
 
-| ![Wind Drake](./apps/sprites/work/redraw-v1/mon/dragons/wind_drake.webp) | ![Lindwurm](./apps/sprites/work/redraw-v1/mon/dragons/lindwurm.webp) |
-|:---:|:---:|
-| **Wind Drake**<br>A small but powerful dragon, particularly adept amongst its kin at manipulating the currents of air that surround it. It can exhale powerful blasts of wind. | **Lindwurm**<br>A small serpentine dragon with a pair of strong forelimbs. Its thick scales give off an eerie red glow. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/dragons/wind_drake.webp" alt="Wind Drake"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/dragons/lindwurm.webp" alt="Lindwurm"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Wind Drake</strong><br>A small but powerful dragon, particularly adept amongst its kin at manipulating the currents of air that surround it. It can exhale powerful blasts of wind.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Lindwurm</strong><br>A small serpentine dragon with a pair of strong forelimbs. Its thick scales give off an eerie red glow.</td>
+  </tr>
+</table>
 
 #### [Aquatic](./apps/sprites/work/redraw-v1/mon/aquatic)
 
-| ![Rock Fish](./apps/sprites/work/redraw-v1/mon/aquatic/rock_fish.webp) | ![Swamp Worm](./apps/sprites/work/redraw-v1/mon/aquatic/swamp_worm.webp) |
-|:---:|:---:|
-| **Rock Fish**<br>A strange stone-scaled fish that swims through solid rock with the same ease that most fish do through water. | **Swamp Worm**<br>A large slimy worm, adept at traversing swamps and marshes. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/aquatic/rock_fish.webp" alt="Rock Fish"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/aquatic/swamp_worm.webp" alt="Swamp Worm"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Rock Fish</strong><br>A strange stone-scaled fish that swims through solid rock with the same ease that most fish do through water.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Swamp Worm</strong><br>A large slimy worm, adept at traversing swamps and marshes.</td>
+  </tr>
+</table>
 
 #### [Abyss](./apps/sprites/work/redraw-v1/mon/abyss)
 
-| ![Tentacled Starspawn](./apps/sprites/work/redraw-v1/mon/abyss/tentacled_starspawn.webp) | ![Wretched Star](./apps/sprites/work/redraw-v1/mon/abyss/wretched_star.webp) |
-|:---:|:---:|
-| **Tentacled Starspawn**<br>A lumbering maw shrouded in a mass of sinuous tentacles. On spotting prey, its tentacles lunge outward, dragging victims directly to its waiting gullet. | **Wretched Star**<br>A conflux of unearthly light and energy, awash in unnatural colours and strange forms no normal being was meant to perceive. It fills all those in its presence with the disorder of the Abyss. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/abyss/tentacled_starspawn.webp" alt="Tentacled Starspawn"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/abyss/wretched_star.webp" alt="Wretched Star"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Tentacled Starspawn</strong><br>A lumbering maw shrouded in a mass of sinuous tentacles. On spotting prey, its tentacles lunge outward, dragging victims directly to its waiting gullet.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Wretched Star</strong><br>A conflux of unearthly light and energy, awash in unnatural colours and strange forms no normal being was meant to perceive. It fills all those in its presence with the disorder of the Abyss.</td>
+  </tr>
+</table>
 
 #### [Unique](./apps/sprites/work/redraw-v1/mon/unique)
 
-| ![Erica](./apps/sprites/work/redraw-v1/mon/unique/erica.webp) | ![Robin](./apps/sprites/work/redraw-v1/mon/unique/robin.webp) |
-|:---:|:---:|
-| **Erica**<br>A wild-tempered adventuress. She's quite prideful for an octopode, and brandishes their venomous capacity and camouflage talents with cruel force. | **Robin**<br>A mountain hobgoblin, recently come in search of the legendary Orb. Not foolhardy or reckless enough to delve into the depths of the Dungeon alone, Robin has built a small army of minions. Potential competitors will quickly find a stream of screaming goblins flying toward them! |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/unique/erica.webp" alt="Erica"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/unique/robin.webp" alt="Robin"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Erica</strong><br>A wild-tempered adventuress. She's quite prideful for an octopode, and brandishes their venomous capacity and camouflage talents with cruel force.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Robin</strong><br>A mountain hobgoblin, recently come in search of the legendary Orb. Not foolhardy or reckless enough to delve into the depths of the Dungeon alone, Robin has built a small army of minions. Potential competitors will quickly find a stream of screaming goblins flying toward them!</td>
+  </tr>
+</table>
 
-| ![Arachne](./apps/sprites/work/redraw-v1/mon/unique/arachne.webp) | ![Mennas](./apps/sprites/work/redraw-v1/mon/unique/mennas.webp) |
-|:---:|:---:|
-| **Arachne**<br>Once a talented human weaver, Arachne was transformed into a monstrous half-spider by a jealous rival's curse. Driven out of her village, she found sanctuary for a time among the jorogumo before a bitter feud forced her to flee once more. Now she wanders other corners of the dungeon with a small retinue of loyal students in tow, seeking a new domain in which they can spin their peerless tapestries in peace. | **Mennas**<br>There was once a human priest named Mennas. He travelled far and wide as a missionary of Zin, often venturing even into Orcish lands. He beseeched the orcs to abandon their false tribes and return to the peoples of their birth; only Zin's light could truly cleanse the weight of sin that had twisted their bodies. |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/unique/arachne.webp" alt="Arachne"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/unique/mennas.webp" alt="Mennas"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Arachne</strong><br>Once a talented human weaver, Arachne was transformed into a monstrous half-spider by a jealous rival's curse. Driven out of her village, she found sanctuary for a time among the jorogumo before a bitter feud forced her to flee once more. Now she wanders other corners of the dungeon with a small retinue of loyal students in tow, seeking a new domain in which they can spin their peerless tapestries in peace.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Mennas</strong><br>There was once a human priest named Mennas. He travelled far and wide as a missionary of Zin, often venturing even into Orcish lands. He beseeched the orcs to abandon their false tribes and return to the peoples of their birth; only Zin's light could truly cleanse the weight of sin that had twisted their bodies.</td>
+  </tr>
+</table>
 
-| ![Enchantress](./apps/sprites/work/redraw-v1/mon/unique/enchantress.webp) | ![Kirke](./apps/sprites/work/redraw-v1/mon/unique/kirke.webp) |
-|:---:|:---:|
-| **Enchantress**<br>First and most fearful of her kind, the Enchantress rules over the spriggans of the dungeon. She wears an opalescent outfit made of dragon skin that shimmers with many colours. | **Kirke**<br>A master of transformation and treachery. Beware, or you may be the next swine to join her herd! |
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/unique/enchantress.webp" alt="Enchantress"></td>
+    <td style="border-left: 2px solid #222; border-bottom: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: bottom;"><img src="./apps/sprites/work/redraw-v1/mon/unique/kirke.webp" alt="Kirke"></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Enchantress</strong><br>First and most fearful of her kind, the Enchantress rules over the spriggans of the dungeon. She wears an opalescent outfit made of dragon skin that shimmers with many colours.</td>
+    <td style="border-left: 2px solid #222; border-top: 2px solid #222; width: 50%; height: auto;text-align: center; vertical-align: top;"><strong>Kirke</strong><br>A master of transformation and treachery. Beware, or you may be the next swine to join her herd!</td>
+  </tr>
+</table>
 
 ---
 
