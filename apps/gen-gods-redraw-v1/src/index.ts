@@ -72,10 +72,10 @@ const DRAW_DIR = path.join(
 );
 
 async function generateImage(
-  godName: string,
-  godDescription: string,
+  name: string,
+  description: string,
 ): Promise<Buffer> {
-  const text = prompt(godName, godDescription);
+  const text = prompt(name, description);
 
   const response = await ai.models.generateContent({
     model: "gemini-2.5-flash-image",
