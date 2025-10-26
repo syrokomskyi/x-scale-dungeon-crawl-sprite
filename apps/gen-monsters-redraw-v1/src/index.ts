@@ -2,7 +2,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
-import { generateSlug } from "gen-shared";
+import { findImage } from "gen-shared";
 import { generateRandomLetterString } from "gen-shared/src/tool";
 import sharp from "sharp";
 
@@ -94,38 +94,6 @@ const DRAW_DIR = path.join(
   "redraw-v1",
   "mon",
 );
-
-function getImageFiles(dir: string): string[] {
-  const files: string[] = [];
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      files.push(...getImageFiles(fullPath));
-    } else if (/\.(png|jpg|jpeg)$/i.test(item)) {
-      files.push(fullPath);
-    }
-  }
-
-  return files;
-}
-
-function findImage(name: string): string | null {
-  const pname = name.toLowerCase().replace(/^the\s+/, "");
-  const slugName = generateSlug(pname, "");
-  const imageFiles = getImageFiles(ORIGINAL_DIR);
-  for (const file of imageFiles) {
-    const baseName = path.basename(file, path.extname(file));
-    if (baseName === slugName) {
-      return file;
-    }
-  }
-
-  console.warn(`No image found for ${name} -> ${pname} -> ${slugName}.`);
-
-  return null;
-}
 
 async function generateImage(
   name: string,
@@ -232,7 +200,7 @@ async function main() {
 
   const nonFatalReasons: string[] = [];
   for (const monster of monsters) {
-    const originalPath = findImage(monster.name);
+    const originalPath = findImage(ORIGINAL_DIR, monster.name);
     if (!originalPath) {
       console.log(`No image found for ${monster.name}, skipping.`);
       continue;
