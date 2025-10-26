@@ -8,7 +8,8 @@ export interface GenerateImageOptions {
   imageConfig?: ImageConfig;
   name: string;
   description: string;
-  originalPath: string;
+  // no path = no image
+  originalPath?: string;
   promptBuilder: (name: string, description: string) => string;
 }
 
@@ -18,17 +19,20 @@ export async function generateImage(
   const model = options.model ?? "gemini-2.5-flash-image";
   const fullPrompt = options.promptBuilder(options.name, options.description);
 
-  const imageBuffer = fs.readFileSync(options.originalPath);
-  const imageBase64 = imageBuffer.toString("base64");
+  let imageBase64: string | undefined;
+  let mimeType: string | undefined;
+  if (options.originalPath) {
+    const imageBuffer = fs.readFileSync(options.originalPath);
+    imageBase64 = imageBuffer.toString("base64");
 
-  const ext = path.extname(options.originalPath).toLowerCase();
-  let mimeType: string;
-  if (ext === ".png") {
-    mimeType = "image/png";
-  } else if (ext === ".jpg" || ext === ".jpeg") {
-    mimeType = "image/jpeg";
-  } else {
-    throw new Error(`Unsupported image format: ${ext}`);
+    const ext = path.extname(options.originalPath).toLowerCase();
+    if (ext === ".png") {
+      mimeType = "image/png";
+    } else if (ext === ".jpg" || ext === ".jpeg") {
+      mimeType = "image/jpeg";
+    } else {
+      throw new Error(`Unsupported image format: ${ext}`);
+    }
   }
 
   try {
@@ -37,12 +41,19 @@ export async function generateImage(
       contents: {
         parts: [
           { text: fullPrompt },
-          { inlineData: { mimeType, data: imageBase64 } },
+          // we can work without image
+          {
+            inlineData:
+              mimeType && imageBase64
+                ? { mimeType, data: imageBase64 }
+                : undefined,
+          },
         ],
       },
       config: { imageConfig: options.imageConfig },
     });
 
+    // get image
     for (const part of response.candidates?.[0]?.content?.parts ?? []) {
       if (part.inlineData) {
         const imageData = part.inlineData.data;
