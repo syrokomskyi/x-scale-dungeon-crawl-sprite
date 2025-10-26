@@ -10,7 +10,7 @@ const ai = new GoogleGenAI({
   project: process.env.GEMINI_PROJECT_ID,
 });
 
-// v1.4.0
+// v1.5.0
 function prompt(description: string) {
   return `
 Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and this description: "${description}"
@@ -30,8 +30,6 @@ Optional additions:
 – add faint hovering glyphs, energy particles, or reflections hinting at the item’s magical nature.
 – for cursed or demonic items, add shadow halos, black fire, or crimson smoke.
 – for holy or divine items, add gold dust light and sacred geometry symbols.
-
---style raw
 `;
 }
 
