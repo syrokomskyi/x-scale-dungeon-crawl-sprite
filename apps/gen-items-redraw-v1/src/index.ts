@@ -174,7 +174,7 @@ async function main() {
       continue;
     }
 
-    console.log(`Generating ${relativePath}...`);
+    console.log(`Generating '${relativePath}'...`);
     try {
       const buffer = await generateImage(file);
 

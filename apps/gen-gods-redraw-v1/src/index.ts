@@ -137,7 +137,7 @@ async function main() {
       continue;
     }
 
-    console.log(`Generating ${god.name}...`);
+    console.log(`Generating '${god.name}'...`);
     try {
       const buffer = await generateImage(god.name, god.description);
       fs.writeFileSync(outputPath, buffer);
