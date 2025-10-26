@@ -4,6 +4,13 @@
   "description": "Redraw the roguelike 'Dungeon Crawl: Stone Soup'.",
   "type": "module",
   "private": true,
+  "scripts": {
+    "lint": "cls && pnpm exec biome lint --write .",
+    "format": "cls && pnpm exec biome format --write .",
+    "clean": "turbo run clean",
+    "upgrade-packages": "pnpm update -r --latest",
+    "upgrade-packages:check": "pnpm outdated -r"
+  },
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
     "turbo": "^2.5.8"
