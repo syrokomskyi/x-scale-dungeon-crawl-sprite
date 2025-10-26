@@ -136,7 +136,7 @@ async function main() {
       continue;
     }
 
-    console.log(`Generating '${god.name}'...`);
+    console.log(`Generating '${god.name}' with ${relativePath}...`);
     try {
       const buffer = await generateImage({
         ai,
