@@ -71,7 +71,7 @@ const ORIGINAL_DIR = path.join(
   "rltiles",
   "item",
 );
-const REDRAW_DIR = path.join(
+const DRAW_DIR = path.join(
   __dirname,
   "..",
   "..",
@@ -91,7 +91,7 @@ async function main() {
     const r = await aiImageProcessing({
       name: itemName,
       originalDir: ORIGINAL_DIR,
-      redrawDir: REDRAW_DIR,
+      drawDir: DRAW_DIR,
       file,
       generateImageOptions: {
         ai,
@@ -109,8 +109,12 @@ async function main() {
       // service
       nonFatalReasons,
     });
-    if (["skipped", "throwed"].includes(r)) {
+    if (r === "skipped") {
       continue;
+    }
+
+    if (r === "throwed") {
+      break;
     }
 
     // next item

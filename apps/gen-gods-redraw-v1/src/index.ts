@@ -1,15 +1,12 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
-import { config } from "dotenv";
 import {
-  generateImage,
+  aiImageProcessing,
   generateRandomLetterString,
   generateSlug,
+  showNonFatalReasons,
 } from "gen-shared";
-import sharp from "sharp";
-
-config({ path: ".env.local" });
 
 const imageConfig: ImageConfig = {
   aspectRatio: "16:9",
@@ -123,70 +120,44 @@ async function main() {
   for (const god of gods) {
     const slugName = generateSlug(god.name, "");
     const fileName = `${slugName}.png`;
+    const file = path.join(DRAW_DIR, fileName);
 
-    const relativePath = path.relative(DRAW_DIR, fileName);
-    const outputPath = path.join(DRAW_DIR, relativePath);
-    const outputDir = path.dirname(outputPath);
-
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    const webpPath = outputPath.replace(/\.[^/.]+$/, ".webp");
-    if (fs.existsSync(outputPath) || fs.existsSync(webpPath)) {
-      console.log(`Skipping ${relativePath}, already exists.`);
-      continue;
-    }
-
-    console.log(`Generating '${god.name}' with ${relativePath}...`);
-    try {
-      const buffer = await generateImage({
+    const r = await aiImageProcessing({
+      name: god.name,
+      originalDir: "",
+      drawDir: DRAW_DIR,
+      file,
+      generateImageOptions: {
         ai,
         imageConfig,
         name: god.name,
         description: god.description,
         originalImagePath: undefined,
         promptBuilder: prompt,
-      });
-      if (!buffer) {
-        nonFatalReasons.push(relativePath);
-        console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
-        continue;
-      }
-
-      // save as original
-      if (saveAsOriginal) {
-        fs.writeFileSync(outputPath, buffer);
-        console.log(`Saved ${outputPath}`);
-      }
-
-      // save as webp
-      if (saveAsWebp) {
-        await sharp(buffer)
-          .webp({ lossless: webpLossless, quality: webpQuality })
-          .toFile(webpPath);
-        console.log(`Saved ${webpPath}`);
-      }
-
-      if (!saveAsOriginal && !saveAsWebp) {
-        console.warn(`Skipping ${relativePath}: no output format specified.`);
-      }
-    } catch (error) {
-      console.error(`Error generating ${god.name}:`, error);
+      },
+      // config
+      saveAsOriginal,
+      saveAsWebp,
+      webpLossless,
+      webpQuality,
+      // service
+      nonFatalReasons,
+    });
+    if (r === "skipped") {
+      continue;
     }
+
+    if (r === "throwed") {
+      break;
+    }
+
+    // next item
 
     // test
     //break;
   }
 
-  if (nonFatalReasons.length > 0) {
-    console.log(
-      `\nSkipped ${nonFatalReasons.length} generations due to non-fatal reasons.`,
-    );
-    for (const relativePath of nonFatalReasons) {
-      console.log(`\t${relativePath}`);
-    }
-  }
+  showNonFatalReasons(nonFatalReasons);
 }
 
 main().catch(console.error);

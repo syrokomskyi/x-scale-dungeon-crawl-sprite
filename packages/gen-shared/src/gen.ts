@@ -9,7 +9,7 @@ export interface AiImageProcessing {
   name: string;
 
   originalDir: string;
-  redrawDir: string;
+  drawDir: string;
   file: string;
 
   generateImageOptions: GenerateImageOptions;
@@ -30,7 +30,7 @@ export async function aiImageProcessing(
   options: AiImageProcessing,
 ): Promise<skippedOrProcessed> {
   const relativePath = getRelativePath(options.originalDir, options.file);
-  const outputPath = path.join(options.redrawDir, relativePath);
+  const outputPath = path.join(options.drawDir, relativePath);
   const outputDir = path.dirname(outputPath);
 
   if (!fs.existsSync(outputDir)) {

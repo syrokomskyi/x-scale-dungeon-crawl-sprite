@@ -88,7 +88,7 @@ const ORIGINAL_DIR = path.join(
   "rltiles",
   "mon",
 );
-const REDRAW_DIR = path.join(
+const DRAW_DIR = path.join(
   __dirname,
   "..",
   "..",
@@ -140,8 +140,8 @@ async function main() {
 
   console.log(`Found ${monsters.length} monsters.\n`);
 
-  if (!fs.existsSync(REDRAW_DIR)) {
-    fs.mkdirSync(REDRAW_DIR, { recursive: true });
+  if (!fs.existsSync(DRAW_DIR)) {
+    fs.mkdirSync(DRAW_DIR, { recursive: true });
   }
 
   const nonFatalReasons: string[] = [];
@@ -155,7 +155,7 @@ async function main() {
     const r = await aiImageProcessing({
       name: monster.name,
       originalDir: ORIGINAL_DIR,
-      redrawDir: REDRAW_DIR,
+      drawDir: DRAW_DIR,
       file,
       generateImageOptions: {
         ai,
@@ -173,11 +173,11 @@ async function main() {
       // service
       nonFatalReasons,
     });
-    if (["skipped"].includes(r)) {
+    if (r === "skipped") {
       continue;
     }
 
-    if (["throwed"].includes(r)) {
+    if (r === "throwed") {
       break;
     }
 
