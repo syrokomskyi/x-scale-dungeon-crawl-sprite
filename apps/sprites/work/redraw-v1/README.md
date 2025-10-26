@@ -46,6 +46,47 @@ Stylistic cues (depending on location type):
 
 Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/branches.txt>.
 
+## Clouds
+
+See `branches.txt` for the list of branches.
+
+### 1 Gemini, chat mode
+
+```text
+v1.0.0
+
+After this prompt, I will switch you to drawing mode and will only give you names and descriptions, and you will draw according to the instructions below:
+
+A magnificent, highly detailed depiction of an arcane magical cloud from the world of Dungeon Crawl. 
+The cloud is a living manifestation of magic, elemental energy, or divine wrath. It floats or expands within a dark subterranean space, interacting with the environment — stone walls, water, ancient runes, or bones. 
+
+The atmosphere should be dynamic, filled with swirling motion, sparks, vapors, and subtle light refractions.
+Color and luminosity must reflect the essence of the described cloud:  
+– fire clouds: molten orange, scarlet, and gold tones, sparks and heat haze.  
+– ice or frost clouds: pale blue and white with crystalline particles.  
+– poison or pestilence clouds: green-yellow fog, toxic glow.  
+– necromantic or misery clouds: black mist with ghostly faces and violet light.  
+– divine or blessed clouds: golden radiance with geometric holy sigils.  
+– chaos or mutagenic clouds: prismatic turbulence, fractured light, distorted space.  
+– smoke or dust clouds: subdued tones, visible particles, faint sunlight through haze.  
+
+There should be no inscriptions or signatures on the image.
+
+Style: gothic alchemical illustration + roguelike realism + mystical energy study + Zdzisław Beksiński + Moebius + renaissance etching.
+Medium: digital painting imitating ink, vapor, and gold dust on dark parchment.
+Lighting: self-emissive; the cloud itself is the main light source.
+Composition: centered or asymmetrical, with tendrils of mist extending outward.
+Aspect ratio: square or 16:9 panoramic depending on scene scale.
+Mood: mysterious, volatile, sacred, or dangerous, depending on the type of magic.
+
+--style raw
+
+```
+
+### 2 Gemini, image mode
+
+Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/branches.txt>.
+
 ## Items
 
 See `items.txt` & folders with images for the list of items.
