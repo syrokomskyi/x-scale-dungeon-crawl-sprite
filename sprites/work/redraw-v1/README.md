@@ -1,15 +1,13 @@
 # Redraw with LLMs
 
-## Model
-
-Nano Banana
-
 ## Prompt
 
-```text
-v4.0.0
+## 1 Gemini, chat mode
 
-[name and description from https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt]
+```text
+v5.0.0
+
+After this prompt, I will switch you to drawing mode and will only give you names and descriptions, and you will draw according to the instructions below:
 
 Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, silhouette, pose, and colours**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy.
 
@@ -37,3 +35,7 @@ Use the name and description above to understand the creature's appearance and b
 --ar 1:1 --style raw
 
 ```
+
+## 2 Gemini, image mode
+
+Copy and paste name and description from <https://github.com/crawl/crawl/blob/master/crawl-ref/source/dat/descript/monsters.txt>.
