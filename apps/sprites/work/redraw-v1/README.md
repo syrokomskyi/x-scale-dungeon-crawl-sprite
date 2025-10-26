@@ -7,13 +7,13 @@ See `items.txt` & folders with images for the list of items.
 ### 1 Gemini, chat mode
 
 ```text
-v1.0.0
+v1.1.0
 
 After this prompt, I will switch you to drawing mode and will only give you the names and descriptions of the items, and you will draw according to the instructions below:
 
 Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, form, disposition, and colours**. This is a **dramatic, cinematic detailed reinterpretation**, that feels ancient, mystical, and handcrafted, not a copy.
 
-The design must preserve the recognizable silhouette and color palette of the original pixel art, but reimagine it as a richly textured artefact from a dark fantasy world, inspired by Dungeon Crawl and alchemical manuscripts. 
+The design must preserve the recognizable silhouette and color palette of the original art, but reimagine it as a richly textured artefact from a dark fantasy world, inspired by Dungeon Crawl and alchemical manuscripts. 
 
 Render it with exquisite material detail — tarnished metal, aged leather, cracked gemstones, runes etched into surfaces, faint glow of ancient magic. 
 Background: neutral parchment or dark void with golden alchemical sigils and subtle vignette, so the focus stays on the object. 
@@ -42,7 +42,7 @@ See `monsters.txt` & folders with images for the list of monsters.
 ### 1 Gemini, chat mode
 
 ```text
-v5.1.0
+v5.2.0
 
 After this prompt, I will switch you to drawing mode and will only give you names and descriptions, and you will draw according to the instructions below:
 
@@ -65,7 +65,7 @@ Do not try to make the creature biologically plausible — interpret it artistic
 **Style references:** 
 Dark Souls / Elden Ring / Diablo IV / Magic: The Gathering / Greg Rutkowski / Magali Villeneuve / Wētā Workshop concept art.
 
-Use the attached pixel image as reference for **composition and silhouette**, but reinterpret every surface, light, and texture in **a fully rendered, realistic way**.
+Use the attached image as reference for **composition and silhouette**, but reinterpret every surface, light, and texture in **a fully rendered, realistic way**.
 
 Use the name and description to understand the creature's appearance and behavior.
 
