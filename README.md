@@ -26,42 +26,27 @@ For transfrom sprites run the script in terminal.
 
 #### [Humanoids](./apps/sprites/work/redraw-v1/mon/humanoids)
 
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/giants/juggernaut.webp" alt="juggernaut" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/water_nymph.webp" alt="water_nymph" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/troll.webp" alt="troll" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/eleionoma.webp" alt="eleionoma" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/spriggans/spriggan_rider.webp" alt="spriggan_rider" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/humans/occultist.webp" alt="occultist" style="width:42%; height:auto;"/>
+<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/giants/juggernaut.webp" alt="juggernaut" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/water_nymph.webp" alt="water_nymph" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/troll.webp" alt="troll" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/eleionoma.webp" alt="eleionoma" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/spriggans/spriggan_rider.webp" alt="spriggan_rider" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/humanoids/humans/occultist.webp" alt="occultist" style="width:42%; height:auto;"/>
 
 #### [Eyes](./apps/sprites/work/redraw-v1/mon/eyes)
 
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/eyes/golden_eye.webp" alt="golden_eye" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/eyes/glass_eye.webp" alt="glass_eye" style="width:42%; height:auto;"/>
+<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/eyes/golden_eye.webp" alt="golden_eye" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/eyes/glass_eye.webp" alt="glass_eye" style="width:42%; height:auto;"/>
 
 #### [Dragons](./apps/sprites/work/redraw-v1/mon/dragons)
 
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/dragons/wind_drake.webp" alt="wind_drake" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/dragons/lindwurm.webp" alt="lindwurm" style="width:42%; height:auto;"/>
+<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/dragons/wind_drake.webp" alt="wind_drake" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/dragons/lindwurm.webp" alt="lindwurm" style="width:42%; height:auto;"/>
 
 #### [Aquatic](./apps/sprites/work/redraw-v1/mon/aquatic)
 
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/aquatic/rock_fish.webp" alt="rock_fish" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/aquatic/swamp_worm.webp" alt="swamp_worm" style="width:42%; height:auto;"/>
+<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/aquatic/rock_fish.webp" alt="rock_fish" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/aquatic/swamp_worm.webp" alt="swamp_worm" style="width:42%; height:auto;"/>
 
 #### [Abyss](./apps/sprites/work/redraw-v1/mon/abyss)
 
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/abyss/tentacled_starspawn.webp" alt="tentacled_starspawn" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/abyss/wretched_star.webp" alt="wretched_star" style="width:42%; height:auto;"/>
+<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/abyss/tentacled_starspawn.webp" alt="tentacled_starspawn" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/abyss/wretched_star.webp" alt="wretched_star" style="width:42%; height:auto;"/>
 
 #### [Unique](./apps/sprites/work/redraw-v1/mon/unique)
 
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/erica.webp" alt="erica" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/robin.webp" alt="robin" style="width:42%; height:auto;"/>
-
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/arachne.webp" alt="arachne" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/mennas.webp" alt="mennas" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/enchantress.webp" alt="enchantress" style="width:42%; height:auto;"/>
-<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/kirke.webp" alt="kirke" style="width:42%; height:auto;"/>
+<img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/erica.webp" alt="erica" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/robin.webp" alt="robin" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/arachne.webp" alt="arachne" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/mennas.webp" alt="mennas" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/enchantress.webp" alt="enchantress" style="width:42%; height:auto;"/><img src="https://raw.githubusercontent.com/syrokomskyi/x-scale-dungeon-crawl-sprite/master/apps/sprites/work/redraw-v1/mon/unique/kirke.webp" alt="kirke" style="width:42%; height:auto;"/>
 
 ---
 
