@@ -188,12 +188,20 @@ async function main() {
     }
 
     const description = lines.slice(1).join("\n").trim();
+    if (description.startsWith("<") && description.endsWith(">")) {
+      //console.log(`Skipping ${name}. This is same as ${description}.`);
+      continue;
+    }
+
     monsters.push({
       name: name.trim(),
-      description: description.replaceAll("\n", " ").trim(),
+      description: description,
     });
 
-    console.log(`${monsters.length}: ${name}: ${description}`);
+    const n = monsters.length;
+    console.log(
+      `${n} ${monsters[n - 1].name}\n\t${monsters[n - 1].description}\n`,
+    );
   }
 
   console.log(`Found ${monsters.length} monsters.\n`);
