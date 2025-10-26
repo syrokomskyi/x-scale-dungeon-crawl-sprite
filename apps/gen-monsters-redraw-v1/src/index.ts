@@ -12,7 +12,7 @@ const imageConfig: ImageConfig = {
 };
 
 // save as png
-const saveAsOriginal = true;
+const saveAsOriginal = false;
 
 // save as webp
 const saveAsWebp = true;
