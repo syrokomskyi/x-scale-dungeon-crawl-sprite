@@ -2,6 +2,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { GoogleGenAI, type ImageConfig } from "@google/genai";
 import { config } from "dotenv";
+import { generateRandomLetterString } from "gen-shared/src/tool";
 import sharp from "sharp";
 
 config({ path: ".env.local" });
@@ -17,6 +18,8 @@ const saveAsOriginal = false;
 const saveAsWebp = true;
 const webpLossless = false;
 const webpQuality = 100;
+
+const randomPrompt = true;
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -50,6 +53,8 @@ Optional additions:
 – add faint hovering glyphs, energy particles, or reflections hinting at the item’s magical nature
 – for cursed or demonic items, add shadow halos, black fire, or crimson smoke
 – for holy or divine items, add gold dust light and sacred geometry symbols
+
+${randomPrompt ? `${generateRandomLetterString()}` : ""}
 `;
 }
 
