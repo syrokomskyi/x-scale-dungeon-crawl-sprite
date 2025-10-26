@@ -15,13 +15,13 @@ const ai = new GoogleGenAI({
   project: process.env.GEMINI_PROJECT_ID,
 });
 
-// v5.5.0
+// v5.5.1
 function prompt(name: string, description: string) {
   return `
 Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, silhouette, pose, and colours**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy, not a pixel-art.
 
-"${name}"
-"${description}"
+'${name}'
+'${description}'
 
 Render the creature (item, object, building, etc.), its armor, and surroundings with:
 - **Realistic materials** (metal, bone, leather, fabric, stone, mist, etc.) in the colours of the provided image.
@@ -108,11 +108,11 @@ function findMonsterImage(monsterName: string): string | null {
 }
 
 async function generateImage(
-  monsterName: string,
+  name: string,
   description: string,
   originalPath: string,
-): Promise<Buffer> {
-  const fullPrompt = prompt(monsterName, description);
+): Promise<Buffer | null> {
+  const fullPrompt = prompt(name, description);
 
   const imageBuffer = fs.readFileSync(originalPath);
   const imageBase64 = imageBuffer.toString("base64");
@@ -127,29 +127,41 @@ async function generateImage(
     throw new Error(`Unsupported image format: ${ext}`);
   }
 
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash-image",
-    contents: {
-      parts: [
-        { text: fullPrompt },
-        { inlineData: { mimeType, data: imageBase64 } },
-      ],
-    },
-    config: { imageConfig },
-  });
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash-image",
+      contents: {
+        parts: [
+          { text: fullPrompt },
+          { inlineData: { mimeType, data: imageBase64 } },
+        ],
+      },
+      config: { imageConfig },
+    });
 
-  for (const part of response.candidates?.[0]?.content?.parts ?? []) {
-    if (part.inlineData) {
-      const imageData = part.inlineData.data;
-      if (!imageData) {
-        throw new Error("No image data");
+    for (const part of response.candidates?.[0]?.content?.parts ?? []) {
+      if (part.inlineData) {
+        const imageData = part.inlineData.data;
+        if (!imageData) {
+          throw new Error("No image data");
+        }
+
+        return Buffer.from(imageData, "base64");
       }
-
-      return Buffer.from(imageData, "base64");
     }
-  }
 
-  throw new Error("No image generated");
+    // non-fatal image reasons
+    const finishReason = response.candidates?.[0]?.finishReason;
+    if (finishReason === "IMAGE_SAFETY") {
+      console.warn(`\tImage safety reason for ${name}.\n`, fullPrompt);
+      return null;
+    }
+
+    throw new Error("No image generated", { cause: JSON.stringify(response) });
+  } catch (error) {
+    console.error(`Error generating ${name}:`, error);
+    throw new Error("No image generated", { cause: error });
+  }
 }
 
 async function main() {
@@ -181,7 +193,7 @@ async function main() {
       description: description.replaceAll("\n", " ").trim(),
     });
 
-    console.log(`${monsters.length}: ${name}: ${description.slice(0, 60)}...`);
+    console.log(`${monsters.length}: ${name}: ${description}`);
   }
 
   console.log(`Found ${monsters.length} monsters.\n`);
@@ -190,6 +202,7 @@ async function main() {
     fs.mkdirSync(DRAW_DIR, { recursive: true });
   }
 
+  const nonFatalReasons: string[] = [];
   for (const monster of monsters) {
     const originalPath = findMonsterImage(monster.name);
     if (!originalPath) {
@@ -210,13 +223,19 @@ async function main() {
       continue;
     }
 
-    console.log(`Generating ${monster.name}...`);
+    console.log(`Generating ${monster.name} with ${relativePath}...`);
     try {
       const buffer = await generateImage(
         monster.name,
         monster.description,
         originalPath,
       );
+      if (!buffer) {
+        nonFatalReasons.push(relativePath);
+        console.log(`\tSkipping ${relativePath}, non-fatal reason.`);
+        continue;
+      }
+
       fs.writeFileSync(outputPath, buffer);
       console.log(`Saved ${outputPath}`);
     } catch (error) {
@@ -225,6 +244,15 @@ async function main() {
 
     // test
     break;
+  }
+
+  if (nonFatalReasons.length > 0) {
+    console.log(
+      `\nSkipped ${nonFatalReasons.length} generations due to non-fatal reasons.`,
+    );
+    for (const relativePath of nonFatalReasons) {
+      console.log(`\t${relativePath}`);
+    }
   }
 }
 
