@@ -43,9 +43,9 @@ Copy and paste name and description from <https://github.com/crawl/crawl/blob/ma
 Open the Comet Assistant on the Gemini chat.
 
 ```text
-v1.0.0
+v1.2.0
 
-Click the "Download" button for each generated image and save it to the computer.
+Copy the links to the generated images and download them.
 
 ```
 
