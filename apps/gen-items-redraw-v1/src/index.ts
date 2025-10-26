@@ -10,21 +10,21 @@ const ai = new GoogleGenAI({
   project: process.env.GEMINI_PROJECT_ID,
 });
 
-// v1.2.0
+// v1.4.0
 function prompt(description: string) {
   return `
-Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and this description:
+Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and this description: "${description}"
 
-${description}
+The design must preserve the recognizable silhouette and color palette of the original art, but reimagine it as a richly textured artefact from a dark fantasy world, inspired by Dungeon Crawl and alchemical manuscripts. This is a **dramatic, cinematic detailed reinterpretation**, that feels ancient, mystical, and handcrafted, not a copy, not a pixel-art.
 
-The design must preserve the recognizable silhouette and color palette of the original art, but reimagine it as a richly textured artefact from a dark fantasy world, inspired by Dungeon Crawl and alchemical manuscripts. This is a **dramatic, cinematic detailed reinterpretation**, that feels ancient, mystical, and handcrafted, not a copy.
-
-Render it with exquisite material detail — tarnished metal, aged leather, cracked gemstones, runes etched into surfaces, faint glow of ancient magic. 
-Background: neutral parchment or dark void with golden alchemical sigils and subtle vignette, so the focus stays on the object. 
-Lighting: candlelight or arcane glow, emphasizing texture and mystical depth. 
-Style: gothic renaissance + roguelike realism + H.R. Giger + Zdzisław Beksiński + medieval manuscript illumination. 
-Medium: digital painting with painterly brushstrokes and fine engraving detail, as if restored from a forgotten grimoire. 
+Render it with exquisite material detail — tarnished metal, aged leather, cracked gemstones, runes etched into surfaces, faint glow of ancient magic.
+Background: neutral parchment or dark void with golden alchemical sigils and subtle vignette, so the focus stays on the object.
+Lighting: candlelight or arcane glow, emphasizing texture and mystical depth.
+Style: gothic renaissance + roguelike realism + H.R. Giger + Zdzisław Beksiński + medieval manuscript illumination. No inscriptions.
+Medium: digital painting with painterly brushstrokes and fine engraving detail, as if restored from a forgotten grimoire.
 Aspect ratio: square, centered composition, one artefact only.
+
+There should be no inscriptions or signatures on the image.
 
 Optional additions:
 – add faint hovering glyphs, energy particles, or reflections hinting at the item’s magical nature.
