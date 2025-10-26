@@ -43,7 +43,7 @@ export async function aiImageProcessing(
     return "skipped";
   }
 
-  console.log(`Generating '${options.name}' with ${relativePath}...`);
+  console.log(`Generating '${options.name}' with '${relativePath}'...`);
   try {
     const buffer = await generateImage(options.generateImageOptions);
     if (!buffer) {
@@ -109,23 +109,26 @@ export async function generateImage(
     }
   }
 
+  const c = {
+    model,
+    contents: {
+      parts:
+        imageBase64 && mimeType
+          ? [
+              { text: fullPrompt },
+              {
+                inlineData: { mimeType, data: imageBase64 },
+              },
+            ]
+          : [{ text: fullPrompt }],
+    },
+    config: { imageConfig: options.imageConfig },
+  };
+
+  console.log(`${JSON.stringify(c, null, 2)}\n`);
+
   try {
-    const response = await options.ai.models.generateContent({
-      model,
-      contents: {
-        parts: [
-          { text: fullPrompt },
-          // we can work without image
-          {
-            inlineData:
-              mimeType && imageBase64
-                ? { mimeType, data: imageBase64 }
-                : undefined,
-          },
-        ],
-      },
-      config: { imageConfig: options.imageConfig },
-    });
+    const response = await options.ai.models.generateContent(c);
 
     // get image
     for (const part of response.candidates?.[0]?.content?.parts ?? []) {
