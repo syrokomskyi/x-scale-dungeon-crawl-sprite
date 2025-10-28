@@ -17,7 +17,8 @@ const filters = await import("../../public/data/filters.json");
     currentPath.forEach((sel, index) => {
       const btn = document.createElement("button");
       btn.textContent = `[${sel}]`;
-      btn.className = "bg-blue-500 text-white px-2 py-1 rounded";
+      btn.className =
+        "bg-amber-700 text-white px-3 py-2 rounded border-2 border-amber-500 shadow-lg hover:bg-amber-600";
       btn.onclick = () => {
         selected = selected.slice(0, index);
         renderFilter();
@@ -31,7 +32,7 @@ const filters = await import("../../public/data/filters.json");
       const btn = document.createElement("button");
       btn.textContent = cat;
       btn.className =
-        "bg-gray-200 text-black px-2 py-1 rounded hover:bg-gray-300";
+        "bg-stone-600 text-stone-200 px-3 py-2 rounded border-2 border-stone-500 shadow-lg hover:bg-stone-500";
       btn.onclick = () => {
         selected.push(cat);
         renderFilter();
