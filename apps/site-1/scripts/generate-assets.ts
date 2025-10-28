@@ -6,6 +6,7 @@ import {
   readdirSync,
   readFileSync,
   statSync,
+  unlinkSync,
   writeFileSync,
 } from "node:fs";
 import { basename, dirname, join, relative } from "node:path";
@@ -32,6 +33,7 @@ const spritesName: string = basename(spritesDir);
 let totalFiles = 0;
 let copiedFiles = 0;
 let skippedFiles = 0;
+let removedFiles = 0;
 
 function buildFilters(dir: string): Record<string, any> {
   const result: Record<string, any> = {};
@@ -201,8 +203,30 @@ writeFileSync(
   JSON.stringify(images, null, 2),
 );
 console.log("images.json generated.");
+
+// Remove unused PNG files from crawl-ref
+console.log("\nRemoving unused PNG files from crawl-ref...\n");
+const usedIcons = new Set<string>();
+for (const img of images) {
+  if (img.icon) {
+    usedIcons.add(join(publicDir, img.icon));
+  }
+}
+
+const allPngFiles = getAllFiles(crawlRefDirPublic, ".png");
+for (const pngPath of allPngFiles) {
+  const fullPath = join(crawlRefDirPublic, pngPath);
+  if (!usedIcons.has(fullPath)) {
+    unlinkSync(fullPath);
+    removedFiles++;
+    console.log(`Removed ${relative(publicDir, fullPath)}`);
+  }
+}
+console.log(`Removed ${removedFiles} unused PNG files.`);
+
 console.log(`\nTotal files: ${totalFiles}`);
 console.log(`Copied: ${copiedFiles}`);
 console.log(`Skipped: ${skippedFiles}`);
+console.log(`Removed: ${removedFiles}`);
 
 console.log("\nAssets generation completed.\n");
