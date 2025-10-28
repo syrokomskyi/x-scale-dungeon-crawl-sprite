@@ -16,7 +16,7 @@ const { path, name, note, icon } = Astro.props;
   <img
     src={`${import.meta.env.BASE_URL}${path}`}
     alt={name}
-    title={`${name}. ${note}`}
+    title={`${name} | ${note}`}
     class="w-full h-144 object-cover cursor-pointer"
     loading="lazy"
     onclick={`openFullscreen('${path}', '${name}')`}
