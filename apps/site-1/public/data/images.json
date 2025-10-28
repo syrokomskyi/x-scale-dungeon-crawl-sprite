@@ -2,49 +2,3577 @@
   {
     "path": "redraw-v1/god/ashenzari.webp",
     "name": "Ashenzari",
-    "note": "God of divination and knowledge 1",
-    "icon": "crawl-ref/source/rltiles/gui/invocations/ashenzari_scry.png"
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/ashenzari_breakthechains.png"
   },
   {
     "path": "redraw-v1/god/beogh.webp",
     "name": "Beogh",
-    "note": "Orcish god of war",
-    "icon": "crawl-ref/source/rltiles/gui/invocations/beogh_smite.png"
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/beogh_dismiss_apostle.png"
   },
   {
     "path": "redraw-v1/god/cheibriados.webp",
     "name": "Cheibriados",
-    "note": "God of time and patience",
+    "note": "",
     "icon": "crawl-ref/source/rltiles/gui/invocations/cheibriados_bend_time.png"
   },
   {
     "path": "redraw-v1/god/dithmenos.webp",
     "name": "Dithmenos",
-    "note": "God of shadows and darkness",
-    "icon": "crawl-ref/source/rltiles/gui/invocations/dithmenos_shadowslip.png"
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/dithmenos_nightfall.png"
   },
   {
     "path": "redraw-v1/god/elyvilon.webp",
     "name": "Elyvilon",
-    "note": "Goddess of healing and mercy",
-    "icon": "crawl-ref/source/rltiles/gui/invocations/elyvilon_heal_self.png"
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/elyvilon_divine_vigour.png"
+  },
+  {
+    "path": "redraw-v1/god/fedhas.webp",
+    "name": "Fedhas",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/fedhas_grow_ballistomycete.png"
+  },
+  {
+    "path": "redraw-v1/god/gozag.webp",
+    "name": "Gozag",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/gozag_bribe_branch.png"
+  },
+  {
+    "path": "redraw-v1/god/hepliaklqana.webp",
+    "name": "Hepliaklqana",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/ignis.webp",
+    "name": "Ignis",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/ignis_fiery_armour.png"
+  },
+  {
+    "path": "redraw-v1/god/jiyva.webp",
+    "name": "Jiyva",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/jiyva_oozemancy.png"
+  },
+  {
+    "path": "redraw-v1/god/kikubaaqudgha.webp",
+    "name": "Kikubaaqudgha",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/lugonu.webp",
+    "name": "Lugonu",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/lugonu_banish.png"
+  },
+  {
+    "path": "redraw-v1/god/makhleb.webp",
+    "name": "Makhleb",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/makhleb_globe_of_annihilation.png"
+  },
+  {
+    "path": "redraw-v1/god/nemelex_xobeh.webp",
+    "name": "Nemelex Xobeh",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/okawaru.webp",
+    "name": "Okawaru",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/okawaru_duel.png"
+  },
+  {
+    "path": "redraw-v1/god/pakellas.webp",
+    "name": "Pakellas",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/qazlal.webp",
+    "name": "Qazlal",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/qazlal_disaster_area.png"
+  },
+  {
+    "path": "redraw-v1/god/ru.webp",
+    "name": "Ru",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/ru_apocalypse.png"
+  },
+  {
+    "path": "redraw-v1/god/sif_muna.webp",
+    "name": "Sif Muna",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/sif_muna_amnesia.png"
+  },
+  {
+    "path": "redraw-v1/god/the_shining_one.webp",
+    "name": "The Shining One",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/trog.webp",
+    "name": "Trog",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/trog_berserk.png"
+  },
+  {
+    "path": "redraw-v1/god/uskayaw.webp",
+    "name": "Uskayaw",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/uskayaw_grand_finale.png"
+  },
+  {
+    "path": "redraw-v1/god/vehumet.webp",
+    "name": "Vehumet",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/wu_jian.webp",
+    "name": "Wu Jian",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/wu_jian_heavenly_storm.png"
+  },
+  {
+    "path": "redraw-v1/god/xom.webp",
+    "name": "Xom",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/yredelemnul.webp",
+    "name": "Yredelemnul",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/god/zin.webp",
+    "name": "Zin",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/zin_cure_mutations.png"
   },
   {
     "path": "redraw-v1/item/amulet/amethyst.webp",
-    "name": "Amethyst Amulet",
-    "note": "Magical amulet",
+    "name": "Amethyst",
+    "note": "",
     "icon": "crawl-ref/source/rltiles/item/amulet/amethyst.png"
   },
   {
     "path": "redraw-v1/item/amulet/artefact/urand_air.webp",
     "name": "Urand Air",
-    "note": "Magical amulet artefact",
+    "note": "",
     "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_air.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_amulet_invisibility.webp",
+    "name": "Urand Amulet Invisibility",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_amulet_invisibility.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_bloodlust.webp",
+    "name": "Urand Bloodlust",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_bloodlust.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_brooch_of_shielding.webp",
+    "name": "Urand Brooch Of Shielding",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_brooch_of_shielding.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_cekugob.webp",
+    "name": "Urand Cekugob",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_cekugob.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_dreamdust.webp",
+    "name": "Urand Dreamdust",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_dreamdust.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_dreamshard.webp",
+    "name": "Urand Dreamshard",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_dreamshard.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_elemental_vulnerability.webp",
+    "name": "Urand Elemental Vulnerability",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_elemental_vulnerability.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_finger.webp",
+    "name": "Urand Finger",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_finger.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_four_winds.webp",
+    "name": "Urand Four Winds",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_four_winds.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_hermit_pendant.webp",
+    "name": "Urand Hermit Pendant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_hermit_pendant.png"
+  },
+  {
+    "path": "redraw-v1/item/amulet/artefact/urand_vitality.webp",
+    "name": "Urand Vitality",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_vitality.png"
   },
   {
     "path": "redraw-v1/mon/aberrations/glowing_orange_brain.webp",
     "name": "Glowing Orange Brain",
-    "note": "Aberration monster",
+    "note": "",
     "icon": "crawl-ref/source/rltiles/mon/aberrations/glowing_orange_brain.png"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/nameless_horror.webp",
+    "name": "Nameless Horror",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/nameless_horror.png"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/orb_guardian.webp",
+    "name": "Orb Guardian",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/orb_guardian.png"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/screaming_refraction.webp",
+    "name": "Screaming Refraction",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/screaming_refraction.png"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/tentacled_monstrosity.webp",
+    "name": "Tentacled Monstrosity",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/tentacled_monstrosity.png"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/ugly_thing.webp",
+    "name": "Ugly Thing",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/ugly_thing.png"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/unseen_horror.webp",
+    "name": "Unseen Horror",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/unseen_horror.png"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/very_ugly_thing.webp",
+    "name": "Very Ugly Thing",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/very_ugly_thing.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/ancient_zyme.webp",
+    "name": "Ancient Zyme",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/ancient_zyme.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/apocalypse_crab.webp",
+    "name": "Apocalypse Crab",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/apocalypse_crab.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/lurking_horror.webp",
+    "name": "Lurking Horror",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/lurking_horror.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/starcursed_mass.webp",
+    "name": "Starcursed Mass",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/starcursed_mass.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/tentacled_starspawn.webp",
+    "name": "Tentacled Starspawn",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/tentacled_starspawn.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/thrashing_horror.webp",
+    "name": "Thrashing Horror",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/thrashing_horror.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/worldbinder.webp",
+    "name": "Worldbinder",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/worldbinder.png"
+  },
+  {
+    "path": "redraw-v1/mon/abyss/wretched_star.webp",
+    "name": "Wretched Star",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/abyss/wretched_star.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/aspiring_flesh.webp",
+    "name": "Aspiring Flesh",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/aspiring_flesh.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/azure_jelly.webp",
+    "name": "Azure Jelly",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/azure_jelly.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/endoplasm.webp",
+    "name": "Endoplasm",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/endoplasm.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/glowing_shapeshifter.webp",
+    "name": "Glowing Shapeshifter",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/glowing_shapeshifter.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/jelly.webp",
+    "name": "Jelly",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/jelly.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/rockslime.webp",
+    "name": "Rockslime",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/rockslime.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/shapeshifter.webp",
+    "name": "Shapeshifter",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/shapeshifter.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/slime_creature.webp",
+    "name": "Slime Creature",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/slime_creature.png"
+  },
+  {
+    "path": "redraw-v1/mon/amorphous/void_ooze.webp",
+    "name": "Void Ooze",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/amorphous/void_ooze.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/adder.webp",
+    "name": "Adder",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/adder.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/alligator_snapping_turtle.webp",
+    "name": "Alligator Snapping Turtle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/alligator_snapping_turtle.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/alligator.webp",
+    "name": "Alligator",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/alligator.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/anaconda.webp",
+    "name": "Anaconda",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/anaconda.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/ball_python.webp",
+    "name": "Ball Python",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/ball_python.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/basilisk.webp",
+    "name": "Basilisk",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/basilisk.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/bat.webp",
+    "name": "Bat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/bat.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/bennu.webp",
+    "name": "Bennu",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/bennu.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/black_bear.webp",
+    "name": "Black Bear",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/black_bear.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/black_mamba.webp",
+    "name": "Black Mamba",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/black_mamba.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/blink_frog.webp",
+    "name": "Blink Frog",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/blink_frog.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/bombardier_beetle.webp",
+    "name": "Bombardier Beetle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/bombardier_beetle.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/boulder_beetle.webp",
+    "name": "Boulder Beetle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/boulder_beetle.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/brain_worm.webp",
+    "name": "Brain Worm",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/brain_worm.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/broodmother.webp",
+    "name": "Broodmother",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/broodmother.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/bullfrog.webp",
+    "name": "Bullfrog",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/bullfrog.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/bunyip.webp",
+    "name": "Bunyip",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/bunyip.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/butterfly.webp",
+    "name": "Butterfly",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/butterfly.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/cane_toad.webp",
+    "name": "Cane Toad",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/cane_toad.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/catoblepas.webp",
+    "name": "Catoblepas",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/catoblepas.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/caustic_shrike.webp",
+    "name": "Caustic Shrike",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/caustic_shrike.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/clockroach.webp",
+    "name": "Clockroach",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/clockroach.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/crocodile.webp",
+    "name": "Crocodile",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/crocodile.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/crystal_echidna.webp",
+    "name": "Crystal Echidna",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/crystal_echidna.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/culicivora.webp",
+    "name": "Culicivora",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/culicivora.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/dart_slug.webp",
+    "name": "Dart Slug",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/dart_slug.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/death_yak.webp",
+    "name": "Death Yak",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/death_yak.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/dream_sheep.webp",
+    "name": "Dream Sheep",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/dream_sheep.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/elephant.webp",
+    "name": "Elephant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/elephant.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/emperor_scorpion.webp",
+    "name": "Emperor Scorpion",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/emperor_scorpion.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/fire_bat.webp",
+    "name": "Fire Bat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/fire_bat.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/fire_crab.webp",
+    "name": "Fire Crab",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/fire_crab.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/frilled_lizard.webp",
+    "name": "Frilled Lizard",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/frilled_lizard.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/ghost_crab.webp",
+    "name": "Ghost Crab",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/ghost_crab.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/ghost_moth.webp",
+    "name": "Ghost Moth",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/ghost_moth.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/goliath_frog.webp",
+    "name": "Goliath Frog",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/goliath_frog.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/hell_hog.webp",
+    "name": "Hell Hog",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/hell_hog.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/hell_hound.webp",
+    "name": "Hell Hound",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/hell_hound.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/hippogriff.webp",
+    "name": "Hippogriff",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/hippogriff.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/hog.webp",
+    "name": "Hog",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/hog.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/holy_swine.webp",
+    "name": "Holy Swine",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/holy_swine.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/hornet.webp",
+    "name": "Hornet",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/hornet.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/hound.webp",
+    "name": "Hound",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/hound.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/ice_beast.webp",
+    "name": "Ice Beast",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/ice_beast.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/iguana.webp",
+    "name": "Iguana",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/iguana.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/inugami.webp",
+    "name": "Inugami",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/inugami.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/jackal.webp",
+    "name": "Jackal",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/jackal.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/jumping_spider.webp",
+    "name": "Jumping Spider",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/jumping_spider.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/killer_bee.webp",
+    "name": "Killer Bee",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/killer_bee.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/komodo_dragon.webp",
+    "name": "Komodo Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/komodo_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/mana_viper.webp",
+    "name": "Mana Viper",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/mana_viper.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/manticore.webp",
+    "name": "Manticore",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/manticore.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/mountainshell.webp",
+    "name": "Mountainshell",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/mountainshell.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/oblivion_hound.webp",
+    "name": "Oblivion Hound",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/oblivion_hound.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/obsidian_bat.webp",
+    "name": "Obsidian Bat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/obsidian_bat.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/orb_spider.webp",
+    "name": "Orb Spider",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/orb_spider.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/polar_bear.webp",
+    "name": "Polar Bear",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/polar_bear.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/queen_bee.webp",
+    "name": "Queen Bee",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/queen_bee.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/quokka.webp",
+    "name": "Quokka",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/quokka.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/radroach.webp",
+    "name": "Radroach",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/radroach.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/raiju.webp",
+    "name": "Raiju",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/raiju.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/rat.webp",
+    "name": "Rat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/rat.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/raven.webp",
+    "name": "Raven",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/raven.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/redback.webp",
+    "name": "Redback",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/redback.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/ribbon_worm.webp",
+    "name": "Ribbon Worm",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/ribbon_worm.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/scorpion.webp",
+    "name": "Scorpion",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/scorpion.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/sea_snake.webp",
+    "name": "Sea Snake",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/sea_snake.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/seismosaurus.webp",
+    "name": "Seismosaurus",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/seismosaurus.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/shard_shrike.webp",
+    "name": "Shard Shrike",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/shard_shrike.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/shock_serpent.webp",
+    "name": "Shock Serpent",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/shock_serpent.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/sky_beast.webp",
+    "name": "Sky Beast",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/sky_beast.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/skyshark.webp",
+    "name": "Skyshark",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/skyshark.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/snapping_turtle.webp",
+    "name": "Snapping Turtle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/snapping_turtle.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/spark_wasp.webp",
+    "name": "Spark Wasp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/spark_wasp.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/steelbarb_worm.webp",
+    "name": "Steelbarb Worm",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/steelbarb_worm.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/sun_moth.webp",
+    "name": "Sun Moth",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/sun_moth.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/tarantella.webp",
+    "name": "Tarantella",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/tarantella.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/torpor_snail.webp",
+    "name": "Torpor Snail",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/torpor_snail.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/tyrant_leech.webp",
+    "name": "Tyrant Leech",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/tyrant_leech.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/vampire_bat.webp",
+    "name": "Vampire Bat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/vampire_bat.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/vampire_mosquito.webp",
+    "name": "Vampire Mosquito",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/vampire_mosquito.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/warg.webp",
+    "name": "Warg",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/warg.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/water_moccasin.webp",
+    "name": "Water Moccasin",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/water_moccasin.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/wolf_spider.webp",
+    "name": "Wolf Spider",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/wolf_spider.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/wolf.webp",
+    "name": "Wolf",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/wolf.png"
+  },
+  {
+    "path": "redraw-v1/mon/animals/yak.webp",
+    "name": "Yak",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/animals/yak.png"
+  },
+  {
+    "path": "redraw-v1/mon/aquatic/electric_eel.webp",
+    "name": "Electric Eel",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aquatic/electric_eel.png"
+  },
+  {
+    "path": "redraw-v1/mon/aquatic/lava_snake.webp",
+    "name": "Lava Snake",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aquatic/lava_snake.png"
+  },
+  {
+    "path": "redraw-v1/mon/aquatic/octopode.webp",
+    "name": "Octopode",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aquatic/octopode.png"
+  },
+  {
+    "path": "redraw-v1/mon/aquatic/rock_fish.webp",
+    "name": "Rock Fish",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aquatic/rock_fish.png"
+  },
+  {
+    "path": "redraw-v1/mon/aquatic/swamp_worm.webp",
+    "name": "Swamp Worm",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/aquatic/swamp_worm.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/armataur.webp",
+    "name": "Armataur",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/armataur.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/barachi.webp",
+    "name": "Barachi",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/barachi.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/entropy_weaver.webp",
+    "name": "Entropy Weaver",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/entropy_weaver.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/faun.webp",
+    "name": "Faun",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/faun.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/fenstrider_witch.webp",
+    "name": "Fenstrider Witch",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/fenstrider_witch.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/formicid.webp",
+    "name": "Formicid",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/formicid.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/guardian_serpent.webp",
+    "name": "Guardian Serpent",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/guardian_serpent.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/guardian_sphinx.webp",
+    "name": "Guardian Sphinx",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/guardian_sphinx.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/harpy.webp",
+    "name": "Harpy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/harpy.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/jorogumo.webp",
+    "name": "Jorogumo",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/jorogumo.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/meliai.webp",
+    "name": "Meliai",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/meliai.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/merfolk/merfolk_aquamancer.webp",
+    "name": "Merfolk Aquamancer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/merfolk/merfolk_aquamancer.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/merfolk/merfolk_avatar.webp",
+    "name": "Merfolk Avatar",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/merfolk/merfolk_avatar.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/merfolk/merfolk_impaler.webp",
+    "name": "Merfolk Impaler",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/merfolk/merfolk_impaler.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/merfolk/merfolk_javelineer.webp",
+    "name": "Merfolk Javelineer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/merfolk/merfolk_javelineer.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/merfolk/merfolk_siren.webp",
+    "name": "Merfolk Siren",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/merfolk/merfolk_siren.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/merfolk/merfolk.webp",
+    "name": "Merfolk",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/merfolk/merfolk.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/minotaur.webp",
+    "name": "Minotaur",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/minotaur.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/naga/naga_mage.webp",
+    "name": "Naga Mage",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/naga/naga_mage.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/naga/naga_ritualist.webp",
+    "name": "Naga Ritualist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/naga/naga_ritualist.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/naga/naga_sharpshooter.webp",
+    "name": "Naga Sharpshooter",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/naga/naga_sharpshooter.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/naga/naga_warrior.webp",
+    "name": "Naga Warrior",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/naga/naga_warrior.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/naga/naga.webp",
+    "name": "Naga",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/naga/naga.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/naga/nagaraja.webp",
+    "name": "Nagaraja",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/naga/nagaraja.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/salamander_mystic.webp",
+    "name": "Salamander Mystic",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/salamander_mystic.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/salamander_tyrant.webp",
+    "name": "Salamander Tyrant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/salamander_tyrant.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/salamander.webp",
+    "name": "Salamander",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/salamander.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/satyr.webp",
+    "name": "Satyr",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/satyr.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/sphinx_marauder.webp",
+    "name": "Sphinx Marauder",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/sphinx_marauder.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/taurs/centaur_warrior.webp",
+    "name": "Centaur Warrior",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/taurs/centaur_warrior.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/taurs/centaur.webp",
+    "name": "Centaur",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/taurs/centaur.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/taurs/yaktaur_captain.webp",
+    "name": "Yaktaur Captain",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/taurs/yaktaur_captain.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/taurs/yaktaur.webp",
+    "name": "Yaktaur",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/taurs/yaktaur.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/tengu_conjurer.webp",
+    "name": "Tengu Conjurer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/tengu_conjurer.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/tengu_reaver.webp",
+    "name": "Tengu Reaver",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/tengu_reaver.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/tengu_warrior.webp",
+    "name": "Tengu Warrior",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/tengu_warrior.png"
+  },
+  {
+    "path": "redraw-v1/mon/demihumanoids/tengu.webp",
+    "name": "Tengu",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demihumanoids/tengu.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/balrug.webp",
+    "name": "Balrug",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/balrug.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/blizzard_demon.webp",
+    "name": "Blizzard Demon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/blizzard_demon.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/brimstone_fiend.webp",
+    "name": "Brimstone Fiend",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/brimstone_fiend.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/cacodemon.webp",
+    "name": "Cacodemon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/cacodemon.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/cerulean_imp.webp",
+    "name": "Cerulean Imp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/cerulean_imp.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/crimson_imp.webp",
+    "name": "Crimson Imp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/crimson_imp.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/demonic_crawler.webp",
+    "name": "Demonic Crawler",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/demonic_crawler.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/drude.webp",
+    "name": "Drude",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/drude.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/efreet.webp",
+    "name": "Efreet",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/efreet.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/executioner.webp",
+    "name": "Executioner",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/executioner.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/green_death.webp",
+    "name": "Green Death",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/green_death.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/hell_sentinel.webp",
+    "name": "Hell Sentinel",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/hell_sentinel.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/hellion.webp",
+    "name": "Hellion",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/hellion.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/hellwing.webp",
+    "name": "Hellwing",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/hellwing.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/ice_devil.webp",
+    "name": "Ice Devil",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/ice_devil.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/ice_fiend.webp",
+    "name": "Ice Fiend",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/ice_fiend.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/iron_imp.webp",
+    "name": "Iron Imp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/iron_imp.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/lemure.webp",
+    "name": "Lemure",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/lemure.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/nekomata.webp",
+    "name": "Nekomata",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/nekomata.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/neqoxec.webp",
+    "name": "Neqoxec",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/neqoxec.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/orange_demon.webp",
+    "name": "Orange Demon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/orange_demon.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/rakshasa.webp",
+    "name": "Rakshasa",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/rakshasa.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/reaper.webp",
+    "name": "Reaper",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/reaper.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/red_devil.webp",
+    "name": "Red Devil",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/red_devil.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/rust_devil.webp",
+    "name": "Rust Devil",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/rust_devil.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/shadow_demon.webp",
+    "name": "Shadow Demon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/shadow_demon.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/shadow_imp.webp",
+    "name": "Shadow Imp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/shadow_imp.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/sin_beast.webp",
+    "name": "Sin Beast",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/sin_beast.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/sixfirhy.webp",
+    "name": "Sixfirhy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/sixfirhy.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/smoke_demon.webp",
+    "name": "Smoke Demon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/smoke_demon.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/soul_eater.webp",
+    "name": "Soul Eater",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/soul_eater.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/sun_demon.webp",
+    "name": "Sun Demon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/sun_demon.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/tormentor.webp",
+    "name": "Tormentor",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/tormentor.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/tzitzimitl.webp",
+    "name": "Tzitzimitl",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/tzitzimitl.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/ufetubus.webp",
+    "name": "Ufetubus",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/ufetubus.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/wendigo.webp",
+    "name": "Wendigo",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/wendigo.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/white_imp.webp",
+    "name": "White Imp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/white_imp.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/ynoxinul.webp",
+    "name": "Ynoxinul",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/ynoxinul.png"
+  },
+  {
+    "path": "redraw-v1/mon/demons/zykzyl.webp",
+    "name": "Zykzyl",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/demons/zykzyl.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/acid_dragon.webp",
+    "name": "Acid Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/acid_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/death_drake.webp",
+    "name": "Death Drake",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/death_drake.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/fire_dragon.webp",
+    "name": "Fire Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/fire_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/golden_dragon.webp",
+    "name": "Golden Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/golden_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/ice_dragon.webp",
+    "name": "Ice Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/ice_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/iron_dragon.webp",
+    "name": "Iron Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/iron_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/lindwurm.webp",
+    "name": "Lindwurm",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/lindwurm.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/quicksilver_dragon.webp",
+    "name": "Quicksilver Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/quicksilver_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/rime_drake.webp",
+    "name": "Rime Drake",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/rime_drake.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/shadow_dragon.webp",
+    "name": "Shadow Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/shadow_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/steam_dragon.webp",
+    "name": "Steam Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/steam_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/storm_dragon.webp",
+    "name": "Storm Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/storm_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/swamp_dragon.webp",
+    "name": "Swamp Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/swamp_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/swamp_drake.webp",
+    "name": "Swamp Drake",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/swamp_drake.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/wind_drake.webp",
+    "name": "Wind Drake",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/wind_drake.png"
+  },
+  {
+    "path": "redraw-v1/mon/dragons/wyvern.webp",
+    "name": "Wyvern",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/dragons/wyvern.png"
+  },
+  {
+    "path": "redraw-v1/mon/eyes/eye_of_devastation.webp",
+    "name": "Eye Of Devastation",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/eyes/eye_of_devastation.png"
+  },
+  {
+    "path": "redraw-v1/mon/eyes/glass_eye.webp",
+    "name": "Glass Eye",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/eyes/glass_eye.png"
+  },
+  {
+    "path": "redraw-v1/mon/eyes/golden_eye.webp",
+    "name": "Golden Eye",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/eyes/golden_eye.png"
+  },
+  {
+    "path": "redraw-v1/mon/eyes/great_orb_of_eyes.webp",
+    "name": "Great Orb Of Eyes",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/eyes/great_orb_of_eyes.png"
+  },
+  {
+    "path": "redraw-v1/mon/eyes/shining_eye.webp",
+    "name": "Shining Eye",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/eyes/shining_eye.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/ballistomycete_spore.webp",
+    "name": "Ballistomycete Spore",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/ballistomycete_spore.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/ballistomycete.webp",
+    "name": "Ballistomycete",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/ballistomycete.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/briar_patch.webp",
+    "name": "Briar Patch",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/briar_patch.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/bush.webp",
+    "name": "Bush",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/bush.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/deathcap.webp",
+    "name": "Deathcap",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/deathcap.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/oklob_plant.webp",
+    "name": "Oklob Plant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/oklob_plant.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/oklob_sapling.webp",
+    "name": "Oklob Sapling",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/oklob_sapling.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/sacred_lotus.webp",
+    "name": "Sacred Lotus",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/sacred_lotus.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/scrub_nettle.webp",
+    "name": "Scrub Nettle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/scrub_nettle.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/sleepcap.webp",
+    "name": "Sleepcap",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/sleepcap.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/thorn_hunter.webp",
+    "name": "Thorn Hunter",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/thorn_hunter.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/vine_stalker.webp",
+    "name": "Vine Stalker",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/vine_stalker.png"
+  },
+  {
+    "path": "redraw-v1/mon/fungi_plants/wandering_mushroom.webp",
+    "name": "Wandering Mushroom",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/fungi_plants/wandering_mushroom.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/angel.webp",
+    "name": "Angel",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/angel.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/apis.webp",
+    "name": "Apis",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/apis.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/cherub.webp",
+    "name": "Cherub",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/cherub.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/daeva.webp",
+    "name": "Daeva",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/daeva.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/fravashi.webp",
+    "name": "Fravashi",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/fravashi.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/ophan.webp",
+    "name": "Ophan",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/ophan.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/pearl_dragon.webp",
+    "name": "Pearl Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/pearl_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/holy/seraph.webp",
+    "name": "Seraph",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/holy/seraph.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/boggart.webp",
+    "name": "Boggart",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/boggart.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/deep_dwarf.webp",
+    "name": "Deep Dwarf",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/deep_dwarf.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/deep_troll_earth_mage.webp",
+    "name": "Deep Troll Earth Mage",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/deep_troll_earth_mage.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/deep_troll_shaman.webp",
+    "name": "Deep Troll Shaman",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/deep_troll_shaman.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/deep_troll.webp",
+    "name": "Deep Troll",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/deep_troll.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/demigod.webp",
+    "name": "Demigod",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/demigod.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/demonspawn/blood_saint.webp",
+    "name": "Blood Saint",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/demonspawn/blood_saint.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/demonspawn/corrupter.webp",
+    "name": "Corrupter",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/demonspawn/corrupter.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/demonspawn/demonspawn.webp",
+    "name": "Demonspawn",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/demonspawn/demonspawn.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/demonspawn/soul_scholar.webp",
+    "name": "Soul Scholar",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/demonspawn/soul_scholar.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/demonspawn/warmonger.webp",
+    "name": "Warmonger",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/demonspawn/warmonger.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/dryad.webp",
+    "name": "Dryad",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/dryad.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/dwarf.webp",
+    "name": "Dwarf",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/dwarf.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/eleionoma.webp",
+    "name": "Eleionoma",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/eleionoma.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_annihilator.webp",
+    "name": "Deep Elf Annihilator",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_annihilator.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_archer.webp",
+    "name": "Deep Elf Archer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_archer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_blademaster.webp",
+    "name": "Deep Elf Blademaster",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_blademaster.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_death_mage.webp",
+    "name": "Deep Elf Death Mage",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_death_mage.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_demonologist.webp",
+    "name": "Deep Elf Demonologist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_demonologist.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_high_priest.webp",
+    "name": "Deep Elf High Priest",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_high_priest.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_knight.webp",
+    "name": "Deep Elf Knight",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_knight.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_master_archer.webp",
+    "name": "Deep Elf Master Archer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_master_archer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_pyromancer.webp",
+    "name": "Deep Elf Pyromancer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_pyromancer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_sorcerer.webp",
+    "name": "Deep Elf Sorcerer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_sorcerer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/deep_elf_zephyrmancer.webp",
+    "name": "Deep Elf Zephyrmancer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/deep_elf_zephyrmancer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/elves/elf.webp",
+    "name": "Elf",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/elves/elf.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/cactus_giant.webp",
+    "name": "Cactus Giant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/cactus_giant.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/cyclops.webp",
+    "name": "Cyclops",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/cyclops.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/ettin.webp",
+    "name": "Ettin",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/ettin.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/fire_giant.webp",
+    "name": "Fire Giant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/fire_giant.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/frost_giant.webp",
+    "name": "Frost Giant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/frost_giant.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/iron_giant.webp",
+    "name": "Iron Giant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/iron_giant.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/juggernaut.webp",
+    "name": "Juggernaut",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/juggernaut.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/protean_progenitor.webp",
+    "name": "Protean Progenitor",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/protean_progenitor.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/stone_giant.webp",
+    "name": "Stone Giant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/stone_giant.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/tainted_leviathan.webp",
+    "name": "Tainted Leviathan",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/tainted_leviathan.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/giants/titan.webp",
+    "name": "Titan",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/giants/titan.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/gnoll_sergeant.webp",
+    "name": "Gnoll Sergeant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/gnoll_sergeant.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/gnoll_shaman.webp",
+    "name": "Gnoll Shaman",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/gnoll_shaman.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/gnoll.webp",
+    "name": "Gnoll",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/gnoll.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/goblin_rider_good_spear.webp",
+    "name": "Goblin Rider Good Spear",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/goblin_rider_good_spear.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/goblin_rider_spearless.webp",
+    "name": "Goblin Rider Spearless",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/goblin_rider_spearless.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/goblin_rider.webp",
+    "name": "Goblin Rider",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/goblin_rider.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/goblin.webp",
+    "name": "Goblin",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/goblin.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/halfling.webp",
+    "name": "Halfling",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/halfling.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/hobgoblin.webp",
+    "name": "Hobgoblin",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/hobgoblin.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/arcanist.webp",
+    "name": "Arcanist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/arcanist.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/burial_acolyte.webp",
+    "name": "Burial Acolyte",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/burial_acolyte.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/death_knight.webp",
+    "name": "Death Knight",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/death_knight.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/hell_knight.webp",
+    "name": "Hell Knight",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/hell_knight.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/human.webp",
+    "name": "Human",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/human.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/imperial_myrmidon.webp",
+    "name": "Imperial Myrmidon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/imperial_myrmidon.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/ironbound_beastmaster.webp",
+    "name": "Ironbound Beastmaster",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/ironbound_beastmaster.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/ironbound_convoker.webp",
+    "name": "Ironbound Convoker",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/ironbound_convoker.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/ironbound_frostheart.webp",
+    "name": "Ironbound Frostheart",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/ironbound_frostheart.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/ironbound_preserver.webp",
+    "name": "Ironbound Preserver",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/ironbound_preserver.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/killer_klown_blue.webp",
+    "name": "Killer Klown Blue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/killer_klown_blue.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/killer_klown_green.webp",
+    "name": "Killer Klown Green",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/killer_klown_green.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/killer_klown_purple.webp",
+    "name": "Killer Klown Purple",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/killer_klown_purple.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/killer_klown_red.webp",
+    "name": "Killer Klown Red",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/killer_klown_red.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/killer_klown_yellow.webp",
+    "name": "Killer Klown Yellow",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/killer_klown_yellow.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/necromancer.webp",
+    "name": "Necromancer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/necromancer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/occultist.webp",
+    "name": "Occultist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/occultist.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/ragged_hierophant.webp",
+    "name": "Ragged Hierophant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/ragged_hierophant.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/servant_of_whispers.webp",
+    "name": "Servant Of Whispers",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/servant_of_whispers.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/slave_freed.webp",
+    "name": "Slave Freed",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/slave_freed.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/slave.webp",
+    "name": "Slave",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/slave.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/vault_guard.webp",
+    "name": "Vault Guard",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/vault_guard.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/vault_sentinel.webp",
+    "name": "Vault Sentinel",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/vault_sentinel.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/humans/vault_warden.webp",
+    "name": "Vault Warden",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/humans/vault_warden.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/iron_troll.webp",
+    "name": "Iron Troll",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/iron_troll.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/ironbound_mechanist.webp",
+    "name": "Ironbound Mechanist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/ironbound_mechanist.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/ironbound_thunderhulk.webp",
+    "name": "Ironbound Thunderhulk",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/ironbound_thunderhulk.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/kobold_blastminer.webp",
+    "name": "Kobold Blastminer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/kobold_blastminer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/kobold_brigand.webp",
+    "name": "Kobold Brigand",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/kobold_brigand.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/kobold_demonologist.webp",
+    "name": "Kobold Demonologist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/kobold_demonologist.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/kobold_fleshcrafter.webp",
+    "name": "Kobold Fleshcrafter",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/kobold_fleshcrafter.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/kobold.webp",
+    "name": "Kobold",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/kobold.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/meteoran.webp",
+    "name": "Meteoran",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/meteoran.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/ogr.webp",
+    "name": "Ogr",
+    "note": "",
+    "icon": ""
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/ogre_mage.webp",
+    "name": "Ogre Mage",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/ogre_mage.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/ogre.webp",
+    "name": "Ogre",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/ogre.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/oni_incarcerator.webp",
+    "name": "Oni Incarcerator",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/oni_incarcerator.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/oni.webp",
+    "name": "Oni",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/oni.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc_high_priest.webp",
+    "name": "Orc High Priest",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc_high_priest.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc_knight.webp",
+    "name": "Orc Knight",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc_knight.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc_priest.webp",
+    "name": "Orc Priest",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc_priest.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc_sorcerer.webp",
+    "name": "Orc Sorcerer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc_sorcerer.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc_warlord.webp",
+    "name": "Orc Warlord",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc_warlord.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc_warrior.webp",
+    "name": "Orc Warrior",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc_warrior.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc_wizard.webp",
+    "name": "Orc Wizard",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc_wizard.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/orcs/orc.webp",
+    "name": "Orc",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/orcs/orc.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/spriggans/spriggan_air_mage.webp",
+    "name": "Spriggan Air Mage",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/spriggans/spriggan_air_mage.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/spriggans/spriggan_berserker.webp",
+    "name": "Spriggan Berserker",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/spriggans/spriggan_berserker.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/spriggans/spriggan_defender.webp",
+    "name": "Spriggan Defender",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/spriggans/spriggan_defender.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/spriggans/spriggan_druid.webp",
+    "name": "Spriggan Druid",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/spriggans/spriggan_druid.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/spriggans/spriggan_rider.webp",
+    "name": "Spriggan Rider",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/spriggans/spriggan_rider.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/spriggans/spriggan.webp",
+    "name": "Spriggan",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/spriggans/spriggan.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/swamp_ogre.webp",
+    "name": "Swamp Ogre",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/swamp_ogre.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/troll.webp",
+    "name": "Troll",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/troll.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/two_headed_ogre.webp",
+    "name": "Two Headed Ogre",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/two_headed_ogre.png"
+  },
+  {
+    "path": "redraw-v1/mon/humanoids/water_nymph.webp",
+    "name": "Water Nymph",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/humanoids/water_nymph.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/air_elemental.webp",
+    "name": "Air Elemental",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/air_elemental.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/ancestor.webp",
+    "name": "Ancestor",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/ancestor.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/armour_echo.webp",
+    "name": "Armour Echo",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/armour_echo.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/ball_lightning.webp",
+    "name": "Ball Lightning",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/ball_lightning.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/battlesphere.webp",
+    "name": "Battlesphere",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/battlesphere.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/blazeheart_core.webp",
+    "name": "Blazeheart Core",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/blazeheart_core.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/blazeheart_golem.webp",
+    "name": "Blazeheart Golem",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/blazeheart_golem.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/bomblet.webp",
+    "name": "Bomblet",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/bomblet.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/clockwork_bee.webp",
+    "name": "Clockwork Bee",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/clockwork_bee.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/crystal_guardian.webp",
+    "name": "Crystal Guardian",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/crystal_guardian.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/earth_elemental.webp",
+    "name": "Earth Elemental",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/earth_elemental.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/electric_golem.webp",
+    "name": "Electric Golem",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/electric_golem.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/fire_elemental.webp",
+    "name": "Fire Elemental",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/fire_elemental.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/flesh_golem.webp",
+    "name": "Flesh Golem",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/flesh_golem.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/foxfire.webp",
+    "name": "Foxfire",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/foxfire.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/gargoyle.webp",
+    "name": "Gargoyle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/gargoyle.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/iron_elemental.webp",
+    "name": "Iron Elemental",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/iron_elemental.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/iron_golem.webp",
+    "name": "Iron Golem",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/iron_golem.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/living_spell.webp",
+    "name": "Living Spell",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/living_spell.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/molten_gargoyle.webp",
+    "name": "Molten Gargoyle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/molten_gargoyle.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/monarch_bomb.webp",
+    "name": "Monarch Bomb",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/monarch_bomb.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/nargun.webp",
+    "name": "Nargun",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/nargun.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/orb_of_entropy.webp",
+    "name": "Orb Of Entropy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/orb_of_entropy.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/orb_of_fire.webp",
+    "name": "Orb Of Fire",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/orb_of_fire.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/orb_of_winter.webp",
+    "name": "Orb Of Winter",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/orb_of_winter.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/peacekeeper.webp",
+    "name": "Peacekeeper",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/peacekeeper.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/phalanx_beetle.webp",
+    "name": "Phalanx Beetle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/phalanx_beetle.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/platinum_paragon.webp",
+    "name": "Platinum Paragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/platinum_paragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/quicksilver_elemental.webp",
+    "name": "Quicksilver Elemental",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/quicksilver_elemental.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/rending_blade.webp",
+    "name": "Rending Blade",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/rending_blade.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/saltling.webp",
+    "name": "Saltling",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/saltling.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/shadow_puppet.webp",
+    "name": "Shadow Puppet",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/shadow_puppet.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/shooting_star.webp",
+    "name": "Shooting Star",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/shooting_star.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/solar_ember.webp",
+    "name": "Solar Ember",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/solar_ember.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/spellspark_servitor.webp",
+    "name": "Spellspark Servitor",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/spellspark_servitor.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/splinterfrost_barricade.webp",
+    "name": "Splinterfrost Barricade",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/splinterfrost_barricade.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/toenail_golem.webp",
+    "name": "Toenail Golem",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/toenail_golem.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/undertaker.webp",
+    "name": "Undertaker",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/undertaker.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/ushabti.webp",
+    "name": "Ushabti",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/ushabti.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/walking_alembic.webp",
+    "name": "Walking Alembic",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/walking_alembic.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/war_gargoyle.webp",
+    "name": "War Gargoyle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/war_gargoyle.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/water_elemental.webp",
+    "name": "Water Elemental",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/water_elemental.png"
+  },
+  {
+    "path": "redraw-v1/mon/nonliving/will_o_the_wisp.webp",
+    "name": "Will O The Wisp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/nonliving/will_o_the_wisp.png"
+  },
+  {
+    "path": "redraw-v1/mon/panlord/pandemonium_lord.webp",
+    "name": "Pandemonium Lord",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/panlord/pandemonium_lord.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/destroyer.webp",
+    "name": "Destroyer",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/destroyer.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/dimme.webp",
+    "name": "Dimme",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/dimme.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/large_bag_of_meat.webp",
+    "name": "Large Bag Of Meat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/large_bag_of_meat.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/meat_hydra.webp",
+    "name": "Meat Hydra",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/meat_hydra.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/meatlord.webp",
+    "name": "Meatlord",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/meatlord.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/orb_golem.webp",
+    "name": "Orb Golem",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/orb_golem.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/scourge.webp",
+    "name": "Scourge",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/scourge.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/unspeakable.webp",
+    "name": "Unspeakable",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/unspeakable.png"
+  },
+  {
+    "path": "redraw-v1/mon/sprint/witch.webp",
+    "name": "Witch",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/sprint/witch.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/block_of_ice.webp",
+    "name": "Block Of Ice",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/block_of_ice.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/diamond_sawblade.webp",
+    "name": "Diamond Sawblade",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/diamond_sawblade.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/hellfire_mortar.webp",
+    "name": "Hellfire Mortar",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/hellfire_mortar.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/hoarfrost_cannon.webp",
+    "name": "Hoarfrost Cannon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/hoarfrost_cannon.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/ice_statue.webp",
+    "name": "Ice Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/ice_statue.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/lightning_spire.webp",
+    "name": "Lightning Spire",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/lightning_spire.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/obsidian_statue.webp",
+    "name": "Obsidian Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/obsidian_statue.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/orange_crystal_statue.webp",
+    "name": "Orange Crystal Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/orange_crystal_statue.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/pillar_of_salt.webp",
+    "name": "Pillar Of Salt",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/pillar_of_salt.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/shadow_turret.webp",
+    "name": "Shadow Turret",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/shadow_turret.png"
+  },
+  {
+    "path": "redraw-v1/mon/statues/training_dummy.webp",
+    "name": "Training Dummy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/statues/training_dummy.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/ancient_champion.webp",
+    "name": "Ancient Champion",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/ancient_champion.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/ancient_lich.webp",
+    "name": "Ancient Lich",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/ancient_lich.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/bes_kemwar.webp",
+    "name": "Bes Kemwar",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/bes_kemwar.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/bloated_husk.webp",
+    "name": "Bloated Husk",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/bloated_husk.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/bog_body.webp",
+    "name": "Bog Body",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/bog_body.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/bone_dragon.webp",
+    "name": "Bone Dragon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/bone_dragon.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/cognitogaunt.webp",
+    "name": "Cognitogaunt",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/cognitogaunt.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/curse_skull.webp",
+    "name": "Curse Skull",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/curse_skull.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/curse_toe.webp",
+    "name": "Curse Toe",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/curse_toe.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/death_cob.webp",
+    "name": "Death Cob",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/death_cob.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/death_scarab.webp",
+    "name": "Death Scarab",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/death_scarab.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/dread_lich.webp",
+    "name": "Dread Lich",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/dread_lich.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/drowned_soul.webp",
+    "name": "Drowned Soul",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/drowned_soul.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/eidolon.webp",
+    "name": "Eidolon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/eidolon.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/flayed_ghost.webp",
+    "name": "Flayed Ghost",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/flayed_ghost.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/freezing_wraith.webp",
+    "name": "Freezing Wraith",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/freezing_wraith.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/ghost.webp",
+    "name": "Ghost",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/ghost.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/ghoul.webp",
+    "name": "Ghoul",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/ghoul.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/guardian_mummy.webp",
+    "name": "Guardian Mummy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/guardian_mummy.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/halazid_warlock.webp",
+    "name": "Halazid Warlock",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/halazid_warlock.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/jiangshi.webp",
+    "name": "Jiangshi",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/jiangshi.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/laughing_skull.webp",
+    "name": "Laughing Skull",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/laughing_skull.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/lich.webp",
+    "name": "Lich",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/lich.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/lost_soul.webp",
+    "name": "Lost Soul",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/lost_soul.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/marrowcuda.webp",
+    "name": "Marrowcuda",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/marrowcuda.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/martyred_shade.webp",
+    "name": "Martyred Shade",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/martyred_shade.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/mummy_priest.webp",
+    "name": "Mummy Priest",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/mummy_priest.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/mummy.webp",
+    "name": "Mummy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/mummy.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/necrophage.webp",
+    "name": "Necrophage",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/necrophage.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/phantasmal_warrior.webp",
+    "name": "Phantasmal Warrior",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/phantasmal_warrior.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/phantom.webp",
+    "name": "Phantom",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/phantom.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/pharaoh_ant.webp",
+    "name": "Pharaoh Ant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/pharaoh_ant.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/poltergeist.webp",
+    "name": "Poltergeist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/poltergeist.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/polterguardian.webp",
+    "name": "Polterguardian",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/polterguardian.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/profane_servitor.webp",
+    "name": "Profane Servitor",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/profane_servitor.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/putrid_mouth.webp",
+    "name": "Putrid Mouth",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/putrid_mouth.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/revenant_soulmonger.webp",
+    "name": "Revenant Soulmonger",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/revenant_soulmonger.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/revenant.webp",
+    "name": "Revenant",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/revenant.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/royal_mummy.webp",
+    "name": "Royal Mummy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/royal_mummy.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/searing_wretch.webp",
+    "name": "Searing Wretch",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/searing_wretch.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/shadow_wraith.webp",
+    "name": "Shadow Wraith",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/shadow_wraith.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/shadowghast.webp",
+    "name": "Shadowghast",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/shadowghast.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/silent_spectre.webp",
+    "name": "Silent Spectre",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/silent_spectre.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/skeletal_warrior.webp",
+    "name": "Skeletal Warrior",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/skeletal_warrior.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/soul_wisp.webp",
+    "name": "Soul Wisp",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/soul_wisp.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/stoker.webp",
+    "name": "Stoker",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/stoker.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/undying_armoury.webp",
+    "name": "Undying Armoury",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/undying_armoury.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/vampire_bloodprince.webp",
+    "name": "Vampire Bloodprince",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/vampire_bloodprince.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/vampire_knight.webp",
+    "name": "Vampire Knight",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/vampire_knight.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/vampire_mage.webp",
+    "name": "Vampire Mage",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/vampire_mage.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/vampire.webp",
+    "name": "Vampire",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/vampire.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/weeping_skull.webp",
+    "name": "Weeping Skull",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/weeping_skull.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/wight.webp",
+    "name": "Wight",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/wight.png"
+  },
+  {
+    "path": "redraw-v1/mon/undead/wraith.webp",
+    "name": "Wraith",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/undead/wraith.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/aizul.webp",
+    "name": "Aizul",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/aizul.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/amaemon.webp",
+    "name": "Amaemon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/amaemon.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/antaeus.webp",
+    "name": "Antaeus",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/antaeus.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/arachne.webp",
+    "name": "Arachne",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/arachne.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/asmodeus.webp",
+    "name": "Asmodeus",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/asmodeus.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/asterion.webp",
+    "name": "Asterion",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/asterion.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/azrael.webp",
+    "name": "Azrael",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/azrael.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/boris.webp",
+    "name": "Boris",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/boris.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/cassandra.webp",
+    "name": "Cassandra",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/cassandra.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/cerebov.webp",
+    "name": "Cerebov",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/cerebov.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/chuck.webp",
+    "name": "Chuck",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/chuck.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/crazy_yiuf.webp",
+    "name": "Crazy Yiuf",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/crazy_yiuf.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/dispater.webp",
+    "name": "Dispater",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/dispater.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/dissolution.webp",
+    "name": "Dissolution",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/dissolution.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/donald.webp",
+    "name": "Donald",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/donald.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/dowan.webp",
+    "name": "Dowan",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/dowan.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/duvessa.webp",
+    "name": "Duvessa",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/duvessa.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/edmund.webp",
+    "name": "Edmund",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/edmund.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/enchantress.webp",
+    "name": "Enchantress",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/enchantress.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/ereshkigal.webp",
+    "name": "Ereshkigal",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/ereshkigal.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/erica.webp",
+    "name": "Erica",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/erica.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/erolcha.webp",
+    "name": "Erolcha",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/erolcha.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/eustachio.webp",
+    "name": "Eustachio",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/eustachio.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/fannar.webp",
+    "name": "Fannar",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/fannar.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/frances.webp",
+    "name": "Frances",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/frances.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/frederick.webp",
+    "name": "Frederick",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/frederick.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/gastronok.webp",
+    "name": "Gastronok",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/gastronok.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/geryon.webp",
+    "name": "Geryon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/geryon.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/gloorx_vloq.webp",
+    "name": "Gloorx Vloq",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/gloorx_vloq.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/grinder.webp",
+    "name": "Grinder",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/grinder.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/grum.webp",
+    "name": "Grum",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/grum.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/grunn.webp",
+    "name": "Grunn",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/grunn.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/harold.webp",
+    "name": "Harold",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/harold.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/head_instructor.webp",
+    "name": "Head Instructor",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/head_instructor.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/ignacio.webp",
+    "name": "Ignacio",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/ignacio.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/ijyb.webp",
+    "name": "Ijyb",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/ijyb.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/ilsuiw.webp",
+    "name": "Ilsuiw",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/ilsuiw.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/jeremiah.webp",
+    "name": "Jeremiah",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/jeremiah.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/jessica.webp",
+    "name": "Jessica",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/jessica.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/jorgrun.webp",
+    "name": "Jorgrun",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/jorgrun.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/jory.webp",
+    "name": "Jory",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/jory.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/joseph.webp",
+    "name": "Joseph",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/joseph.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/josephina.webp",
+    "name": "Josephina",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/josephina.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/josephine.webp",
+    "name": "Josephine",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/josephine.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/khufu.webp",
+    "name": "Khufu",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/khufu.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/kirke.webp",
+    "name": "Kirke",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/kirke.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/lodul.webp",
+    "name": "Lodul",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/lodul.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/lom_lobon.webp",
+    "name": "Lom Lobon",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/lom_lobon.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/louise.webp",
+    "name": "Louise",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/louise.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/maggie.webp",
+    "name": "Maggie",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/maggie.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/mara.webp",
+    "name": "Mara",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/mara.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/margery.webp",
+    "name": "Margery",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/margery.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/maurice.webp",
+    "name": "Maurice",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/maurice.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/menkaure.webp",
+    "name": "Menkaure",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/menkaure.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/mennas.webp",
+    "name": "Mennas",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/mennas.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/mlioglotl.webp",
+    "name": "Mlioglotl",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/mlioglotl.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/mnoleg.webp",
+    "name": "Mnoleg",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/mnoleg.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/murray.webp",
+    "name": "Murray",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/murray.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/natasha.webp",
+    "name": "Natasha",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/natasha.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/nellie.webp",
+    "name": "Nellie",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/nellie.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/nergalle.webp",
+    "name": "Nergalle",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/nergalle.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/nessos.webp",
+    "name": "Nessos",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/nessos.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/nikola.webp",
+    "name": "Nikola",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/nikola.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/norris.webp",
+    "name": "Norris",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/norris.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/parghit.webp",
+    "name": "Parghit",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/parghit.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/pargi.webp",
+    "name": "Pargi",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/pargi.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/pikel.webp",
+    "name": "Pikel",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/pikel.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/polyphemus.webp",
+    "name": "Polyphemus",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/polyphemus.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/prince_ribbit.webp",
+    "name": "Prince Ribbit",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/prince_ribbit.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/robin.webp",
+    "name": "Robin",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/robin.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/roxanne.webp",
+    "name": "Roxanne",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/roxanne.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/royal_jelly.webp",
+    "name": "Royal Jelly",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/royal_jelly.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/rupert.webp",
+    "name": "Rupert",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/rupert.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/saint_roka.webp",
+    "name": "Saint Roka",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/saint_roka.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/sigmund.webp",
+    "name": "Sigmund",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/sigmund.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/snorg.webp",
+    "name": "Snorg",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/snorg.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/sojobo.webp",
+    "name": "Sojobo",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/sojobo.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/sonja.webp",
+    "name": "Sonja",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/sonja.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/sprozz.webp",
+    "name": "Sprozz",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/sprozz.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/terence.webp",
+    "name": "Terence",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/terence.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/urug.webp",
+    "name": "Urug",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/urug.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/vashnia.webp",
+    "name": "Vashnia",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/vashnia.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/vv.webp",
+    "name": "Vv",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/vv.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/wiglaf.webp",
+    "name": "Wiglaf",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/wiglaf.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/xakkrixis.webp",
+    "name": "Xakkrixis",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/xakkrixis.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/xtahua.webp",
+    "name": "Xtahua",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/xtahua.png"
+  },
+  {
+    "path": "redraw-v1/mon/unique/zenata.webp",
+    "name": "Zenata",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/unique/zenata.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/air_elementalist_statue.webp",
+    "name": "Air Elementalist Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/air_elementalist_statue.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/antique_champion.webp",
+    "name": "Antique Champion",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/antique_champion.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/bog_mummy.webp",
+    "name": "Bog Mummy",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/bog_mummy.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/cigotuvis_monster.webp",
+    "name": "Cigotuvis Monster",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/cigotuvis_monster.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/earth_elementalist_statue.webp",
+    "name": "Earth Elementalist Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/earth_elementalist_statue.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/fire_elementalist_statue.webp",
+    "name": "Fire Elementalist Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/fire_elementalist_statue.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/hellbinder.webp",
+    "name": "Hellbinder",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/hellbinder.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/mad_acolyte_of_lugonu.webp",
+    "name": "Mad Acolyte Of Lugonu",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/mad_acolyte_of_lugonu.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/master_elementalist.webp",
+    "name": "Master Elementalist",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/master_elementalist.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/megabat.webp",
+    "name": "Megabat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/megabat.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/microbat.webp",
+    "name": "Microbat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/microbat.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/moon_troll.webp",
+    "name": "Moon Troll",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/moon_troll.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/phase_bat.webp",
+    "name": "Phase Bat",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/phase_bat.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/water_elementalist_statue.webp",
+    "name": "Water Elementalist Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/water_elementalist_statue.png"
+  },
+  {
+    "path": "redraw-v1/mon/vault/zot_statue.webp",
+    "name": "Zot Statue",
+    "note": "",
+    "icon": "crawl-ref/source/rltiles/mon/vault/zot_statue.png"
   }
 ]
