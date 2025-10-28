@@ -1,0 +1,22 @@
+---
+interface Props {
+  path: string;
+  name: string;
+  note: string;
+}
+
+const { path, name, note } = Astro.props;
+---
+
+<div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+  <img
+    src={`/${path}`}
+    alt={name}
+    class="w-full h-48 object-contain bg-gray-700"
+    loading="lazy"
+  />
+  <div class="p-4">
+    <h3 class="text-lg font-bold text-white mb-2">{name}</h3>
+    {note && <p class="text-gray-300 text-sm">{note}</p>}
+  </div>
+</div>

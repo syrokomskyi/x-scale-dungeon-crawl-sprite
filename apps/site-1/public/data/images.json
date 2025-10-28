@@ -1,0 +1,37 @@
+[
+  {
+    "path": "redraw-v1/god/ashenzari.webp",
+    "name": "Ashenzari",
+    "note": "God of divination and knowledge"
+  },
+  {
+    "path": "redraw-v1/god/beogh.webp",
+    "name": "Beogh",
+    "note": "Orcish god of war"
+  },
+  {
+    "path": "redraw-v1/god/cheibriados.webp",
+    "name": "Cheibriados",
+    "note": "God of time and patience"
+  },
+  {
+    "path": "redraw-v1/god/dithmenos.webp",
+    "name": "Dithmenos",
+    "note": "God of shadows and darkness"
+  },
+  {
+    "path": "redraw-v1/god/elyvilon.webp",
+    "name": "Elyvilon",
+    "note": "Goddess of healing and mercy"
+  },
+  {
+    "path": "redraw-v1/item/amulet/amethyst.webp",
+    "name": "Amethyst Amulet",
+    "note": "Magical amulet"
+  },
+  {
+    "path": "redraw-v1/mon/aberrations/glowing_orange_brain.webp",
+    "name": "Glowing Orange Brain",
+    "note": "Aberration monster"
+  }
+]
