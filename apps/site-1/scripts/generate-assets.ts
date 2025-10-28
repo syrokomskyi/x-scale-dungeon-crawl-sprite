@@ -4,6 +4,7 @@ import {
   existsSync,
   mkdirSync,
   readdirSync,
+  readFileSync,
   statSync,
   writeFileSync,
 } from "node:fs";
@@ -65,6 +66,37 @@ function getAllFiles(
   return result;
 }
 
+function parseDescriptions(): Map<string, string> {
+  const descriptions = new Map<string, string>();
+  const files = [
+    join(crawlRefDir, "source", "dat", "descript", "gods.txt"),
+    join(crawlRefDir, "source", "dat", "descript", "monsters.txt"),
+  ];
+
+  for (const file of files) {
+    if (!existsSync(file)) {
+      console.warn(`Description file not found: ${file}`);
+      continue;
+    }
+
+    const content = readFileSync(file, "utf-8");
+    const sections = content.split(/%%%%/);
+    for (const section of sections) {
+      const trimmed = section.trim();
+      if (!trimmed) continue;
+
+      const lines = trimmed.split("\n");
+      const name = lines[0].trim();
+      const note = lines.slice(2).join("\n").trim(); // Skip name and blank line
+      if (name && note) {
+        descriptions.set(name.toLowerCase(), note);
+      }
+    }
+  }
+
+  return descriptions;
+}
+
 function copyDir(src: string, dest: string): void {
   if (!existsSync(dest)) {
     mkdirSync(dest, { recursive: true });
@@ -114,12 +146,17 @@ console.log("filters.json generated.");
 
 // images.json
 console.log("\nGenerating images.json...\n");
+const descriptions = parseDescriptions();
 const redrawV1Dir = join(publicDir, "redraw-v1");
 const crawlRefDirPublic = join(publicDir, "crawl-ref");
 const guiDir = join(crawlRefDirPublic, "source", "rltiles", "gui");
 
-const webpFiles = getAllFiles(redrawV1Dir, ".webp").map(p => p.replace(/\\/g, "/"));
-const pngFilesInGui = getAllFiles(guiDir, ".png").map(p => p.replace(/\\/g, "/"));
+const webpFiles = getAllFiles(redrawV1Dir, ".webp").map((p) =>
+  p.replace(/\\/g, "/"),
+);
+const pngFilesInGui = getAllFiles(guiDir, ".png").map((p) =>
+  p.replace(/\\/g, "/"),
+);
 
 const images: Array<{
   path: string;
@@ -138,9 +175,9 @@ for (const webpPath of webpFiles) {
     .split("_")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
-  const note = "";
+  const note = descriptions.get(name.toLowerCase()) ?? "";
 
-  // Find icon
+  // find icon
   const iconPath = webpPath.replace(".webp", ".png");
   let icon = "";
   if (existsSync(join(crawlRefDirPublic, "source", "rltiles", iconPath))) {
@@ -157,7 +194,6 @@ for (const webpPath of webpFiles) {
   images.push({ path, name, note, icon });
 }
 
-// Sort by path
 images.sort((a, b) => a.path.localeCompare(b.path));
 
 writeFileSync(
