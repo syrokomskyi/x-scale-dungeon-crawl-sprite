@@ -21,6 +21,8 @@ const spritesDir: string = join(
   "redraw-v1",
 );
 
+const exclude: string[] = ["README.md"];
+
 const crawlRefName: string = basename(crawlRefDir);
 const spritesName: string = basename(spritesDir);
 
@@ -42,6 +44,11 @@ function copyDir(src: string, dest: string): void {
     } else {
       totalFiles++;
       if (!existsSync(destPath)) {
+        if (exclude.includes(item)) {
+          console.log(`Skipped ${relative(publicDir, destPath)}, excluded`);
+          continue;
+        }
+
         copyFileSync(srcPath, destPath);
         copiedFiles++;
         console.log(`Copied ${relative(publicDir, destPath)}`);
