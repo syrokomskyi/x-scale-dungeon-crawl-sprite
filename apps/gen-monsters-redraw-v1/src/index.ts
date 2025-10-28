@@ -52,7 +52,7 @@ The atmosphere should feel **moody, ancient, and mythic**, combining realism wit
 Do not try to make the creature biologically plausible — interpret it artistically, as a **dark mythic entity**.
 
 **Style references:** 
-Dark Souls / Elden Ring / Diablo IV / Magic: The Gathering / Greg Rutkowski / Magali Villeneuve / Wētā Workshop concept art.
+Dark Souls, Elden Ring, Diablo IV, Magic: The Gathering, Greg Rutkowski, Magali Villeneuve, Wētā Workshop concept art.
 
 Use the attached image as reference for **composition and silhouette**, but reinterpret every surface, light, and texture in **a fully rendered, realistic way**.
 
