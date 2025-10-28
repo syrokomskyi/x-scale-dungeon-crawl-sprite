@@ -81,7 +81,7 @@ const imageList = images.default;
   function openFullscreen(path, name) {
     const overlay = document.getElementById("fullscreen-overlay");
     const img = document.getElementById("fullscreen-img");
-    img.src = `/${path}`;
+    img.src = `${import.meta.env.BASE_URL}/${path}`;
     img.alt = name;
     overlay.classList.remove("hidden");
     overlay.classList.add("flex");
