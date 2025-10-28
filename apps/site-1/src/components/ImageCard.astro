@@ -16,8 +16,9 @@ const { path, name, note, icon } = Astro.props;
   <img
     src={`/${path}`}
     alt={name}
-    class="w-full h-144 object-cover"
+    class="w-full h-144 object-cover cursor-pointer"
     loading="lazy"
+    onclick={`openFullscreen('${path}', '${name}')`}
   />
   <div class="p-4">
     <h3 class="text-lg text-white mb-2">

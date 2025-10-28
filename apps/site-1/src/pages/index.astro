@@ -31,6 +31,18 @@ const imageList = images.default;
   </main>
 </Layout>
 
+<div
+  id="fullscreen-overlay"
+  class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center"
+>
+  <img
+    id="fullscreen-img"
+    src=""
+    alt=""
+    class="max-w-full max-h-full object-contain cursor-pointer"
+  />
+</div>
+
 <script is:inline>
   let currentFilter = [];
 
@@ -50,4 +62,27 @@ const imageList = images.default;
       card.style.display = show ? "" : "none";
     });
   }
+
+  function openFullscreen(path, name) {
+    const overlay = document.getElementById("fullscreen-overlay");
+    const img = document.getElementById("fullscreen-img");
+    img.src = `/${path}`;
+    img.alt = name;
+    overlay.classList.remove("hidden");
+  }
+
+  function closeFullscreen() {
+    const overlay = document.getElementById("fullscreen-overlay");
+    overlay.classList.add("hidden");
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeFullscreen();
+    }
+  });
+
+  document
+    .getElementById("fullscreen-overlay")
+    .addEventListener("click", closeFullscreen);
 </script>
