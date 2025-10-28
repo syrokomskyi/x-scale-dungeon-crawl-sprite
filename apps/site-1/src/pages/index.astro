@@ -1,4 +1,5 @@
 ---
+import Filter from "../components/Filter.astro";
 import ImageCard from "../components/ImageCard.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -11,7 +12,9 @@ const imageList = images.default;
     <h1 class="text-4xl text-center mb-8 text-white">
       Dungeon Crawl: Stone Soup | Fun Gallery
     </h1>
+    <Filter />
     <div
+      id="gallery"
       class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
     >
       {
@@ -27,3 +30,24 @@ const imageList = images.default;
     </div>
   </main>
 </Layout>
+
+<script is:inline>
+  let currentFilter = [];
+
+  window.addEventListener("filterChange", (e) => {
+    currentFilter = e.detail.selected;
+    filterGallery();
+  });
+
+  function filterGallery() {
+    const gallery = document.getElementById("gallery");
+    const cards = gallery.querySelectorAll(".image-card");
+    cards.forEach((card) => {
+      const path = card.dataset.path;
+      const show =
+        currentFilter.length === 0 ||
+        path.startsWith("redraw-v1/" + currentFilter.join("/") + "/");
+      card.style.display = show ? "" : "none";
+    });
+  }
+</script>

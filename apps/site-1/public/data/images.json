@@ -36,6 +36,12 @@
     "icon": "crawl-ref/source/rltiles/item/amulet/amethyst.png"
   },
   {
+    "path": "redraw-v1/item/amulet/artefact/urand_air.webp",
+    "name": "Urand Air",
+    "note": "Magical amulet artefact",
+    "icon": "crawl-ref/source/rltiles/item/amulet/artefact/urand_air.png"
+  },
+  {
     "path": "redraw-v1/mon/aberrations/glowing_orange_brain.webp",
     "name": "Glowing Orange Brain",
     "note": "Aberration monster",

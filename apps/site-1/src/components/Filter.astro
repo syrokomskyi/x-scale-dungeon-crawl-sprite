@@ -1,0 +1,66 @@
+---
+const filters = await import("../../public/data/filters.json");
+---
+
+<div id="filter" class="mb-4 flex flex-wrap gap-2"></div>
+
+<script define:vars={{ filters }}>
+  const filterEl = document.getElementById("filter");
+  let selected = [];
+
+  function renderFilter() {
+    const currentPath = selected;
+    const available = getAvailable(currentPath);
+    filterEl.innerHTML = "";
+
+    // selected as [selected]
+    currentPath.forEach((sel, index) => {
+      const btn = document.createElement("button");
+      btn.textContent = `[${sel}]`;
+      btn.className = "bg-blue-500 text-white px-2 py-1 rounded";
+      btn.onclick = () => {
+        selected = selected.slice(0, index);
+        renderFilter();
+        dispatchFilterChange();
+      };
+      filterEl.appendChild(btn);
+    });
+
+    // next level as unselected
+    available.forEach((cat) => {
+      const btn = document.createElement("button");
+      btn.textContent = cat;
+      btn.className =
+        "bg-gray-200 text-black px-2 py-1 rounded hover:bg-gray-300";
+      btn.onclick = () => {
+        selected.push(cat);
+        renderFilter();
+        dispatchFilterChange();
+      };
+      filterEl.appendChild(btn);
+    });
+  }
+
+  function getAvailable(path) {
+    let current = filters.default;
+    for (const p of path) {
+      if (typeof current[p] === "object" && current[p] !== null) {
+        current = current[p];
+      } else {
+        return [];
+      }
+    }
+    if (Array.isArray(current)) {
+      return current;
+    } else {
+      return Object.keys(current);
+    }
+  }
+
+  function dispatchFilterChange() {
+    const event = new CustomEvent("filterChange", { detail: { selected } });
+    window.dispatchEvent(event);
+  }
+
+  renderFilter();
+</script>
