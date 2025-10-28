@@ -50,11 +50,7 @@ const filters = await import("../../public/data/filters.json");
         return [];
       }
     }
-    if (Array.isArray(current)) {
-      return current;
-    } else {
-      return Object.keys(current);
-    }
+    return Object.keys(current);
   }
 
   function dispatchFilterChange() {

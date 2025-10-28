@@ -1,40 +1,40 @@
 {
-  "god": [],
+  "god": {},
   "item": {
     "amulet": {
-      "artefact": []
+      "artefact": {}
     }
   },
   "mon": {
-    "aberrations": [],
-    "abyss": [],
-    "amorphous": [],
-    "animals": [],
-    "aquatic": [],
+    "aberrations": {},
+    "abyss": {},
+    "amorphous": {},
+    "animals": {},
+    "aquatic": {},
     "demihumanoids": {
-      "merfolk": [],
-      "naga": [],
-      "taurs": []
+      "merfolk": {},
+      "naga": {},
+      "taurs": {}
     },
-    "demons": [],
-    "dragons": [],
-    "eyes": [],
-    "fungi_plants": [],
-    "holy": [],
+    "demons": {},
+    "dragons": {},
+    "eyes": {},
+    "fungi_plants": {},
+    "holy": {},
     "humanoids": {
-      "demonspawn": [],
-      "elves": [],
-      "giants": [],
-      "humans": [],
-      "orcs": [],
-      "spriggans": []
+      "demonspawn": {},
+      "elves": {},
+      "giants": {},
+      "humans": {},
+      "orcs": {},
+      "spriggans": {}
     },
-    "nonliving": [],
-    "panlord": [],
-    "sprint": [],
-    "statues": [],
-    "undead": [],
-    "unique": [],
-    "vault": []
+    "nonliving": {},
+    "panlord": {},
+    "sprint": {},
+    "statues": {},
+    "undead": {},
+    "unique": {},
+    "vault": {}
   }
 }
