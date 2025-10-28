@@ -33,7 +33,7 @@ const imageList = images.default;
 
 <div
   id="fullscreen-overlay"
-  class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center"
+  class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 items-center justify-center"
 >
   <img
     id="fullscreen-img"
@@ -69,10 +69,12 @@ const imageList = images.default;
     img.src = `/${path}`;
     img.alt = name;
     overlay.classList.remove("hidden");
+    overlay.classList.add("flex");
   }
 
   function closeFullscreen() {
     const overlay = document.getElementById("fullscreen-overlay");
+    overlay.classList.remove("flex");
     overlay.classList.add("hidden");
   }
 
