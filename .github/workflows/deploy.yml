@@ -22,6 +22,7 @@ jobs:
           cache: "pnpm"
       - run: cd apps/site-1 && pnpm install --frozen-lockfile
       - run: cd apps/site-1 && pnpm build
-      - uses: actions/deploy-pages@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          folder: apps/site-1/dist
+          path: apps/site-1/dist
+      - uses: actions/deploy-pages@v4
