@@ -16,7 +16,12 @@ const imageList = images.default;
     >
       {
         imageList.map((image) => (
-          <ImageCard path={image.path} name={image.name} note={image.note} />
+          <ImageCard
+            path={image.path}
+            name={image.name}
+            note={image.note}
+            icon={image.icon}
+          />
         ))
       }
     </div>

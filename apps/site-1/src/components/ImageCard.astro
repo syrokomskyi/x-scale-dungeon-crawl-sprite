@@ -3,9 +3,10 @@ interface Props {
   path: string;
   name: string;
   note: string;
+  icon: string;
 }
 
-const { path, name, note } = Astro.props;
+const { path, name, note, icon } = Astro.props;
 ---
 
 <div
@@ -18,7 +19,9 @@ const { path, name, note } = Astro.props;
     loading="lazy"
   />
   <div class="p-4">
-    <h3 class="text-lg font-bold text-white mb-2">{name}</h3>
-    {note && <p class="text-gray-300 text-sm">{note}</p>}
+    <h3 class="text-lg font-bold text-white mb-2">
+      <img src={`/${icon}`} alt="icon" class="w-6 h-6 inline mr-2" />{name}
+    </h3>
+    {note && <p class="text-gray-300 text-s">{note}</p>}
   </div>
 </div>

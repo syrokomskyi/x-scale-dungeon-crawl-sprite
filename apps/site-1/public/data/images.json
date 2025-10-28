@@ -2,36 +2,43 @@
   {
     "path": "redraw-v1/god/ashenzari.webp",
     "name": "Ashenzari",
-    "note": "God of divination and knowledge 1"
+    "note": "God of divination and knowledge 1",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/ashenzari_scry.png"
   },
   {
     "path": "redraw-v1/god/beogh.webp",
     "name": "Beogh",
-    "note": "Orcish god of war"
+    "note": "Orcish god of war",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/beogh_smite.png"
   },
   {
     "path": "redraw-v1/god/cheibriados.webp",
     "name": "Cheibriados",
-    "note": "God of time and patience"
+    "note": "God of time and patience",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/cheibriados_bend_time.png"
   },
   {
     "path": "redraw-v1/god/dithmenos.webp",
     "name": "Dithmenos",
-    "note": "God of shadows and darkness"
+    "note": "God of shadows and darkness",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/dithmenos_shadowslip.png"
   },
   {
     "path": "redraw-v1/god/elyvilon.webp",
     "name": "Elyvilon",
-    "note": "Goddess of healing and mercy"
+    "note": "Goddess of healing and mercy",
+    "icon": "crawl-ref/source/rltiles/gui/invocations/elyvilon_heal_self.png"
   },
   {
     "path": "redraw-v1/item/amulet/amethyst.webp",
     "name": "Amethyst Amulet",
-    "note": "Magical amulet"
+    "note": "Magical amulet",
+    "icon": "crawl-ref/source/rltiles/item/amulet/amethyst.png"
   },
   {
     "path": "redraw-v1/mon/aberrations/glowing_orange_brain.webp",
     "name": "Glowing Orange Brain",
-    "note": "Aberration monster"
+    "note": "Aberration monster",
+    "icon": "crawl-ref/source/rltiles/mon/aberrations/glowing_orange_brain.png"
   }
 ]
