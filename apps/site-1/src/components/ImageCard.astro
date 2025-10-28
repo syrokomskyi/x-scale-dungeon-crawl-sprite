@@ -22,7 +22,9 @@ const { path, name, note, icon } = Astro.props;
   />
   <div class="p-4">
     <h3 class="text-lg text-white mb-2">
-      <img src={`/${icon}`} alt="icon" class="w-6 h-6 inline mr-2" />{name}
+      {icon && <img src={`/${icon}`} alt="icon" class="w-6 h-6 inline mr-2" />}{
+        name
+      }
     </h3>
     {note && <p class="text-gray-300 text-s">{note}</p>}
   </div>
