@@ -16,15 +16,23 @@ const { path, name, note, icon } = Astro.props;
   <img
     src={`/${path}`}
     alt={name}
+    title={`${name}. ${note}`}
     class="w-full h-144 object-cover cursor-pointer"
     loading="lazy"
     onclick={`openFullscreen('${path}', '${name}')`}
   />
   <div class="p-4">
     <h3 class="text-lg text-white mb-2">
-      {icon && <img src={`/${icon}`} alt="icon" class="w-6 h-6 inline mr-2" />}{
-        name
-      }
+      {
+        icon && (
+          <img
+            src={`/${icon}`}
+            alt={name}
+            class="w-6 h-6 inline mr-2"
+            loading="lazy"
+          />
+        )
+      }{name}
     </h3>
     {note && <p class="text-gray-300 text-s">{note}</p>}
   </div>
