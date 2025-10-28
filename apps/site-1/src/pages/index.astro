@@ -64,6 +64,20 @@ const imageList = images.default;
     });
   }
 
+  // Shuffle the gallery cards on load
+  function shuffleGallery() {
+    const gallery = document.getElementById("gallery");
+    const cards = Array.from(gallery.children);
+    for (let i = cards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cards[i], cards[j]] = [cards[j], cards[i]];
+    }
+    cards.forEach((card) => gallery.appendChild(card));
+  }
+
+  // Shuffle on DOM content loaded
+  document.addEventListener("DOMContentLoaded", shuffleGallery);
+
   function openFullscreen(path, name) {
     const overlay = document.getElementById("fullscreen-overlay");
     const img = document.getElementById("fullscreen-img");
