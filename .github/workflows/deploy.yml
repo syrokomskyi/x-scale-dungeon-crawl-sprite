@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: "20"
           cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
       - run: cd apps/site-1 && pnpm install --frozen-lockfile
       - run: cd apps/site-1 && pnpm build
       - uses: actions/upload-pages-artifact@v3
