@@ -131,6 +131,9 @@ const images: Array<{
 for (const webpPath of webpFiles) {
   const path = `redraw-v1/${webpPath}`;
   const basenameNoExt = basename(webpPath, ".webp");
+  if (/\d$/.test(basenameNoExt)) {
+    continue;
+  }
   const name = basenameNoExt
     .split("_")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
