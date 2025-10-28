@@ -10,6 +10,14 @@ Share some ❤️ and star repo to support the [Large Sprites](https://github.co
 
 _If you write an article about **Dungeon Crawl: Stone Soup**, let me know and I'll post the URL of the article in the **README**_ 🤝
 
+---
+
+This project is **NOT A MOD**, not a call for modification of the Game, but a **tribute to the DCSS developers and the community** that created one of the most magnificent roguelikes in history.
+
+It would never have existed without the awesome descriptions of creatures and perfectly readable sprites created by the [community](https://reddit.com/r/dcss).
+
+---
+
 ## Sprite Source
 
 <https://github.com/crawl/crawl>
