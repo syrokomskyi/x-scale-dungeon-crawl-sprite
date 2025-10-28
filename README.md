@@ -6,7 +6,7 @@
 
 Fan visuals for the game [Dungeon Crawl: Stone Soup](https://en.wikipedia.org/wiki/Dungeon_Crawl_Stone_Soup). Enjoy.
 
-> [!WARNING]
+> [!IMPORTANT]
 > This project is **NOT A MOD**, not a call for modification of the Game, but a **tribute to the DCSS developers and the community** that created one of the most magnificent roguelikes in history.
 > It would never have existed without the awesome descriptions of creatures and perfectly readable sprites created by the [community](https://reddit.com/r/dcss).
 
