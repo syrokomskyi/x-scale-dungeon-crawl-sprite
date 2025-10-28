@@ -1,6 +1,6 @@
-# Dungeon Crawl Sprite Gallery
+# Dungeon Crawl: Stone Soup | Fan Gallery
 
-A static website showcasing webp images from the redraw-v1 folder using Astro, TypeScript, and Tailwind CSS.
+A static website showcasing images from the `redraw-v1` folder.
 
 ## Setup
 
