@@ -1,4 +1,4 @@
-# Dungeon Crawl: Stone Soup - Fan Visuals
+# 🏰 Dungeon Crawl: Stone Soup - Fan Visuals
 
 ![Cover - Fan visuals for the game Dungeon Crawl: Stone Soup](./images/cover.webp)
 
@@ -14,13 +14,13 @@ _If you write an article about **Dungeon Crawl: Stone Soup** and/or **this proje
 
 Share some ❤️ and star repo to support the [DCSS Visuals](https://github.com/syrokomskyi/x-scale-dungeon-crawl-sprite) for the `Dungeon Crawl: Stone Soup`.
 
-## [Demo >](https://syrokomskyi.github.io/x-scale-dungeon-crawl-sprite/)
+## 🔗 [Demo >](https://syrokomskyi.github.io/x-scale-dungeon-crawl-sprite/)
 
-## Sprite Source
+## 🎨 Sprite Source
 
 <https://github.com/crawl/crawl>
 
-## Transform
+## ⚙️ Transform
 
 See the `README.md` in each `./apps/sprites/work/` folder.
 
@@ -28,9 +28,9 @@ For transform sprites run the script in terminal.
 
 ---
 
-### [Monsters](./apps/sprites/work/redraw-v1/mon)
+### 👹 [Monsters](./apps/sprites/work/redraw-v1/mon)
 
-#### [Humanoids](./apps/sprites/work/redraw-v1/mon/humanoids)
+#### 👥 [Humanoids](./apps/sprites/work/redraw-v1/mon/humanoids)
 
 <table style="border-collapse: collapse;">
   <tr>
@@ -65,7 +65,7 @@ For transform sprites run the script in terminal.
   </tr>
 </table>
 
-#### [Eyes](./apps/sprites/work/redraw-v1/mon/eyes)
+#### 👁️ [Eyes](./apps/sprites/work/redraw-v1/mon/eyes)
 
 <table style="border-collapse: collapse;">
   <tr>
@@ -78,7 +78,7 @@ For transform sprites run the script in terminal.
   </tr>
 </table>
 
-#### [Dragons](./apps/sprites/work/redraw-v1/mon/dragons)
+#### 🐉 [Dragons](./apps/sprites/work/redraw-v1/mon/dragons)
 
 <table style="border-collapse: collapse;">
   <tr>
@@ -91,7 +91,7 @@ For transform sprites run the script in terminal.
   </tr>
 </table>
 
-#### [Aquatic](./apps/sprites/work/redraw-v1/mon/aquatic)
+#### 🐟 [Aquatic](./apps/sprites/work/redraw-v1/mon/aquatic)
 
 <table style="border-collapse: collapse;">
   <tr>
@@ -104,7 +104,7 @@ For transform sprites run the script in terminal.
   </tr>
 </table>
 
-#### [Abyss](./apps/sprites/work/redraw-v1/mon/abyss)
+#### 🌌 [Abyss](./apps/sprites/work/redraw-v1/mon/abyss)
 
 <table style="border-collapse: collapse;">
   <tr>
@@ -117,7 +117,7 @@ For transform sprites run the script in terminal.
   </tr>
 </table>
 
-#### [Unique](./apps/sprites/work/redraw-v1/mon/unique)
+#### 🌟 [Unique](./apps/sprites/work/redraw-v1/mon/unique)
 
 <table style="border-collapse: collapse;">
   <tr>
