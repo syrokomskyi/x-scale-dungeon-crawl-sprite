@@ -6,12 +6,13 @@
 
 Fan visuals for the game [Dungeon Crawl: Stone Soup](https://en.wikipedia.org/wiki/Dungeon_Crawl_Stone_Soup). Enjoy.
 
+> [!WARNING]
+> This project is **NOT A MOD**, not a call for modification of the Game, but a **tribute to the DCSS developers and the community** that created one of the most magnificent roguelikes in history.
+> It would never have existed without the awesome descriptions of creatures and perfectly readable sprites created by the [community](https://reddit.com/r/dcss).
+
 Share some ❤️ and star repo to support the [DCSS Visuals](https://github.com/syrokomskyi/x-scale-dungeon-crawl-sprite) for the `Dungeon Crawl: Stone Soup`.
 
 _If you write an article about **Dungeon Crawl: Stone Soup** and/or this project, let me know and I'll post the URL of the article in the **README**_ 🤝
-
-> This project is **NOT A MOD**, not a call for modification of the Game, but a **tribute to the DCSS developers and the community** that created one of the most magnificent roguelikes in history.
-> It would never have existed without the awesome descriptions of creatures and perfectly readable sprites created by the [community](https://reddit.com/r/dcss).
 
 ## Sprite Source
 
