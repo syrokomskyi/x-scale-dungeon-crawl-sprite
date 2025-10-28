@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   deploy:
@@ -18,8 +18,8 @@ jobs:
           version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'pnpm'
+          node-version: "20"
+          cache: "pnpm"
       - run: cd apps/site-1 && pnpm install --frozen-lockfile
       - run: cd apps/site-1 && pnpm build
       - uses: actions/deploy-pages@v4
