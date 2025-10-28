@@ -5,7 +5,7 @@ import {
   readdirSync,
   statSync,
 } from "node:fs";
-import { basename, dirname, join } from "node:path";
+import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -24,6 +24,10 @@ const spritesDir: string = join(
 const crawlRefName: string = basename(crawlRefDir);
 const spritesName: string = basename(spritesDir);
 
+let totalFiles = 0;
+let copiedFiles = 0;
+let skippedFiles = 0;
+
 function copyDir(src: string, dest: string): void {
   if (!existsSync(dest)) {
     mkdirSync(dest, { recursive: true });
@@ -36,17 +40,26 @@ function copyDir(src: string, dest: string): void {
     if (stat.isDirectory()) {
       copyDir(srcPath, destPath);
     } else {
+      totalFiles++;
       if (!existsSync(destPath)) {
         copyFileSync(srcPath, destPath);
-        console.log(`Copied ${srcPath} to ${destPath}`);
+        copiedFiles++;
+        console.log(`Copied ${relative(publicDir, destPath)}`);
       } else {
-        console.log(`Skipped ${srcPath}, already exists`);
+        skippedFiles++;
+        console.log(`Skipped ${relative(publicDir, destPath)}, already exists`);
       }
     }
   }
 }
 
-console.log("Starting assets generation...");
+console.log("\nStarting assets generation...\n");
+
 copyDir(crawlRefDir, join(publicDir, crawlRefName));
 copyDir(spritesDir, join(publicDir, spritesName));
-console.log("Assets generation completed.");
+
+console.log(`\nTotal files: ${totalFiles}`);
+console.log(`Copied: ${copiedFiles}`);
+console.log(`Skipped: ${skippedFiles}`);
+
+console.log("\nAssets generation completed.\n");
