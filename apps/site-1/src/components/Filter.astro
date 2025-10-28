@@ -27,6 +27,7 @@ const filters = await import("../../public/data/filters.json");
         selected = selected.slice(0, index);
         renderFilter();
         dispatchFilterChange();
+        scrollToTop();
       };
       filterEl.appendChild(btn);
     });
@@ -41,6 +42,7 @@ const filters = await import("../../public/data/filters.json");
         selected.push(cat);
         renderFilter();
         dispatchFilterChange();
+        scrollToTop();
       };
       filterEl.appendChild(btn);
     });
@@ -61,6 +63,10 @@ const filters = await import("../../public/data/filters.json");
   function dispatchFilterChange() {
     const event = new CustomEvent("filterChange", { detail: { selected } });
     window.dispatchEvent(event);
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   renderFilter();
