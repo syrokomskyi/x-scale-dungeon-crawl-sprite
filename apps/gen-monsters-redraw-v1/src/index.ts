@@ -32,13 +32,10 @@ const ai = new GoogleGenAI({
   project: process.env.GEMINI_PROJECT_ID,
 });
 
-// v5.6.0
+// v5.7.0
 function prompt(name: string, description: string) {
   return `
 Draw a **realistic dark fantasy reinterpretation** of the original art (see attachment) and description (see below). Keep the **same composition, silhouette, pose, and colours**, as well as the **relative layout of background elements**. This is a **dramatic, cinematic reinterpretation**, not a copy, not a pixel-art.
-
-**${name}**
-*${description}*
 
 Render the creature (item, object, building, etc.), its armor, and surroundings with:
 - **Realistic materials** (metal, bone, leather, fabric, stone, mist, etc.) in the colours of the provided image.
@@ -61,9 +58,12 @@ Use the attached image as reference for **composition and silhouette**, but rein
 
 There should be no inscriptions or signatures on the image.
 
-Use the name and description above to understand the creature's appearance and behavior.
-
 Aspect ratio: ${imageConfig.aspectRatio}.
+
+Use the **name** and *description* to understand the creature's appearance and behavior:
+
+**${name}**
+*${description}*
 
 ${randomPrompt ? `${generateRandomLetterString()}` : ""}
 `;
