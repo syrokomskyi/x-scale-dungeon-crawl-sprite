@@ -54,20 +54,24 @@ const imageList = images.default;
     setHash("");
   };
 
+  function openFullscreenCard(path, name, note, icon) {
+    document.dispatchEvent(
+      new CustomEvent("openFullscreen", {
+        detail: { path, name, note, icon },
+      })
+    );
+  }
+
   function openCardByPath(path) {
-    const image = imageList.find((img) => img.path === path + ".webp");
+    const image = imageList.find((img) => img.path === path);
     if (image) {
-      document.dispatchEvent(
-        new CustomEvent("openFullscreen", {
-          detail: {
-            path: image.path,
-            name: image.name,
-            note: image.note,
-            icon: image.icon,
-          },
-        })
-      );
+      openFullscreenCard(image.path, image.name, image.note, image.icon);
     }
+  }
+
+  function getPathFromHash() {
+    const hash = window.location.hash.slice(1);
+    return hash ? decodeURIComponent(hash) + ".webp" : null;
   }
 
   window.addEventListener("hashchange", () => {
@@ -75,9 +79,8 @@ const imageList = images.default;
       isProgrammaticHashChange = false;
       return;
     }
-    const hash = window.location.hash.slice(1); // remove #
-    if (hash) {
-      const path = decodeURIComponent(hash) + ".webp";
+    const path = getPathFromHash();
+    if (path) {
       openCardByPath(path);
     } else {
       window.closeFullscreen();
@@ -138,13 +141,15 @@ const imageList = images.default;
         const name = img.alt;
         const note = card.dataset.note;
         const icon = card.dataset.icon;
-        document.dispatchEvent(
-          new CustomEvent("openFullscreen", {
-            detail: { path, name, note, icon },
-          })
-        );
+        openFullscreenCard(path, name, note, icon);
         setHash(encodeURIComponent(path.replace(".webp", "")));
       });
     });
   });
+
+  // Check initial hash after setup
+  const initialPath = getPathFromHash();
+  if (initialPath) {
+    openCardByPath(initialPath);
+  }
 </script>
