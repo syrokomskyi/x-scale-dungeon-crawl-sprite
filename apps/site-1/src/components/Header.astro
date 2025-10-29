@@ -16,6 +16,7 @@ import Filter from "./Filter.astro";
         allows every fan of the Game to draw high-quality images from their
         favorite Game. Any Game. Even if you can't draw.
       </h6>
+      <Filter />
     </div>
     <a
       href="https://github.com/syrokomskyi/x-scale-dungeon-crawl-sprite"
@@ -37,32 +38,30 @@ import Filter from "./Filter.astro";
       GitHub
     </a>
   </div>
-
-  <Filter />
-
-  <script is:inline>
-    let lastScrollY = window.scrollY;
-    let isHidden = false;
-    const header = document.querySelector("header");
-
-    function adjustBodyPadding() {
-      const headerHeight = header.offsetHeight;
-      document.body.style.paddingTop = headerHeight + "px";
-    }
-
-    window.addEventListener("load", adjustBodyPadding);
-    window.addEventListener("resize", adjustBodyPadding);
-
-    window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden) {
-        header.classList.add("translate-y-[-100%]");
-        isHidden = true;
-      } else if (currentScrollY < lastScrollY && isHidden) {
-        header.classList.remove("translate-y-[-100%]");
-        isHidden = false;
-      }
-      lastScrollY = currentScrollY;
-    });
-  </script>
 </header>
+
+<script is:inline>
+  let lastScrollY = window.scrollY;
+  let isHidden = false;
+  const header = document.querySelector("header");
+
+  function adjustBodyPadding() {
+    const headerHeight = header.offsetHeight;
+    document.body.style.paddingTop = headerHeight + "px";
+  }
+
+  window.addEventListener("load", adjustBodyPadding);
+  window.addEventListener("resize", adjustBodyPadding);
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden) {
+      header.classList.add("translate-y-[-100%]");
+      isHidden = true;
+    } else if (currentScrollY < lastScrollY && isHidden) {
+      header.classList.remove("translate-y-[-100%]");
+      isHidden = false;
+    }
+    lastScrollY = currentScrollY;
+  });
+</script>
