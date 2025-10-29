@@ -2,9 +2,13 @@
 const filters = await import("../../public/data/filters.json");
 ---
 
-<div id="filter" class="mb-4 flex flex-wrap gap-2 bg-transparent z-40 justify-center"></div>
+<div
+  id="filter"
+  class="mb-4 flex flex-wrap gap-2 bg-transparent z-40 justify-center"
+>
+</div>
 
-<script define:vars={{ filters }}>
+<script is:inline define:vars={{ filters }}>
   const filterEl = document.getElementById("filter");
   let selected = [];
 
