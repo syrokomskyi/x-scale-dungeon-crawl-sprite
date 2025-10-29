@@ -40,13 +40,23 @@ const imageList = images.default;
 <script is:inline define:vars={{ baseUrl, imageList }}>
   let currentFilter = [];
 
+  function encodePath(path) {
+    let hash = encodeURIComponent(path.replace(".webp", ""));
+    hash = hash.replace(/%2F/g, "+");
+    return hash;
+  }
+
+  function decodePath(hash) {
+    return hash
+      ? decodeURIComponent(hash.replace(/\+/g, "%2F")) + ".webp"
+      : null;
+  }
+
   let isProgrammaticHashChange = false;
 
   function setHash(path) {
     isProgrammaticHashChange = true;
-    let hash = encodeURIComponent(path.replace(".webp", ""));
-    hash = hash.replace(/%2F/g, "+");
-    window.location.hash = hash;
+    window.location.hash = encodePath(path);
   }
 
   window.closeFullscreen = function () {
@@ -73,9 +83,7 @@ const imageList = images.default;
 
   function getPathFromHash() {
     const hash = window.location.hash.slice(1);
-    return hash
-      ? decodeURIComponent(hash.replace(/\+/g, "%2F")) + ".webp"
-      : null;
+    return decodePath(hash);
   }
 
   window.addEventListener("hashchange", () => {
@@ -131,9 +139,10 @@ const imageList = images.default;
 
     // Check initial hash
     if (window.location.hash) {
-      const hash = window.location.hash.slice(1);
-      const path = decodeURIComponent(hash.replace(/\+/g, "%2F")) + ".webp";
-      openCardByPath(path);
+      const path = getPathFromHash();
+      if (path) {
+        openCardByPath(path);
+      }
     }
 
     // Add click listeners to images
