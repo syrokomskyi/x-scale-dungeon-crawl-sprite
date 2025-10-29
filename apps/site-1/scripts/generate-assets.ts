@@ -1,10 +1,12 @@
 /** biome-ignore-all lint/suspicious/noExplicitAny: File read specific */
 import {
   copyFileSync,
+  cpSync,
   existsSync,
   mkdirSync,
   readdirSync,
   readFileSync,
+  rmSync,
   statSync,
   unlinkSync,
   writeFileSync,
@@ -131,11 +133,19 @@ function copyDir(src: string, dest: string): void {
 
 console.log("\nStarting assets generation...\n");
 
-// crawl-ref (original)
-copyDir(crawlRefDir, join(publicDir, crawlRefName));
+// crawl-ref (original, fully)
+console.log(`Copying crawl-ref directory...`);
+const crawlRefDest = join(publicDir, crawlRefName);
+if (existsSync(crawlRefDest)) {
+  rmSync(crawlRefDest, { recursive: true, force: true });
+}
+cpSync(crawlRefDir, crawlRefDest, { recursive: true });
+console.log(`Copied crawl-ref directory.`);
 
-// sprites (redraw)
+// sprites (redraw, partially)
+console.log(`Copying sprites directory...`);
 copyDir(spritesDir, join(publicDir, spritesName));
+console.log(`Copied sprites directory.`);
 
 // filters.json
 console.log("\nGenerating filters.json...\n");
