@@ -5,6 +5,8 @@ import Header from "../components/Header.astro";
 import ImageCard from "../components/ImageCard.astro";
 import Layout from "../layouts/Layout.astro";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const images = await import("../../public/data/images.json");
 const imageList = images.default;
 ---
@@ -44,7 +46,7 @@ const imageList = images.default;
   />
 </div>
 
-<script is:inline>
+<script is:inline define:vars={{ baseUrl }}>
   let currentFilter = [];
 
   window.addEventListener("filterChange", (e) => {
@@ -76,12 +78,25 @@ const imageList = images.default;
   }
 
   // Shuffle on DOM content loaded
-  document.addEventListener("DOMContentLoaded", shuffleGallery);
+  document.addEventListener("DOMContentLoaded", () => {
+    shuffleGallery();
+
+    // Add click listeners to images
+    const images = document.querySelectorAll(".image-card img");
+    images.forEach((img) => {
+      img.addEventListener("click", () => {
+        const card = img.closest(".image-card");
+        const path = card.dataset.path;
+        const name = img.alt;
+        openFullscreen(path, name);
+      });
+    });
+  });
 
   function openFullscreen(path, name) {
     const overlay = document.getElementById("fullscreen-overlay");
     const img = document.getElementById("fullscreen-img");
-    img.src = `${import.meta.env.BASE_URL}/${path}`;
+    img.src = `${baseUrl}/${path}`.replace("//", "/");
     img.alt = name;
     overlay.classList.remove("hidden");
     overlay.classList.add("flex");
