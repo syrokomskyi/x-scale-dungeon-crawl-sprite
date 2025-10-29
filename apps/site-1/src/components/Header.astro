@@ -1,15 +1,23 @@
 ---
-
+import Filter from "./Filter.astro";
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md">
-  <div class="container mx-auto px-4 py-4 relative">
-    <h1 class="text-4xl text-white text-center">
-      Dungeon Crawl: Stone Soup | Fun Gallery
-    </h1>
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div></div>
+    <div class="text-center">
+      <h3 class="text-3xl text-white">
+        Tool for Creating Fan Gallery for Any Roguelike Game
+      </h3>
+      <h6 class="text-lg text-gray-300 mt-1 mb-1 px-4">
+        The goal of this project is to demo the capabilities of a tool that
+        allows every fan of the Game to draw high-quality images from their
+        favorite Game. Any Game. Even if you can't draw.
+      </h6>
+    </div>
     <a
       href="https://github.com/syrokomskyi/x-scale-dungeon-crawl-sprite"
-      class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors flex items-center gap-2"
+      class="bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors flex items-center gap-2"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -27,4 +35,5 @@
       GitHub
     </a>
   </div>
+  <Filter />
 </header>
