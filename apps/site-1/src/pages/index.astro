@@ -130,9 +130,5 @@ const imageList = images.default;
 
   document
     .getElementById("fullscreen-overlay")
-    .addEventListener("click", (e) => {
-      if (e.target === e.currentTarget) {
-        closeFullscreen();
-      }
-    });
+    .addEventListener("click", closeFullscreen);
 </script>
