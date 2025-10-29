@@ -1,4 +1,5 @@
 .astro
 
 public/crawl-ref
+public/data
 public/redraw-v1
