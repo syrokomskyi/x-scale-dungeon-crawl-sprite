@@ -12,7 +12,7 @@ The game [Dungeon Crawl: Stone Soup](https://en.wikipedia.org/wiki/Dungeon_Crawl
 
 _If you write an article about **Dungeon Crawl: Stone Soup** and/or **this project**, let me know and I'll post the URL of the article in the **README**_ 🤝
 
-Share some ❤️ and star repo to support the [DCSS Visuals](https://github.com/syrokomskyi/x-scale-dungeon-crawl-sprite) for the `Dungeon Crawl: Stone Soup`.
+Share some ❤️ and star repo to support this project.
 
 ## 🔗 [Demo >](https://syrokomskyi.github.io/x-scale-dungeon-crawl-sprite/)
 
