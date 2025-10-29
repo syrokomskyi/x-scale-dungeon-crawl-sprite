@@ -1,0 +1,36 @@
+---
+export interface Props {
+  message?: string;
+}
+
+const { message = "Link copied" } = Astro.props;
+---
+
+<div
+  id="toast"
+  class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 z-50"
+>
+  {message}
+</div>
+
+<style>
+  #toast.show {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  function showToast(message = "Link copied") {
+    const toast = document.getElementById("toast");
+    if (toast) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    }
+  }
+
+  // Make it globally available
+  (window as any).showToast = showToast;
+</script>
