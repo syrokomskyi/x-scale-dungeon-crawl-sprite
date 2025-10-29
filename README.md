@@ -1,13 +1,13 @@
-# 🏰 Dungeon Crawl: Stone Soup - Fan Visuals
+# 🏰 Tool for Creating Fan Gallery for Any Roguelike Game
 
-![Cover - Fan visuals for the game Dungeon Crawl: Stone Soup](./images/cover.webp)
+![Cover - Tool for Creating Fan Gallery for Any Roguelike Game](./images/cover.webp)
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Fan visuals for the game [Dungeon Crawl: Stone Soup](https://en.wikipedia.org/wiki/Dungeon_Crawl_Stone_Soup). Enjoy.
+The game [Dungeon Crawl: Stone Soup](https://en.wikipedia.org/wiki/Dungeon_Crawl_Stone_Soup) was used as an example. Enjoy.
 
 > [!IMPORTANT]
-> This project is **NOT A MOD**, not a call for modification of the Game, but a **tribute to the DCSS developers and the community** that created one of the most magnificent roguelikes in history.
+> This project is **NOT A MOD**, not a call for modification of the Game, but a **tribute to the DCSS developers and the community** that created one of the most magnificent roguelikes in history. This is just a demo.
 > It would never have existed without the awesome descriptions of creatures and perfectly readable sprites created by the [community](https://reddit.com/r/dcss).
 
 _If you write an article about **Dungeon Crawl: Stone Soup** and/or **this project**, let me know and I'll post the URL of the article in the **README**_ 🤝
