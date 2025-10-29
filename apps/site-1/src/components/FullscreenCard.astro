@@ -1,9 +1,5 @@
 ---
-interface Props {
-  baseUrl: string;
-}
-
-const { baseUrl } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <div
