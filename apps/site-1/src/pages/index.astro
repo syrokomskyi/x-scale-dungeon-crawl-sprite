@@ -116,6 +116,12 @@ const imageList = images.default;
   document.addEventListener("DOMContentLoaded", () => {
     shuffleGallery();
 
+    // Add overlay click listener
+    const overlay = document.getElementById("fullscreen-overlay");
+    if (overlay) {
+      overlay.addEventListener("click", window.closeFullscreen);
+    }
+
     // Check initial hash
     if (window.location.hash) {
       const hash = window.location.hash.slice(1);
