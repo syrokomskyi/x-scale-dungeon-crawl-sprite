@@ -45,6 +45,14 @@ import Filter from "./Filter.astro";
     let isHidden = false;
     const header = document.querySelector("header");
 
+    function adjustBodyPadding() {
+      const headerHeight = header.offsetHeight;
+      document.body.style.paddingTop = headerHeight + "px";
+    }
+
+    window.addEventListener("load", adjustBodyPadding);
+    window.addEventListener("resize", adjustBodyPadding);
+
     window.addEventListener("scroll", () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden) {
