@@ -112,6 +112,22 @@ const imageList = images.default;
     img.src = `${baseUrl}/${path}`.replace("//", "/");
     img.alt = name;
     creatureNameEl.textContent = name;
+
+    // Remove previous icon if exists
+    const prevIcon = creatureNameEl.previousElementSibling;
+    if (prevIcon && prevIcon.tagName === "IMG") {
+      prevIcon.remove();
+    }
+
+    // Add icon if exists
+    if (icon) {
+      const iconImg = document.createElement("img");
+      iconImg.src = `${baseUrl}/${icon}`.replace("//", "/");
+      iconImg.alt = name;
+      iconImg.className = "w-6 h-6 inline mr-2";
+      creatureNameEl.before(iconImg);
+    }
+
     overlay.classList.remove("hidden");
     overlay.classList.add("flex");
   }
