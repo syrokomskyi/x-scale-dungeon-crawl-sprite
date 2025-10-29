@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/suspicious/noExplicitAny: File read specific */
+/** biome-ignore-all lint/suspicious/noExplicitAny: File specific */
 import {
   copyFileSync,
   cpSync,
@@ -13,6 +13,7 @@ import {
 } from "node:fs";
 import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -166,77 +167,99 @@ const guiDir = join(crawlRefDirPublic, "source", "rltiles", "gui");
 const webpFiles = getAllFiles(redrawV1Dir, ".webp").map((p) =>
   p.replace(/\\/g, "/"),
 );
-const pngFilesInGui = getAllFiles(guiDir, ".png").map((p) =>
-  p.replace(/\\/g, "/"),
-);
+const pngFilesInGui = existsSync(guiDir)
+  ? getAllFiles(guiDir, ".png").map((p) => p.replace(/\\/g, "/"))
+  : [];
 
 const images: Array<{
   path: string;
+  pathWidth: number;
+  pathHeight: number;
   name: string;
   note: string;
   icon: string;
 }> = [];
 
-for (const webpPath of webpFiles) {
-  const path = `redraw-v1/${webpPath}`;
-  const basenameNoExt = basename(webpPath, ".webp");
-  if (/\d$/.test(basenameNoExt)) {
-    continue;
-  }
-  const name = basenameNoExt
-    .split("_")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-  const note = descriptions.get(name.toLowerCase()) ?? "";
+(async () => {
+  for (const webpPath of webpFiles) {
+    const path = `redraw-v1/${webpPath}`;
+    const basenameNoExt = basename(webpPath, ".webp");
+    if (/\d$/.test(basenameNoExt)) {
+      continue;
+    }
 
-  // find icon
-  const iconPath = webpPath.replace(".webp", ".png");
-  let icon = "";
-  if (existsSync(join(crawlRefDirPublic, "source", "rltiles", iconPath))) {
-    icon = `crawl-ref/source/rltiles/${iconPath}`.replace(/\\/g, "/");
-  } else {
-    const candidate = pngFilesInGui.find((png) =>
-      basename(png).startsWith(`${basenameNoExt}_`),
-    );
-    if (candidate) {
-      icon = `crawl-ref/source/rltiles/gui/${candidate}`.replace(/\\/g, "/");
+    const name = basenameNoExt
+      .split("_")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+    const note = descriptions.get(name.toLowerCase()) ?? "";
+
+    // find icon
+    const iconPath = webpPath.replace(".webp", ".png");
+    let icon = "";
+    if (existsSync(join(crawlRefDirPublic, "source", "rltiles", iconPath))) {
+      icon = `crawl-ref/source/rltiles/${iconPath}`.replace(/\\/g, "/");
+    } else {
+      const candidate = pngFilesInGui.find((png) =>
+        basename(png).startsWith(`${basenameNoExt}_`),
+      );
+      if (candidate) {
+        icon = `crawl-ref/source/rltiles/gui/${candidate}`.replace(/\\/g, "/");
+      }
+    }
+
+    // get dimensions
+    try {
+      const metadata = await sharp(join(redrawV1Dir, webpPath)).metadata();
+      if (!metadata.width || !metadata.height) {
+        console.warn(`Could not get dimensions for ${webpPath}`);
+        continue;
+      }
+      images.push({
+        path,
+        pathWidth: metadata.width,
+        pathHeight: metadata.height,
+        name,
+        note,
+        icon,
+      });
+    } catch (error) {
+      console.warn(`Error getting dimensions for ${webpPath}: ${error}`);
     }
   }
 
-  images.push({ path, name, note, icon });
-}
+  images.sort((a, b) => a.path.localeCompare(b.path));
 
-images.sort((a, b) => a.path.localeCompare(b.path));
+  writeFileSync(
+    join(publicDir, "data", "images.json"),
+    JSON.stringify(images, null, 2),
+  );
+  console.log("images.json generated.");
 
-writeFileSync(
-  join(publicDir, "data", "images.json"),
-  JSON.stringify(images, null, 2),
-);
-console.log("images.json generated.");
-
-// Remove unused PNG files from crawl-ref
-console.log("\nRemoving unused PNG files from crawl-ref...\n");
-const usedIcons = new Set<string>();
-for (const img of images) {
-  if (img.icon) {
-    usedIcons.add(join(publicDir, img.icon));
+  // Remove unused PNG files from crawl-ref
+  console.log("\nRemoving unused PNG files from crawl-ref...\n");
+  const usedIcons = new Set<string>();
+  for (const img of images) {
+    if (img.icon) {
+      usedIcons.add(join(publicDir, img.icon));
+    }
   }
-}
 
-const allPngFiles = getAllFiles(crawlRefDirPublic, ".png");
-for (const pngPath of allPngFiles) {
-  const fullPath = join(crawlRefDirPublic, pngPath);
-  if (!usedIcons.has(fullPath)) {
-    unlinkSync(fullPath);
-    removedFiles++;
-    // console.log(`Removed ${relative(publicDir, fullPath)}`);
+  const allPngFiles = getAllFiles(crawlRefDirPublic, ".png");
+  for (const pngPath of allPngFiles) {
+    const fullPath = join(crawlRefDirPublic, pngPath);
+    if (!usedIcons.has(fullPath)) {
+      unlinkSync(fullPath);
+      removedFiles++;
+      // console.log(`Removed ${relative(publicDir, fullPath)}`);
+    }
   }
-}
-console.log(`Removed ${removedFiles} unused PNG files.`);
+  console.log(`Removed ${removedFiles} unused PNG files.`);
 
-console.log(`\nTotal files: ${totalFiles}`);
-console.log(`Copied: ${copiedFiles}`);
-console.log(`Skipped: ${skippedFiles}`);
-console.log(`Removed: ${removedFiles}`);
+  console.log(`\nTotal files: ${totalFiles}`);
+  console.log(`Copied: ${copiedFiles}`);
+  console.log(`Skipped: ${skippedFiles}`);
+  console.log(`Removed: ${removedFiles}`);
 
-console.log("\nAssets generation completed.\n");
+  console.log("\nAssets generation completed.\n");
+})();

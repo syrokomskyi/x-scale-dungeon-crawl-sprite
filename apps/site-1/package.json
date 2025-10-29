@@ -17,6 +17,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "@types/node": "^24.9.2",
+    "sharp": "^0.34.4",
     "tailwindcss": "^4.1.16",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
