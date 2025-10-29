@@ -122,10 +122,10 @@ function copyDir(src: string, dest: string): void {
       if (!existsSync(destPath)) {
         copyFileSync(srcPath, destPath);
         copiedFiles++;
-        console.log(`Copied ${relative(publicDir, destPath)}`);
+        // console.log(`Copied ${relative(publicDir, destPath)}`);
       } else {
         skippedFiles++;
-        console.log(`Skipped ${relative(publicDir, destPath)}, already exists`);
+        // console.log(`Skipped ${relative(publicDir, destPath)}, already exists`);
       }
     }
   }
@@ -229,7 +229,7 @@ for (const pngPath of allPngFiles) {
   if (!usedIcons.has(fullPath)) {
     unlinkSync(fullPath);
     removedFiles++;
-    console.log(`Removed ${relative(publicDir, fullPath)}`);
+    // console.log(`Removed ${relative(publicDir, fullPath)}`);
   }
 }
 console.log(`Removed ${removedFiles} unused PNG files.`);
