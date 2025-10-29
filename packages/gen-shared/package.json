@@ -8,10 +8,10 @@
   "dependencies": {
     "@google/genai": "^1.27.0",
     "sharp": "^0.34.4",
-    "slug": "^11.0.0"
+    "slug": "^11.0.1"
   },
   "devDependencies": {
     "@types/slug": "^5.0.9",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
