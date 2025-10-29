@@ -1,7 +1,7 @@
 {
   "name": "site-1",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "prebuild": "tsx scripts/generate-assets.ts",
     "skip-predev": "tsx scripts/generate-assets.ts",
