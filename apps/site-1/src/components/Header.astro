@@ -2,7 +2,9 @@
 import Filter from "./Filter.astro";
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md">
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md transition-transform duration-300"
+>
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
     <div></div>
     <div class="text-center">
@@ -35,5 +37,24 @@ import Filter from "./Filter.astro";
       GitHub
     </a>
   </div>
+
   <Filter />
+
+  <script is:inline>
+    let lastScrollY = window.scrollY;
+    let isHidden = false;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100 && !isHidden) {
+        header.classList.add("translate-y-[-100%]");
+        isHidden = true;
+      } else if (currentScrollY < lastScrollY && isHidden) {
+        header.classList.remove("translate-y-[-100%]");
+        isHidden = false;
+      }
+      lastScrollY = currentScrollY;
+    });
+  </script>
 </header>
