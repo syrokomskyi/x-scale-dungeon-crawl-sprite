@@ -23,6 +23,8 @@ const imageList = images.default;
         imageList.map((image) => (
           <ImageCard
             path={image.path}
+            width={image.pathWidth}
+            height={image.pathHeight}
             name={image.name}
             note={image.note}
             icon={image.icon}
