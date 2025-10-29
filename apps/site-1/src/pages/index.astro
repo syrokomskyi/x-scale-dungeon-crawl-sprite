@@ -35,14 +35,25 @@ const imageList = images.default;
 
 <div
   id="fullscreen-overlay"
-  class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 items-center justify-center"
+  class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 items-center justify-center p-4"
 >
-  <img
-    id="fullscreen-img"
-    src=""
-    alt=""
-    class="max-w-full max-h-full object-contain cursor-pointer"
-  />
+  <div
+    class="bg-gray-800 rounded-lg shadow-2xl max-w-2xl max-h-full overflow-hidden border-4 border-gray-600 relative"
+  >
+    <img
+      id="fullscreen-img"
+      src=""
+      alt=""
+      class="w-full object-contain rounded-t-lg"
+    />
+    <div
+      class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent"
+    >
+      <h3 id="fullscreen-name" class="text-xl text-white">
+        <span id="creature-name"></span>
+      </h3>
+    </div>
+  </div>
 </div>
 
 <script is:inline define:vars={{ baseUrl }}>
@@ -87,16 +98,20 @@ const imageList = images.default;
         const card = img.closest(".image-card");
         const path = card.dataset.path;
         const name = img.alt;
-        openFullscreen(path, name);
+        const note = card.dataset.note;
+        const icon = card.dataset.icon;
+        openFullscreen(path, name, note, icon);
       });
     });
   });
 
-  function openFullscreen(path, name) {
+  function openFullscreen(path, name, note, icon) {
     const overlay = document.getElementById("fullscreen-overlay");
     const img = document.getElementById("fullscreen-img");
+    const creatureNameEl = document.getElementById("creature-name");
     img.src = `${baseUrl}/${path}`.replace("//", "/");
     img.alt = name;
+    creatureNameEl.textContent = name;
     overlay.classList.remove("hidden");
     overlay.classList.add("flex");
   }
@@ -115,5 +130,9 @@ const imageList = images.default;
 
   document
     .getElementById("fullscreen-overlay")
-    .addEventListener("click", closeFullscreen);
+    .addEventListener("click", (e) => {
+      if (e.target === e.currentTarget) {
+        closeFullscreen();
+      }
+    });
 </script>

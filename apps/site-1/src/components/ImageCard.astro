@@ -14,6 +14,8 @@ const { path, name, note, icon } = Astro.props;
 <div
   class="image-card bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
   data-path={path}
+  data-note={note}
+  data-icon={icon}
 >
   <img
     src={`${baseUrl}/${path}`.replace("//", "/")}
