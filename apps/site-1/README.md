@@ -1,4 +1,4 @@
-# Dungeon Crawl: Stone Soup | Fan Gallery
+# Tool for Create a Fan Gallery | Demo
 
 A static website showcasing images from the `redraw-v1` folder.
 
