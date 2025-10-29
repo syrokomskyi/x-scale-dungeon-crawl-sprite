@@ -42,8 +42,10 @@ const imageList = images.default;
 
   let isProgrammaticHashChange = false;
 
-  function setHash(hash) {
+  function setHash(path) {
     isProgrammaticHashChange = true;
+    let hash = encodeURIComponent(path.replace(".webp", ""));
+    hash = hash.replace(/%2F/g, "+");
     window.location.hash = hash;
   }
 
@@ -71,7 +73,9 @@ const imageList = images.default;
 
   function getPathFromHash() {
     const hash = window.location.hash.slice(1);
-    return hash ? decodeURIComponent(hash) + ".webp" : null;
+    return hash
+      ? decodeURIComponent(hash.replace(/\+/g, "%2F")) + ".webp"
+      : null;
   }
 
   window.addEventListener("hashchange", () => {
@@ -128,7 +132,7 @@ const imageList = images.default;
     // Check initial hash
     if (window.location.hash) {
       const hash = window.location.hash.slice(1);
-      const path = decodeURIComponent(hash) + ".webp";
+      const path = decodeURIComponent(hash.replace(/\+/g, "%2F")) + ".webp";
       openCardByPath(path);
     }
 
@@ -142,7 +146,7 @@ const imageList = images.default;
         const note = card.dataset.note;
         const icon = card.dataset.icon;
         openFullscreenCard(path, name, note, icon);
-        setHash(encodeURIComponent(path.replace(".webp", "")));
+        setHash(path);
       });
     });
   });
