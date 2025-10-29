@@ -151,6 +151,7 @@ console.log(`Copied sprites directory.`);
 // filters.json
 console.log("\nGenerating filters.json...\n");
 const filters = buildFilters(join(publicDir, "redraw-v1"));
+mkdirSync(join(publicDir, "data"), { recursive: true });
 writeFileSync(
   join(publicDir, "data", "filters.json"),
   JSON.stringify(filters, null, 2),
