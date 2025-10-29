@@ -37,8 +37,52 @@ const imageList = images.default;
   <FullscreenCard />
 </Layout>
 
-<script is:inline define:vars={{ baseUrl }}>
+<script is:inline define:vars={{ baseUrl, imageList }}>
   let currentFilter = [];
+
+  let isProgrammaticHashChange = false;
+
+  function setHash(hash) {
+    isProgrammaticHashChange = true;
+    window.location.hash = hash;
+  }
+
+  window.closeFullscreen = function () {
+    const overlay = document.getElementById("fullscreen-overlay");
+    overlay.classList.remove("flex");
+    overlay.classList.add("hidden");
+    setHash("");
+  };
+
+  function openCardByPath(path) {
+    const image = imageList.find((img) => img.path === path + ".webp");
+    if (image) {
+      document.dispatchEvent(
+        new CustomEvent("openFullscreen", {
+          detail: {
+            path: image.path,
+            name: image.name,
+            note: image.note,
+            icon: image.icon,
+          },
+        })
+      );
+    }
+  }
+
+  window.addEventListener("hashchange", () => {
+    if (isProgrammaticHashChange) {
+      isProgrammaticHashChange = false;
+      return;
+    }
+    const hash = window.location.hash.slice(1); // remove #
+    if (hash) {
+      const path = decodeURIComponent(hash) + ".webp";
+      openCardByPath(path);
+    } else {
+      window.closeFullscreen();
+    }
+  });
 
   window.addEventListener("filterChange", (e) => {
     currentFilter = e.detail.selected;
@@ -72,6 +116,13 @@ const imageList = images.default;
   document.addEventListener("DOMContentLoaded", () => {
     shuffleGallery();
 
+    // Check initial hash
+    if (window.location.hash) {
+      const hash = window.location.hash.slice(1);
+      const path = decodeURIComponent(hash) + ".webp";
+      openCardByPath(path);
+    }
+
     // Add click listeners to images
     const images = document.querySelectorAll(".image-card img");
     images.forEach((img) => {
@@ -86,6 +137,7 @@ const imageList = images.default;
             detail: { path, name, note, icon },
           })
         );
+        setHash(encodeURIComponent(path.replace(".webp", "")));
       });
     });
   });
