@@ -7,21 +7,40 @@ const baseUrl = import.meta.env.BASE_URL;
   class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 items-center justify-center p-4"
 >
   <div
-    class="bg-gray-800 rounded-lg shadow-2xl max-w-2xl max-h-full overflow-hidden border-4 border-gray-600 relative"
+    class="bg-gray-800 rounded-lg shadow-2xl max-w-full sm:max-w-2xl max-h-full overflow-hidden border-4 border-gray-600 relative"
   >
+    <button
+      id="share-btn"
+      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-lg transition-colors"
+      aria-label="Share link"
+    >
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
+        ></path>
+      </svg>
+    </button>
     <img
       id="fullscreen-img"
       src=""
       alt=""
       class="w-full object-contain rounded-t-lg"
     />
-    <divа
+    <div
       class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent"
     >
       <h3 id="fullscreen-name" class="text-xl text-white">
         <span id="creature-name"></span>
       </h3>
-    </divа>
+    </div>
   </div>
 </div>
 
@@ -29,6 +48,15 @@ const baseUrl = import.meta.env.BASE_URL;
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       window.closeFullscreen();
+    }
+  });
+
+  // Share button click handler
+  document.getElementById("share-btn")?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+    } catch (err) {
+      console.error("Failed to copy link", err);
     }
   });
 
