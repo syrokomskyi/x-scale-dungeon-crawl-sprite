@@ -33,6 +33,17 @@ const pathToBg: string = join(publicDir, "redraw-v1", "branch");
 
 const excludeFromShow: string[] = ["branch", "README.md", "mon+v2"];
 
+function isVideoToExclude(filename: string): boolean {
+  const lowerFilename = filename.toLowerCase();
+  if (lowerFilename.endsWith(".mp4") || lowerFilename.endsWith(".webm")) {
+    const extIndex = lowerFilename.lastIndexOf(".");
+    const nameWithoutExt = filename.slice(0, extIndex);
+    return !nameWithoutExt.endsWith("_loop");
+  }
+
+  return false;
+}
+
 const crawlRefName: string = basename(crawlRefDir);
 const spritesName: string = basename(spritesDir);
 
@@ -112,7 +123,7 @@ function copyDir(src: string, dest: string): void {
   const items: string[] = readdirSync(src);
   for (const item of items) {
     const destPath: string = join(dest, item);
-    if (excludeFromShow.includes(item)) {
+    if (excludeFromShow.includes(item) || isVideoToExclude(item)) {
       console.log(`Skipped ${relative(publicDir, destPath)}, excluded`);
       continue;
     }
