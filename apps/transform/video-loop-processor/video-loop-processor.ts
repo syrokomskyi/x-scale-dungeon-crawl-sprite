@@ -1,6 +1,7 @@
 import { spawn } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 
@@ -69,10 +70,10 @@ async function processVideo(
   const tempConcatenated = path.join(tempDir, "concatenated.mp4");
   const concatListPath = path.join(tempDir, "concat_list.txt");
 
-  console.error(`Temp dir: ${tempDir}`);
-  console.error(`Temp reversed: ${tempReversed}`);
-  console.error(`Temp concat: ${tempConcatenated}`);
-  console.error(`Concat list: ${concatListPath}`);
+  console.error(`Temp dir: ${relative(SOURCE_DIR, tempDir)}`);
+  console.error(`Temp reversed: ${relative(SOURCE_DIR, tempReversed)}`);
+  console.error(`Temp concat: ${relative(SOURCE_DIR, tempConcatenated)}`);
+  console.error(`Concat list: ${relative(SOURCE_DIR, concatListPath)}`);
 
   try {
     // Step 1: Create reversed version (without audio)
@@ -101,14 +102,16 @@ async function processVideo(
 
     console.error("Reverse done");
     if (!fs.existsSync(tempReversed)) {
-      throw new Error(`Reversed file not created: ${tempReversed}`);
+      throw new Error(
+        `Reversed file not created: ${relative(SOURCE_DIR, tempReversed)}`,
+      );
     }
 
     // Step 2: Create concat list
     const concatList = `file '${path.resolve(inputPath).replace(/\\/g, "/")}'\nfile '${path.resolve(tempReversed).replace(/\\/g, "/")}'`;
     fs.writeFileSync(concatListPath, concatList);
 
-    console.error(`Concat list content: ${concatList}`);
+    console.log(`Concat list content:\n`, concatList);
 
     // Step 3: Concatenate original + reversed
     console.log("  Concatenating...");
@@ -138,7 +141,9 @@ async function processVideo(
 
     console.error("Concat done");
     if (!fs.existsSync(tempConcatenated)) {
-      throw new Error(`Concatenated file not created: ${tempConcatenated}`);
+      throw new Error(
+        `Concatenated file not created: ${relative(SOURCE_DIR, tempConcatenated)}`,
+      );
     }
 
     // Step 4: Encode to MP4 with H.264 (high quality)
@@ -174,9 +179,11 @@ async function processVideo(
     });
 
     console.error("MP4 encoding done");
-    console.error(`Output MP4 path: ${outputPathMp4}`);
+    console.error(`Output MP4 path: ${relative(SOURCE_DIR, outputPathMp4)}`);
     if (!fs.existsSync(outputPathMp4)) {
-      throw new Error(`Output MP4 file not created: ${outputPathMp4}`);
+      throw new Error(
+        `Output MP4 file not created: ${relative(SOURCE_DIR, outputPathMp4)}`,
+      );
     }
 
     // Step 5: Encode to WebM with VP9 (high quality, faster than AV1)
@@ -214,16 +221,21 @@ async function processVideo(
     });
 
     console.error("WebM encoding done");
-    console.error(`Output WebM path: ${outputPathWebm}`);
+    console.error(`Output WebM path: ${relative(SOURCE_DIR, outputPathWebm)}`);
     if (!fs.existsSync(outputPathWebm)) {
-      throw new Error(`Output WebM file not created: ${outputPathWebm}`);
+      throw new Error(
+        `Output WebM file not created: ${relative(SOURCE_DIR, outputPathWebm)}`,
+      );
     }
 
     console.log(
       `✓ Completed: ${path.basename(inputPath)} -> ${path.basename(outputPathMp4)}, ${path.basename(outputPathWebm)}`,
     );
   } catch (error) {
-    console.error(`✗ Error processing ${inputPath}:`, error);
+    console.error(
+      `✗ Error processing ${relative(SOURCE_DIR, inputPath)}:`,
+      error,
+    );
     throw error;
   } finally {
     // Clean up temporary files
@@ -280,7 +292,10 @@ async function main() {
     try {
       await processVideo(fullPath, outputPathMp4, outputPathWebm);
     } catch (error) {
-      console.error(`Skipping file due to error: ${fullPath}`, error);
+      console.error(
+        `Skipping file due to error: ${relative(SOURCE_DIR, fullPath)}`,
+        error,
+      );
     }
   }
 
