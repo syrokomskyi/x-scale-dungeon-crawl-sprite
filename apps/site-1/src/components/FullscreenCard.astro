@@ -62,6 +62,7 @@ const baseUrl = import.meta.env.BASE_URL;
 
   // Share button click handler
   document.getElementById("share-btn")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
     try {
       await navigator.clipboard.writeText(window.location.href);
       window.showToast("Link copied");
