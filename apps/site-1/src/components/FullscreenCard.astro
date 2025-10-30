@@ -100,14 +100,9 @@ const baseUrl = import.meta.env.BASE_URL;
     }
 
     // Check for video
-    const videoPathMp4 = path.replace(
-      /\.(png|jpg|jpeg|gif|webp)$/i,
-      "_loop.mp4"
-    );
-    const videoPathWebp = path.replace(
-      /\.(png|jpg|jpeg|gif|webp)$/i,
-      "_loop.webp"
-    );
+    const ext = /\.(png|jpg|jpeg|gif|webp)$/i;
+    const videoPathMp4 = path.replace(ext, "_loop.mp4");
+    const videoPathWebp = path.replace(ext, "_loop.webp");
 
     // Try MP4 first
     video.src = `${baseUrl}/${videoPathMp4}`.replace("//", "/");
