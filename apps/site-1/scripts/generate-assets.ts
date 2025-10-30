@@ -28,6 +28,9 @@ const spritesDir: string = join(
   "redraw-v1",
 );
 
+const pathToSourceBg: string = join(spritesDir, "branch");
+const pathToBg: string = join(publicDir, "redraw-v1", "branch");
+
 const excludeFromShow: string[] = ["branch", "README.md", "mon+v2"];
 
 const crawlRefName: string = basename(crawlRefDir);
@@ -256,6 +259,11 @@ const images: Array<{
     }
   }
   console.log(`Removed ${removedFiles} unused PNG files.`);
+
+  // Copy sprites for background
+  console.log("\nCopying sprites for background...\n");
+  copyDir(pathToSourceBg, pathToBg);
+  console.log("Sprites for background copied.\n");
 
   console.log(`\nTotal files: ${totalFiles}`);
   console.log(`Copied: ${copiedFiles}`);
