@@ -58,7 +58,7 @@ async function findAllVideos(
 async function processVideo(
   inputPath: string,
   outputPathMp4: string,
-  _outputPathWebm: string,
+  outputPathWebm: string,
 ): Promise<void> {
   console.log(`Processing: ${inputPath}`);
 
@@ -180,42 +180,49 @@ async function processVideo(
     }
 
     // Step 5: Encode to WebM with AV1 (high quality)
-    // console.log("  Encoding to WebM (AV1)...");
-    // const webmFFmpeg = new FFmpeggy({
-    //   input: tempConcatenated,
-    //   output: outputPathWebm,
-    //   outputOptions: [
-    //     "-c:v",
-    //     "libaom-av1",
-    //     "-cpu-used",
-    //     "2", // Encoding speed (0-8, lower = slower but better quality)
-    //     "-crf",
-    //     "30", // CRF for AV1 (recommended 30-35 for high quality)
-    //     "-b:v",
-    //     "0", // Constant quality mode
-    //     "-pix_fmt",
-    //     "yuv420p", // Compatibility
-    //     "-row-mt",
-    //     "1", // Multithreading
-    //     "-tiles",
-    //     "2x2", // Parallel processing
-    //     "-an", // No audio
-    //     "-sn", // No subtitles
-    //   ],
-    //   overwriteExisting: true,
-    //   autorun: true,
-    // });
+    console.log("  Encoding to WebM (AV1)...");
+    const webmProcess = spawn(
+      "ffmpeg",
+      [
+        "-i",
+        tempConcatenated.replace(/\\/g, "/"),
+        "-c:v",
+        "libaom-av1",
+        "-cpu-used",
+        "2",
+        "-crf",
+        "30",
+        "-b:v",
+        "0",
+        "-pix_fmt",
+        "yuv420p",
+        "-row-mt",
+        "1",
+        "-tiles",
+        "2x2",
+        "-an",
+        "-sn",
+        outputPathWebm.replace(/\\/g, "/"),
+      ],
+      { stdio: "ignore" },
+    );
 
-    // webmFFmpeg.on("progress", (progress) => {
-    //   if (progress.percent) {
-    //     console.log(`    WebM: ${progress.percent.toFixed(1)}%`);
-    //   }
-    // });
+    await new Promise<void>((resolve, reject) => {
+      webmProcess.on("close", (code) => {
+        if (code === 0) resolve();
+        else reject(new Error(`FFmpeg WebM exited with code ${code}`));
+      });
+      webmProcess.on("error", reject);
+    });
 
-    // await webmFFmpeg.done();
+    console.error("WebM encoding done");
+    console.error(`Output WebM path: ${outputPathWebm}`);
+    if (!fs.existsSync(outputPathWebm)) {
+      throw new Error(`Output WebM file not created: ${outputPathWebm}`);
+    }
 
     console.log(
-      `✓ Completed: ${path.basename(inputPath)} -> ${path.basename(outputPathMp4)}`,
+      `✓ Completed: ${path.basename(inputPath)} -> ${path.basename(outputPathMp4)}, ${path.basename(outputPathWebm)}`,
     );
   } catch (error) {
     console.error(`✗ Error processing ${inputPath}:`, error);
