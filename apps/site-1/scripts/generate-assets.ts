@@ -189,6 +189,7 @@ const images: Array<{
   name: string;
   note: string;
   icon: string;
+  video: string;
 }> = [];
 
 (async () => {
@@ -219,6 +220,17 @@ const images: Array<{
       }
     }
 
+    // find a first video
+    const videoExtensions = [".webm", ".mp4"];
+    let video = "";
+    for (const ext of videoExtensions) {
+      const videoPath = webpPath.replace(".webp", ext);
+      if (existsSync(join(redrawV1Dir, videoPath))) {
+        video = `redraw-v1/${videoPath}`.replace(/\\/g, "/");
+        break;
+      }
+    }
+
     // get dimensions
     try {
       const metadata = await sharp(join(redrawV1Dir, webpPath)).metadata();
@@ -233,6 +245,7 @@ const images: Array<{
         name,
         note,
         icon,
+        video,
       });
     } catch (error) {
       console.warn(`Error getting dimensions for ${webpPath}: ${error}`);
