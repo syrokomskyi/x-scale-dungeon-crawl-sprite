@@ -34,11 +34,36 @@ import Filter from "./Filter.astro";
         </svg>
         GitHub
       </a>
-      <h6 class="text-base text-gray-300 mt-1 mb-1 px-4 md:text-sm sm:text-xs">
-        The goal of this project is to demo the capabilities of a tool that
-        allows every fan of the Game to draw high-quality images from their
-        favorite Game. Any Game. Even if you can't draw.
-      </h6>
+      <div class="relative">
+        <button
+          id="info-toggle"
+          class="text-gray-300 hover:text-white transition-colors mt-1 mb-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            class="inline"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            ></path>
+            <path
+              d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+            ></path>
+          </svg>
+        </button>
+        <h6
+          id="description-text"
+          class="text-base text-gray-300 mt-1 mb-6 px-4 md:text-sm sm:text-xs hidden"
+        >
+          The goal of this project is to demo the capabilities of a tool that
+          allows every fan of the Game to draw high-quality images from their
+          favorite Game. Any Game. Even if you can't draw.
+        </h6>
+      </div>
       <Filter />
     </div>
     <div></div>
@@ -68,5 +93,12 @@ import Filter from "./Filter.astro";
       isHidden = false;
     }
     lastScrollY = currentScrollY;
+  });
+
+  // Toggle description text
+  const toggleButton = document.getElementById("info-toggle");
+  const descriptionText = document.getElementById("description-text");
+  toggleButton.addEventListener("click", () => {
+    descriptionText.classList.toggle("hidden");
   });
 </script>
