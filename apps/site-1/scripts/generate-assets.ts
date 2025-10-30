@@ -28,7 +28,7 @@ const spritesDir: string = join(
   "redraw-v1",
 );
 
-const exclude: string[] = ["branch", "README.md", "mon+v2"];
+const excludeFromShow: string[] = ["branch", "README.md", "mon+v2"];
 
 const crawlRefName: string = basename(crawlRefDir);
 const spritesName: string = basename(spritesDir);
@@ -109,7 +109,7 @@ function copyDir(src: string, dest: string): void {
   const items: string[] = readdirSync(src);
   for (const item of items) {
     const destPath: string = join(dest, item);
-    if (exclude.includes(item)) {
+    if (excludeFromShow.includes(item)) {
       console.log(`Skipped ${relative(publicDir, destPath)}, excluded`);
       continue;
     }
