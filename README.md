@@ -1,10 +1,10 @@
-# 🏰 Tool for Creating Fan Gallery for Any Roguelike Game
+# Tool for Creating Fan Gallery for any Roguelike Game
 
 ![Cover - Tool for Creating Fan Gallery for Any Roguelike Game](./images/cover.webp)
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-The game [Dungeon Crawl: Stone Soup](https://en.wikipedia.org/wiki/Dungeon_Crawl_Stone_Soup) was used as an example. Enjoy.
+This is a tool. The game [Dungeon Crawl: Stone Soup](https://en.wikipedia.org/wiki/Dungeon_Crawl_Stone_Soup) was used as an example.
 
 > [!IMPORTANT]
 > This project is **NOT A MOD**, not a call for modification of the Game, but a **tribute to the DCSS developers and the community** that created one of the most magnificent roguelikes in history. This is just a demo.
