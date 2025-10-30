@@ -261,6 +261,9 @@ async function main() {
 
     // Generating output file names
     const baseName = path.basename(relativePath, VIDEO_EXTENSION);
+    if (baseName.endsWith("_loop")) {
+      continue;
+    }
     const outputPathMp4 = path.join(outputSubDir, `${baseName}_loop.mp4`);
     const outputPathWebm = path.join(outputSubDir, `${baseName}_loop.webm`);
 
