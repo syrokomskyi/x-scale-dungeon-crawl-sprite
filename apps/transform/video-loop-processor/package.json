@@ -1,0 +1,28 @@
+{
+  "name": "video-loop-processor",
+  "version": "1.0.0",
+  "description": "Video processing with creation of looped versions (forward + reverse).",
+  "type": "module",
+  "main": "video-loop-processor.ts",
+  "scripts": {
+    "start": "tsx video-loop-processor.ts",
+    "build": "tsc",
+    "dev": "tsx watch video-loop-processor.ts"
+  },
+  "keywords": [
+    "video",
+    "ffmpeg",
+    "processing",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ffmpeggy": "^3.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
