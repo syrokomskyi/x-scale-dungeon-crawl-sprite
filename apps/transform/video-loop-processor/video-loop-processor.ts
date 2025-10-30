@@ -267,6 +267,13 @@ async function main() {
     const outputPathMp4 = path.join(outputSubDir, `${baseName}_loop.mp4`);
     const outputPathWebm = path.join(outputSubDir, `${baseName}_loop.webm`);
 
+    if (fs.existsSync(outputPathMp4) && fs.existsSync(outputPathWebm)) {
+      console.log(
+        `Skipping, outputs already exist: ${path.basename(outputPathMp4)}, ${path.basename(outputPathWebm)}`,
+      );
+      continue;
+    }
+
     console.log(`Output MP4: ${outputPathMp4}`);
     console.log(`Output WebM: ${outputPathWebm}`);
 
