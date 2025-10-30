@@ -14,6 +14,7 @@ import {
 import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import * as ThumbHash from "thumbhash";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -197,6 +198,7 @@ const images: Array<{
   path: string;
   pathWidth: number;
   pathHeight: number;
+  pathPlaceholder: string;
   name: string;
   note: string;
   icon: string;
@@ -242,6 +244,19 @@ const images: Array<{
       }
     }
 
+    // generate a blur
+    const image = sharp(join(redrawV1Dir, webpPath)).resize(100);
+    const { data, info } = await image
+      .ensureAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true });
+    const binaryThumbHash = ThumbHash.rgbaToThumbHash(
+      info.width,
+      info.height,
+      data,
+    );
+    const pathPlaceholder = ThumbHash.thumbHashToDataURL(binaryThumbHash);
+
     // get dimensions
     try {
       const metadata = await sharp(join(redrawV1Dir, webpPath)).metadata();
@@ -253,6 +268,7 @@ const images: Array<{
         path,
         pathWidth: metadata.width,
         pathHeight: metadata.height,
+        pathPlaceholder,
         name,
         note,
         icon,
