@@ -16,7 +16,7 @@ const imagesList = images.default;
 
   // Set initial background
   if (bgElement) {
-    const p = imagesList[currentImageIndex].replace("//", "/");
+    const p = imagesList[currentImageIndex];
     bgElement.style.backgroundImage = `url(${p})`;
   }
 
@@ -24,7 +24,7 @@ const imagesList = images.default;
   setInterval(() => {
     currentImageIndex = (currentImageIndex + 1) % imagesList.length;
     if (bgElement) {
-      const p = imagesList[currentImageIndex].replace("//", "/");
+      const p = imagesList[currentImageIndex];
       bgElement.style.backgroundImage = `url(${p})`;
     } else {
       console.warn("Background element not found.");
