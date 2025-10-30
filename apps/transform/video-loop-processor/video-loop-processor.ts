@@ -179,27 +179,25 @@ async function processVideo(
       throw new Error(`Output MP4 file not created: ${outputPathMp4}`);
     }
 
-    // Step 5: Encode to WebM with AV1 (high quality)
-    console.log("  Encoding to WebM (AV1)...");
+    // Step 5: Encode to WebM with VP9 (high quality, faster than AV1)
+    console.log("  Encoding to WebM (VP9)...");
     const webmProcess = spawn(
       "ffmpeg",
       [
         "-i",
         tempConcatenated.replace(/\\/g, "/"),
         "-c:v",
-        "libaom-av1",
-        "-cpu-used",
-        "2",
+        "libvpx-vp9",
         "-crf",
         "30",
         "-b:v",
         "0",
+        "-quality",
+        "good",
+        "-speed",
+        "2", // 0-4, higher = faster but lower quality
         "-pix_fmt",
         "yuv420p",
-        "-row-mt",
-        "1",
-        "-tiles",
-        "2x2",
         "-an",
         "-sn",
         outputPathWebm.replace(/\\/g, "/"),
