@@ -1,0 +1,69 @@
+---
+
+---
+
+<div
+  id="parallax-bg"
+  class="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-2000 ease-in-out"
+>
+</div>
+<div class="fixed inset-0 z-10 bg-black/80 pointer-events-none"></div>
+
+<script>
+  const images = [
+    "/redraw-v1/branch/abyss.webp",
+    "/redraw-v1/branch/arena.webp",
+    "/redraw-v1/branch/bailey.webp",
+    "/redraw-v1/branch/bazaar.webp",
+    "/redraw-v1/branch/cocytus.webp",
+    "/redraw-v1/branch/cocytus1.webp",
+    "/redraw-v1/branch/crucible.webp",
+    "/redraw-v1/branch/crypt.webp",
+    "/redraw-v1/branch/depths.webp",
+    "/redraw-v1/branch/desolation.webp",
+    "/redraw-v1/branch/dis.webp",
+    "/redraw-v1/branch/dungeon.webp",
+    "/redraw-v1/branch/elven_halls.webp",
+    "/redraw-v1/branch/gauntlet.webp",
+    "/redraw-v1/branch/gehenna.webp",
+    "/redraw-v1/branch/hell.webp",
+    "/redraw-v1/branch/ice_cave.webp",
+    "/redraw-v1/branch/lair.webp",
+    "/redraw-v1/branch/necropolis.webp",
+    "/redraw-v1/branch/orcish_mines.webp",
+    "/redraw-v1/branch/ossuary.webp",
+    "/redraw-v1/branch/pandemonium.webp",
+    "/redraw-v1/branch/sewer.webp",
+    "/redraw-v1/branch/shoals.webp",
+    "/redraw-v1/branch/slime_pits.webp",
+    "/redraw-v1/branch/snake_pit.webp",
+    "/redraw-v1/branch/spider_nest.webp",
+    "/redraw-v1/branch/swamp.webp",
+    "/redraw-v1/branch/temple.webp",
+    "/redraw-v1/branch/tomb.webp",
+    "/redraw-v1/branch/trove.webp",
+    "/redraw-v1/branch/vaults.webp",
+    "/redraw-v1/branch/volcano.webp",
+    "/redraw-v1/branch/wizlab.webp",
+    "/redraw-v1/branch/ziggurat.webp",
+    "/redraw-v1/branch/zot.webp",
+  ];
+
+  const bgElement = document.getElementById("parallax-bg");
+  let currentImageIndex = 0;
+
+  // Set initial background
+  if (bgElement) {
+    bgElement.style.backgroundImage = `url(${images[currentImageIndex]})`;
+  }
+
+  // Change background every 24 seconds
+  setInterval(() => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    if (bgElement) {
+      bgElement.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    } else {
+      console.warn("Background element not found.");
+    }
+  }, 24000);
+</script>
