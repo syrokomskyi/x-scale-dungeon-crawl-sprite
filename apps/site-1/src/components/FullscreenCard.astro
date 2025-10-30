@@ -11,7 +11,7 @@ const baseUrl = import.meta.env.BASE_URL;
   >
     <button
       id="share-btn"
-      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-lg transition-colors"
+      class="absolute top-2 right-2 z-10 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-lg transition-colors"
       aria-label="Share link"
     >
       <svg
@@ -61,7 +61,7 @@ const baseUrl = import.meta.env.BASE_URL;
   });
 
   // Share button click handler
-  document.getElementById("share-btn")?.addEventListener("click", async () => {
+  document.getElementById("share-btn")?.addEventListener("click", async (e) => {
     try {
       await navigator.clipboard.writeText(window.location.href);
       window.showToast("Link copied");
