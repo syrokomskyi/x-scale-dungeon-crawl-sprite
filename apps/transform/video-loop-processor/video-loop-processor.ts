@@ -17,8 +17,6 @@ const SOURCE_DIR = path.join(
   "sprites",
   "work",
   "redraw-v1",
-  "mon",
-  "eyes",
 );
 const OUTPUT_DIR = SOURCE_DIR;
 const VIDEO_EXTENSION = ".mp4";
