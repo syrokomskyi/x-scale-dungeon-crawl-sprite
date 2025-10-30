@@ -235,7 +235,7 @@ const images: Array<{
     const videoExtensions = [".webm", ".mp4"];
     let video = "";
     for (const ext of videoExtensions) {
-      const videoPath = webpPath.replace(".webp", ext);
+      const videoPath = webpPath.replace(".webp", `_loop${ext}`);
       if (existsSync(join(redrawV1Dir, videoPath))) {
         video = `redraw-v1/${videoPath}`.replace(/\\/g, "/");
         break;
