@@ -16,14 +16,16 @@ const imagesList = images.default;
 
   // Set initial background
   if (bgElement) {
-    bgElement.style.backgroundImage = `url(${imagesList[currentImageIndex]})`;
+    const p = imagesList[currentImageIndex].replace("//", "/");
+    bgElement.style.backgroundImage = `url(${p})`;
   }
 
   // Change background every 24 seconds
   setInterval(() => {
     currentImageIndex = (currentImageIndex + 1) % imagesList.length;
     if (bgElement) {
-      bgElement.style.backgroundImage = `url(${imagesList[currentImageIndex]})`;
+      const p = imagesList[currentImageIndex].replace("//", "/");
+      bgElement.style.backgroundImage = `url(${p})`;
     } else {
       console.warn("Background element not found.");
     }
