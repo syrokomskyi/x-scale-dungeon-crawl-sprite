@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "SiteFont";
+  src:
+    url("/fonts/FiraMono-Bold.ttf") format("ttf"),
+    url("/fonts/FiraMono-Medium.ttf") format("ttf"),
+    url("/fonts/FiraMono-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "SiteFont", monospace;
+}
