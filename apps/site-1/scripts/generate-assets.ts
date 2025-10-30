@@ -265,6 +265,20 @@ const images: Array<{
   copyDir(pathToSourceBg, pathToBg);
   console.log("Sprites for background copied.\n");
 
+  // backgrounds.json
+  console.log("\nGenerating backgrounds.json...\n");
+  const backgroundFiles = getAllFiles(
+    pathToBg,
+    ".webp",
+    "redraw-v1/branch",
+  ).map((p) => `/${p.split("\\").join("/")}`);
+  backgroundFiles.sort();
+  writeFileSync(
+    join(publicDir, "data", "backgrounds.json"),
+    JSON.stringify(backgroundFiles, null, 2),
+  );
+  console.log("backgrounds.json generated.\n");
+
   console.log(`\nTotal files: ${totalFiles}`);
   console.log(`Copied: ${copiedFiles}`);
   console.log(`Skipped: ${skippedFiles}`);
