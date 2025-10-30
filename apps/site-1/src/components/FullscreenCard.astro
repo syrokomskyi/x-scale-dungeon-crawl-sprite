@@ -34,6 +34,13 @@ const baseUrl = import.meta.env.BASE_URL;
       alt=""
       class="w-full object-contain rounded-t-lg"
     />
+    <video
+      id="fullscreen-video"
+      class="w-full object-contain rounded-t-lg hidden"
+      controls
+      autoplay
+      muted
+      loop></video>
     <div
       class="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black to-transparent"
     >
@@ -66,7 +73,13 @@ const baseUrl = import.meta.env.BASE_URL;
     const { path, name, icon } = e.detail;
     const overlay = document.getElementById("fullscreen-overlay");
     const img = document.getElementById("fullscreen-img");
+    const video = document.getElementById("fullscreen-video");
     const creatureNameEl = document.getElementById("creature-name");
+
+    // Reset visibility
+    img.classList.remove("hidden");
+    video.classList.add("hidden");
+
     img.src = `${baseUrl}/${path}`.replace("//", "/");
     img.alt = name;
     creatureNameEl.textContent = name;
@@ -85,6 +98,44 @@ const baseUrl = import.meta.env.BASE_URL;
       iconImg.className = "w-8 h-8 inline mr-2";
       creatureNameEl.before(iconImg);
     }
+
+    // Check for video
+    const videoPathMp4 = path.replace(
+      /\.(png|jpg|jpeg|gif|webp)$/i,
+      "_loop.mp4"
+    );
+    const videoPathWebp = path.replace(
+      /\.(png|jpg|jpeg|gif|webp)$/i,
+      "_loop.webp"
+    );
+
+    // Try MP4 first
+    video.src = `${baseUrl}/${videoPathMp4}`.replace("//", "/");
+    video.addEventListener(
+      "canplay",
+      () => {
+        img.classList.add("hidden");
+        video.classList.remove("hidden");
+      },
+      { once: true }
+    );
+
+    video.addEventListener(
+      "error",
+      () => {
+        // Try WebP if MP4 fails
+        video.src = `${baseUrl}/${videoPathWebp}`.replace("//", "/");
+        video.addEventListener(
+          "canplay",
+          () => {
+            img.classList.add("hidden");
+            video.classList.remove("hidden");
+          },
+          { once: true }
+        );
+      },
+      { once: true }
+    );
 
     overlay.classList.remove("hidden");
     overlay.classList.add("flex");

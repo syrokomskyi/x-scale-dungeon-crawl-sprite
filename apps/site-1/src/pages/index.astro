@@ -65,6 +65,12 @@ const imageList = images.default;
     const overlay = document.getElementById("fullscreen-overlay");
     overlay.classList.remove("flex");
     overlay.classList.add("hidden");
+    const video = document.getElementById("fullscreen-video");
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+      video.src = "";
+    }
     setHash("");
   };
 
