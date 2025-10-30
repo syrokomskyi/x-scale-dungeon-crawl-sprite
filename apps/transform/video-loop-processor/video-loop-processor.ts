@@ -229,13 +229,13 @@ async function processVideo(
     throw error;
   } finally {
     // Clean up temporary files
-    // try {
-    //   if (fs.existsSync(tempReversed)) fs.unlinkSync(tempReversed);
-    //   if (fs.existsSync(tempConcatenated)) fs.unlinkSync(tempConcatenated);
-    //   if (fs.existsSync(concatListPath)) fs.unlinkSync(concatListPath);
-    // } catch (cleanupError) {
-    //   console.warn("Warning: failed to remove temporary files:", cleanupError);
-    // }
+    try {
+      if (fs.existsSync(tempReversed)) fs.unlinkSync(tempReversed);
+      if (fs.existsSync(tempConcatenated)) fs.unlinkSync(tempConcatenated);
+      if (fs.existsSync(concatListPath)) fs.unlinkSync(concatListPath);
+    } catch (cleanupError) {
+      console.warn("Warning: failed to remove temporary files:", cleanupError);
+    }
   }
 }
 
