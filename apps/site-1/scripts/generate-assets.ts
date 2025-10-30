@@ -137,6 +137,13 @@ function copyDir(src: string, dest: string): void {
 
 console.log("\nStarting assets generation...\n");
 
+// remove pathToBg
+console.log(`Removing ${relative(publicDir, pathToBg)} directory...`);
+if (existsSync(pathToBg)) {
+  rmSync(pathToBg, { recursive: true, force: true });
+}
+console.log(`Removed ${relative(publicDir, pathToBg)} directory.`);
+
 // crawl-ref (original, fully)
 console.log(`Copying crawl-ref directory...`);
 const crawlRefDest = join(publicDir, crawlRefName);
