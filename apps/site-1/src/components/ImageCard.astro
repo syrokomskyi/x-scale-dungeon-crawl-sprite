@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   path: string;
   name: string;
@@ -20,8 +22,10 @@ const { path, width, height, name, note, icon } = Astro.props;
   data-icon={icon}
 >
   <div class="relative" style={`aspect-ratio: ${width} / ${height};`}>
-    <img
+    <Image
       src={`${baseUrl}/${path}`.replace("//", "/")}
+      width={width}
+      height={height}
       alt={name}
       title={`${name} | ${note}`}
       class="w-full h-full object-contain cursor-pointer absolute inset-0"
@@ -32,10 +36,12 @@ const { path, width, height, name, note, icon } = Astro.props;
     <h3 class="text-lg text-white mb-2">
       {
         icon && (
-          <img
+          <Image
             src={`${baseUrl}/${icon}`.replace("//", "/")}
+            width={32}
+            height={32}
             alt={name}
-            class="w-6 h-6 inline mr-2"
+            class="w-8 h-8 inline mr-2"
             loading="lazy"
           />
         )
