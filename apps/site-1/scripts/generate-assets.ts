@@ -316,7 +316,7 @@ const images: Array<{
     pathToBg,
     ".webp",
     "redraw-v1/branch",
-  ).map((p) => `/${p.split("\\").join("/")}`);
+  ).map((p) => `${p.split("\\").join("/")}`);
   backgroundFiles.sort();
   writeFileSync(
     join(publicDir, "data", "backgrounds.json"),
