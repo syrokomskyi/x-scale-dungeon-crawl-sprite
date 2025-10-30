@@ -28,7 +28,7 @@ const spritesDir: string = join(
   "redraw-v1",
 );
 
-const exclude: string[] = ["README.md", "mon+v2"];
+const exclude: string[] = ["branch", "README.md", "mon+v2"];
 
 const crawlRefName: string = basename(crawlRefDir);
 const spritesName: string = basename(spritesDir);
