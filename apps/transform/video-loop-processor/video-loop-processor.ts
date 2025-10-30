@@ -147,44 +147,44 @@ async function processVideo(
     }
 
     // Step 4: Encode to MP4 with H.264 (high quality)
-    console.log("  Encoding to MP4 (H.264)...");
-    const mp4Process = spawn(
-      "ffmpeg",
-      [
-        "-i",
-        tempConcatenated.replace(/\\/g, "/"),
-        "-c:v",
-        "libx264",
-        "-preset",
-        "slow",
-        "-crf",
-        "18",
-        "-pix_fmt",
-        "yuv420p",
-        "-movflags",
-        "+faststart",
-        "-an",
-        "-sn",
-        outputPathMp4.replace(/\\/g, "/"),
-      ],
-      { stdio: "ignore" },
-    );
+    // console.log("  Encoding to MP4 (H.264)...");
+    // const mp4Process = spawn(
+    //   "ffmpeg",
+    //   [
+    //     "-i",
+    //     tempConcatenated.replace(/\\/g, "/"),
+    //     "-c:v",
+    //     "libx264",
+    //     "-preset",
+    //     "slow",
+    //     "-crf",
+    //     "18",
+    //     "-pix_fmt",
+    //     "yuv420p",
+    //     "-movflags",
+    //     "+faststart",
+    //     "-an",
+    //     "-sn",
+    //     outputPathMp4.replace(/\\/g, "/"),
+    //   ],
+    //   { stdio: "ignore" },
+    // );
 
-    await new Promise<void>((resolve, reject) => {
-      mp4Process.on("close", (code) => {
-        if (code === 0) resolve();
-        else reject(new Error(`FFmpeg MP4 exited with code ${code}`));
-      });
-      mp4Process.on("error", reject);
-    });
+    // await new Promise<void>((resolve, reject) => {
+    //   mp4Process.on("close", (code) => {
+    //     if (code === 0) resolve();
+    //     else reject(new Error(`FFmpeg MP4 exited with code ${code}`));
+    //   });
+    //   mp4Process.on("error", reject);
+    // });
 
-    console.error("MP4 encoding done");
-    console.error(`Output MP4 path: ${relative(SOURCE_DIR, outputPathMp4)}`);
-    if (!fs.existsSync(outputPathMp4)) {
-      throw new Error(
-        `Output MP4 file not created: ${relative(SOURCE_DIR, outputPathMp4)}`,
-      );
-    }
+    // console.error("MP4 encoding done");
+    // console.error(`Output MP4 path: ${relative(SOURCE_DIR, outputPathMp4)}`);
+    // if (!fs.existsSync(outputPathMp4)) {
+    //   throw new Error(
+    //     `Output MP4 file not created: ${relative(SOURCE_DIR, outputPathMp4)}`,
+    //   );
+    // }
 
     // Step 5: Encode to WebM with VP9 (high quality, faster than AV1)
     console.log("  Encoding to WebM (VP9)...");
