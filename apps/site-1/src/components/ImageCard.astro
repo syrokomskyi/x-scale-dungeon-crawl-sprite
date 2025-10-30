@@ -8,11 +8,12 @@ interface Props {
   icon: string;
   width: number;
   height: number;
+  video: string;
 }
 
 const baseUrl = import.meta.env.BASE_URL;
 
-const { path, width, height, name, note, icon } = Astro.props;
+const { path, width, height, name, note, icon, video } = Astro.props;
 ---
 
 <div
@@ -20,6 +21,7 @@ const { path, width, height, name, note, icon } = Astro.props;
   data-path={path}
   data-note={note}
   data-icon={icon}
+  data-video={video}
 >
   <div class="relative" style={`aspect-ratio: ${width} / ${height};`}>
     <Image

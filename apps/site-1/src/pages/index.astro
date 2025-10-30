@@ -28,6 +28,7 @@ const imageList = images.default;
             name={image.name}
             note={image.note}
             icon={image.icon}
+            video={image.video}
           />
         ))
       }
@@ -74,10 +75,10 @@ const imageList = images.default;
     setHash("");
   };
 
-  function openFullscreenCard(path, name, note, icon) {
+  function openFullscreenCard(path, name, note, icon, video) {
     document.dispatchEvent(
       new CustomEvent("openFullscreen", {
-        detail: { path, name, note, icon },
+        detail: { path, name, note, icon, video },
       })
     );
   }
@@ -85,7 +86,13 @@ const imageList = images.default;
   function openCardByPath(path) {
     const image = imageList.find((img) => img.path === path);
     if (image) {
-      openFullscreenCard(image.path, image.name, image.note, image.icon);
+      openFullscreenCard(
+        image.path,
+        image.name,
+        image.note,
+        image.icon,
+        image.video
+      );
     }
   }
 
@@ -162,7 +169,8 @@ const imageList = images.default;
         const name = img.alt;
         const note = card.dataset.note;
         const icon = card.dataset.icon;
-        openFullscreenCard(path, name, note, icon);
+        const video = card.dataset.video;
+        openFullscreenCard(path, name, note, icon, video);
         setHash(path);
       });
     });
