@@ -124,7 +124,7 @@ import Filter from "./Filter.astro";
     if (currentIndex !== -1) {
       // Restore previous letter
       const pos = positions[currentIndex];
-      h3.textContent =
+      h3.innerHTML =
         originalText.slice(0, pos) +
         originalText[pos] +
         originalText.slice(pos + 1);
@@ -132,8 +132,9 @@ import Filter from "./Filter.astro";
     // Pick new random position
     currentIndex = Math.floor(Math.random() * positions.length);
     const newPos = positions[currentIndex];
-    h3.textContent =
-      originalText.slice(0, newPos) + "@" + originalText.slice(newPos + 1);
+    const a = originalText.slice(0, newPos);
+    const b = originalText.slice(newPos + 1);
+    h3.innerHTML = `${a}<span class='heartbeat'>@</span>${b}`;
     // Schedule next update with random delay
     const delay = 1000 + Math.random() * 5000;
     setTimeout(updateText, delay);
