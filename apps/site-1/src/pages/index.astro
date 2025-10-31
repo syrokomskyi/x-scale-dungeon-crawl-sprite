@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout.astro";
 const baseUrl = import.meta.env.BASE_URL;
 
 const images = await import("../../public/data/images.json");
-const imageList = images.default;
+const imageList = images.default.sort(() => Math.random() - 0.5);
 ---
 
 <Layout title="Tool for Creating Fan Gallery for Any Roguelike Game">
@@ -132,21 +132,7 @@ const imageList = images.default;
     });
   }
 
-  // Shuffle the gallery cards on load
-  function shuffleGallery() {
-    const gallery = document.getElementById("gallery");
-    const cards = Array.from(gallery.children);
-    for (let i = cards.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [cards[i], cards[j]] = [cards[j], cards[i]];
-    }
-    cards.forEach((card) => gallery.appendChild(card));
-  }
-
-  // Shuffle on DOM content loaded
   document.addEventListener("DOMContentLoaded", () => {
-    shuffleGallery();
-
     // Add overlay click listener
     const overlay = document.getElementById("fullscreen-overlay");
     if (overlay) {
