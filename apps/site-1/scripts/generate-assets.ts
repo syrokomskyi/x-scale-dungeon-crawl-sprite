@@ -177,7 +177,7 @@ function copyDir(src: string, dest: string): void {
   mkdirSync(join(publicDir, "data"), { recursive: true });
   writeFileSync(
     join(publicDir, "data", "filters.json"),
-    JSON.stringify(filters, null, 2),
+    `${JSON.stringify(filters, null, 2)}\n`,
   );
   console.log("filters.json generated.");
 
@@ -281,7 +281,7 @@ function copyDir(src: string, dest: string): void {
 
   writeFileSync(
     join(publicDir, "data", "images.json"),
-    JSON.stringify(images, null, 2),
+    `${JSON.stringify(images, null, 2)}\n`,
   );
   console.log("images.json generated.");
 
@@ -320,7 +320,7 @@ function copyDir(src: string, dest: string): void {
   backgroundFiles.sort();
   writeFileSync(
     join(publicDir, "data", "backgrounds.json"),
-    JSON.stringify(backgroundFiles, null, 2),
+    `${JSON.stringify(backgroundFiles, null, 2)}\n`,
   );
   console.log("backgrounds.json generated.\n");
 
