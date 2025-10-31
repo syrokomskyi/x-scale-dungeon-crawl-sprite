@@ -147,65 +147,65 @@ function copyDir(src: string, dest: string): void {
   }
 }
 
-console.log("\nStarting assets generation...\n");
-
-// remove pathToBg
-console.log(`Removing ${relative(publicDir, pathToBg)} directory...`);
-if (existsSync(pathToBg)) {
-  rmSync(pathToBg, { recursive: true, force: true });
-}
-console.log(`Removed ${relative(publicDir, pathToBg)} directory.`);
-
-// crawl-ref (original, fully)
-console.log(`Copying crawl-ref directory...`);
-const crawlRefDest = join(publicDir, crawlRefName);
-if (existsSync(crawlRefDest)) {
-  rmSync(crawlRefDest, { recursive: true, force: true });
-}
-cpSync(crawlRefDir, crawlRefDest, { recursive: true });
-console.log(`Copied crawl-ref directory.`);
-
-// sprites (redraw, partially)
-console.log(`Copying sprites directory...`);
-copyDir(spritesDir, join(publicDir, spritesName));
-console.log(`Copied sprites directory.`);
-
-// filters.json
-console.log("\nGenerating filters.json...\n");
-const filters = buildFilters(join(publicDir, "redraw-v1"));
-mkdirSync(join(publicDir, "data"), { recursive: true });
-writeFileSync(
-  join(publicDir, "data", "filters.json"),
-  JSON.stringify(filters, null, 2),
-);
-console.log("filters.json generated.");
-
-// images.json
-console.log("\nGenerating images.json...\n");
-const descriptions = parseDescriptions();
-const redrawV1Dir = join(publicDir, "redraw-v1");
-const crawlRefDirPublic = join(publicDir, "crawl-ref");
-const guiDir = join(crawlRefDirPublic, "source", "rltiles", "gui");
-
-const webpFiles = getAllFiles(redrawV1Dir, ".webp").map((p) =>
-  p.replace(/\\/g, "/"),
-);
-const pngFilesInGui = existsSync(guiDir)
-  ? getAllFiles(guiDir, ".png").map((p) => p.replace(/\\/g, "/"))
-  : [];
-
-const images: Array<{
-  path: string;
-  pathWidth: number;
-  pathHeight: number;
-  pathPlaceholder: string;
-  name: string;
-  note: string;
-  icon: string;
-  video: string;
-}> = [];
-
 (async () => {
+  console.log("\nStarting assets generation...\n");
+
+  // remove pathToBg
+  console.log(`Removing ${relative(publicDir, pathToBg)} directory...`);
+  if (existsSync(pathToBg)) {
+    rmSync(pathToBg, { recursive: true, force: true });
+  }
+  console.log(`Removed ${relative(publicDir, pathToBg)} directory.`);
+
+  // crawl-ref (original, fully)
+  console.log(`Copying crawl-ref directory...`);
+  const crawlRefDest = join(publicDir, crawlRefName);
+  if (existsSync(crawlRefDest)) {
+    rmSync(crawlRefDest, { recursive: true, force: true });
+  }
+  cpSync(crawlRefDir, crawlRefDest, { recursive: true });
+  console.log(`Copied crawl-ref directory.`);
+
+  // sprites (redraw, partially)
+  console.log(`Copying sprites directory...`);
+  copyDir(spritesDir, join(publicDir, spritesName));
+  console.log(`Copied sprites directory.`);
+
+  // filters.json
+  console.log("\nGenerating filters.json...\n");
+  const filters = buildFilters(join(publicDir, "redraw-v1"));
+  mkdirSync(join(publicDir, "data"), { recursive: true });
+  writeFileSync(
+    join(publicDir, "data", "filters.json"),
+    JSON.stringify(filters, null, 2),
+  );
+  console.log("filters.json generated.");
+
+  // images.json
+  console.log("\nGenerating images.json...\n");
+  const descriptions = parseDescriptions();
+  const redrawV1Dir = join(publicDir, "redraw-v1");
+  const crawlRefDirPublic = join(publicDir, "crawl-ref");
+  const guiDir = join(crawlRefDirPublic, "source", "rltiles", "gui");
+
+  const webpFiles = getAllFiles(redrawV1Dir, ".webp").map((p) =>
+    p.replace(/\\/g, "/"),
+  );
+  const pngFilesInGui = existsSync(guiDir)
+    ? getAllFiles(guiDir, ".png").map((p) => p.replace(/\\/g, "/"))
+    : [];
+
+  const images: Array<{
+    path: string;
+    pathWidth: number;
+    pathHeight: number;
+    pathPlaceholder: string;
+    name: string;
+    note: string;
+    icon: string;
+    video: string;
+  }> = [];
+
   for (const webpPath of webpFiles) {
     const path = `redraw-v1/${webpPath}`;
     const basenameNoExt = basename(webpPath, ".webp");
