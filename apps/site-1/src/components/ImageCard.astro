@@ -21,6 +21,11 @@ const { path, width, height, placeholder, name, note, icon, video } =
 const dataPlaceholder = thumbHashToDataURL(
   Uint8Array.from(atob(placeholder), (c) => c.charCodeAt(0))
 );
+
+function randomHeartbeatDelay() {
+  const delay = (Math.random() - 0.5) * 0.24;
+  return `${delay.toFixed(3)}s`;
+}
 ---
 
 <div
@@ -59,6 +64,7 @@ const dataPlaceholder = thumbHashToDataURL(
             height={32}
             alt={name}
             class="heartbeat w-8 h-8 inline mr-2"
+            style={`animation-delay: ${randomHeartbeatDelay()}`}
             loading="lazy"
           />
         )

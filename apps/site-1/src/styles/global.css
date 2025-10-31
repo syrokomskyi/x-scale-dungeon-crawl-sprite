@@ -34,8 +34,8 @@ body {
 .heartbeat {
   animation: heartbeat 3s ease-in-out infinite;
   animation-timing-function: cubic-bezier(0.3, 0.1, 0.3, 1);
-  /* TODO animation-delay: calc(0.06s * (random() - 0.6)); */
+  /* add in script for live: animation-delay: calc(0.06s * (random() - 0.6)); */
   animation-delay: 0.06s;
   transform-origin: center center;
-  will-change: transform;
+  will-change: opacity;
 }
