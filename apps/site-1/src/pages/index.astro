@@ -63,7 +63,7 @@ const imageList = images.default.sort(() => Math.random() - 0.5);
     history.replaceState(null, null, "#" + encodePath(path));
   }
 
-  window.closeFullscreen = function () {
+  window.closeFullscreenCard = function () {
     const overlay = document.getElementById("fullscreen-overlay");
     overlay.classList.remove("flex");
     overlay.classList.add("hidden");
@@ -107,11 +107,12 @@ const imageList = images.default.sort(() => Math.random() - 0.5);
       isProgrammaticHashChange = false;
       return;
     }
+
     const path = getPathFromHash();
     if (path) {
       openCardByPath(path);
     } else {
-      window.closeFullscreen();
+      window.closeFullscreenCard();
     }
   });
 
@@ -136,7 +137,7 @@ const imageList = images.default.sort(() => Math.random() - 0.5);
     // Add overlay click listener
     const overlay = document.getElementById("fullscreen-overlay");
     if (overlay) {
-      overlay.addEventListener("click", window.closeFullscreen);
+      overlay.addEventListener("click", window.closeFullscreenCard);
     }
 
     // Check initial hash
