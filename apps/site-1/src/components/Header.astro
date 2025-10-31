@@ -108,4 +108,37 @@ import Filter from "./Filter.astro";
   toggleButton.addEventListener("click", () => {
     descriptionText.classList.toggle("hidden");
   });
+
+  // Animation for subtitle
+  const h3 = document.querySelector("h3");
+  const originalText = h3.textContent.trim();
+  const positions = [];
+  for (let i = 0; i < originalText.length; i++) {
+    if (originalText[i] !== " ") {
+      positions.push(i);
+    }
+  }
+  let currentIndex = -1;
+
+  function updateText() {
+    if (currentIndex !== -1) {
+      // Restore previous letter
+      const pos = positions[currentIndex];
+      h3.textContent =
+        originalText.slice(0, pos) +
+        originalText[pos] +
+        originalText.slice(pos + 1);
+    }
+    // Pick new random position
+    currentIndex = Math.floor(Math.random() * positions.length);
+    const newPos = positions[currentIndex];
+    h3.textContent =
+      originalText.slice(0, newPos) + "@" + originalText.slice(newPos + 1);
+    // Schedule next update with random delay
+    const delay = 1000 + Math.random() * 5000;
+    setTimeout(updateText, delay);
+  }
+
+  // Start animation after initial delay
+  setTimeout(updateText, 3000);
 </script>
