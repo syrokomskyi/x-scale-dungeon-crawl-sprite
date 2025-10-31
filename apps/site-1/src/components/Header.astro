@@ -84,6 +84,9 @@ import Filter from "./Filter.astro";
     document.body.style.paddingTop = headerHeight + "px";
   }
 
+  // Call immediately to prevent jump of gallery
+  adjustBodyPadding();
+
   window.addEventListener("load", adjustBodyPadding);
   window.addEventListener("resize", adjustBodyPadding);
 
