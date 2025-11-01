@@ -1,6 +1,6 @@
 import { useWindowVirtualizer } from "@tanstack/react-virtual";
 import { useEffect, useRef, useState } from "react";
-import { thumbHashToDataURL } from "thumbhash";
+import ImageCard from "./ImageCard";
 
 interface ImageData {
   path: string;
@@ -83,11 +83,6 @@ const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
     return () => window.removeEventListener("resize", updateColumns);
   }, [updateColumns]);
 
-  const randomHeartbeatDelay = () => {
-    const delay = (Math.random() - 0.5) * 0.24;
-    return `${delay.toFixed(3)}s`;
-  };
-
   const handleImageClick = (image: ImageData) => {
     // Update hash in URL
     const hash = encodeURIComponent(image.path.replace(".webp", "")).replace(
@@ -132,70 +127,19 @@ const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
 
               if (!image) return null;
 
-              const dataPlaceholder = thumbHashToDataURL(
-                Uint8Array.from(atob(image.pathPlaceholder), (c) =>
-                  c.charCodeAt(0),
-                ),
-              );
-
               return (
-                <div
+                <ImageCard
                   key={virtualColumn.key}
-                  data-index={virtualColumn.index}
-                  ref={columnVirtualizer.measureElement}
-                  className="image-card bg-black/20 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  data-path={image.path}
-                  data-note={image.note}
-                  data-icon={image.icon}
-                  data-video={image.video}
+                  path={image.path}
+                  width={image.pathWidth}
+                  height={image.pathHeight}
+                  placeholder={image.pathPlaceholder}
+                  name={image.name}
+                  note={image.note}
+                  icon={image.icon}
+                  video={image.video}
                   onClick={() => handleImageClick(image)}
-                >
-                  <div
-                    className="relative"
-                    style={{
-                      aspectRatio: `${image.pathWidth} / ${image.pathHeight}`,
-                    }}
-                  >
-                    <img
-                      src={dataPlaceholder}
-                      width={image.pathWidth}
-                      height={image.pathHeight}
-                      alt={image.name}
-                      className="absolute inset-0 w-full h-full object-cover z-0 blur-lg"
-                    />
-                    <img
-                      src={`${baseUrl}/${image.path}`.replace("//", "/")}
-                      width={image.pathWidth}
-                      height={image.pathHeight}
-                      alt={image.name}
-                      title={`${image.name} | ${image.note}`}
-                      className="w-full h-full object-contain cursor-pointer absolute inset-0 opacity-0 transition-opacity duration-1200"
-                      loading="lazy"
-                      onLoad={(e) => (e.currentTarget.style.opacity = "1")}
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg text-white mb-2 md:text-base sm:text-sm">
-                      {image.icon && (
-                        <img
-                          src={`${baseUrl}/${image.icon}`.replace("//", "/")}
-                          width={32}
-                          height={32}
-                          alt={image.name}
-                          className="heartbeat w-8 h-8 inline mr-2"
-                          style={{ animationDelay: randomHeartbeatDelay() }}
-                          loading="lazy"
-                        />
-                      )}
-                      {image.name}
-                    </h3>
-                    {image.note && (
-                      <p className="text-base text-gray-300 mt-1 mb-1 px-4 md:text-sm sm:text-xs">
-                        {image.note}
-                      </p>
-                    )}
-                  </div>
-                </div>
+                />
               );
             })}
           </div>
