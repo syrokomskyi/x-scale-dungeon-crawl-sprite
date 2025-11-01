@@ -45,12 +45,31 @@ function isVideoToExclude(filename: string): boolean {
   return false;
 }
 
+function isIgnored(currentRelPath: string): boolean {
+  for (const ignored of ignoredPaths) {
+    if (ignored.endsWith("/*")) {
+      const prefix = ignored.slice(0, -1);
+      if (currentRelPath.startsWith(prefix)) {
+        return true;
+      }
+    } else {
+      if (
+        currentRelPath === ignored ||
+        currentRelPath.replace(/\.[^.]+$/, "") === ignored
+      ) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+
 function isItemExclude(item: string, currentRelPath: string): boolean {
   return (
     excludeFromShow.includes(item) ||
     isVideoToExclude(item) ||
-    ignoredPaths.has(currentRelPath) ||
-    ignoredPaths.has(currentRelPath.replace(/\.[^.]+$/, ""))
+    isIgnored(currentRelPath)
   );
 }
 
