@@ -62,7 +62,9 @@ const ImageCard: React.FC<ImageCardProps> = ({
           title={`${name} | ${note}`}
           className="w-full h-full object-contain cursor-pointer absolute inset-0 opacity-0 transition-opacity duration-1200"
           loading="lazy"
-          onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+          onLoad={(e) => {
+            e.currentTarget.style.opacity = "1";
+          }}
         />
       </div>
       <div className="p-4">
