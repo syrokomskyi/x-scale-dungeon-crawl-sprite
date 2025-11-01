@@ -24,6 +24,7 @@ const dataPlaceholder = thumbHashToDataURL(
 
 const noteId = `note-${path.replace(/\//g, "-")}`;
 const nameId = `name-${path.replace(/\//g, "-")}`;
+const iconId = `icon-${path.replace(/\//g, "-")}`;
 
 function randomHeartbeatDelay() {
   const delay = (Math.random() - 0.5) * 0.24;
@@ -64,11 +65,12 @@ function randomHeartbeatDelay() {
       {
         icon && (
           <Image
+            id={iconId}
             src={`${baseUrl}/${icon}`.replace("//", "/")}
             width={32}
             height={32}
             alt={name}
-            class="shrink-0 w-6 h-6 mr-2 heartbeat"
+            class="shrink-0 w-6 h-6 mr-2 heartbeat cursor-pointer"
             style={`animation-delay: ${randomHeartbeatDelay()}`}
             loading="lazy"
           />
@@ -91,11 +93,19 @@ function randomHeartbeatDelay() {
 
 {
   note && (
-    <script is:inline define:vars={{ nameId, noteId }}>
+    <script is:inline define:vars={{ nameId, iconId, noteId }}>
       const nameElement = document.getElementById(nameId);
+      const iconElement = document.getElementById(iconId);
       const descriptionText = document.getElementById(noteId);
       if (nameElement && descriptionText) {
-        nameElement.addEventListener("click", () => {
+        nameElement.addEventListener("click", (e) => {
+          e.stopPropagation();
+          descriptionText.classList.toggle("hidden");
+        });
+      }
+      if (iconElement && descriptionText) {
+        iconElement.addEventListener("click", (e) => {
+          e.stopImmediatePropagation();
           descriptionText.classList.toggle("hidden");
         });
       }
