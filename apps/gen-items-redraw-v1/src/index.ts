@@ -11,6 +11,8 @@ import {
 
 config({ path: ".env.local" });
 
+const maxCount = 12;
+
 const imageConfig: ImageConfig = {
   aspectRatio: "1:1",
 };
@@ -82,6 +84,8 @@ const DRAW_DIR = path.join(
 );
 
 async function main() {
+  let count = 0;
+
   const imageFiles = getImageFiles(ORIGINAL_DIR);
   const nonFatalReasons: string[] = [];
   for (const file of imageFiles) {
@@ -118,9 +122,12 @@ async function main() {
     }
 
     // next item
+    ++count;
 
     // test
-    break;
+    if (count >= maxCount) {
+      break;
+    }
   }
 
   showNonFatalReasons(nonFatalReasons);
