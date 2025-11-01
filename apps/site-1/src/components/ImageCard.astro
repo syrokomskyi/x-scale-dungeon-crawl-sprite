@@ -19,7 +19,7 @@ const { path, width, height, placeholder, name, note, icon, video } =
   Astro.props;
 
 const dataPlaceholder = thumbHashToDataURL(
-  Uint8Array.from(atob(placeholder), (c) => c.charCodeAt(0))
+  Uint8Array.from(atob(placeholder), (c) => c.charCodeAt(0)),
 );
 
 const noteId = `note-${path.replace(/\//g, "-")}`;
