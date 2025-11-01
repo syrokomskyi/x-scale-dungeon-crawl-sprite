@@ -1,8 +1,10 @@
 ---
-const startCopyrightYear = 2025;
+const { startCopyrightYear, hasBackground } = Astro.props;
 ---
 
-<footer class="bg-white/10 backdrop-blur-md text-white py-4 mt-8">
+<footer
+  class={`text-white py-4 mt-8 ${hasBackground ? "bg-white/10 backdrop-blur-md" : ""}`}
+>
   <div class="container mx-auto px-4 text-center">
     <p>
       <span class="heartbeat">©</span>
