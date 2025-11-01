@@ -1,5 +1,5 @@
 import { useWindowVirtualizer } from "@tanstack/react-virtual";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ImageCard from "./ImageCard";
 
 interface ImageData {
@@ -65,7 +65,7 @@ const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
     gap: 16,
   });
 
-  const updateColumns = () => {
+  const updateColumns = useCallback(() => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
       setColumns(4);
     } else if (window.matchMedia("(min-width: 768px)").matches) {
@@ -75,7 +75,7 @@ const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
     } else {
       setColumns(1);
     }
-  };
+  }, []);
 
   useEffect(() => {
     updateColumns();
