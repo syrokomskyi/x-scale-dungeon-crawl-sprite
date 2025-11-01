@@ -2,6 +2,8 @@
 
 import { thumbHashToDataURL } from "thumbhash";
 
+const showNote = false;
+
 interface ImageCardProps {
   path: string;
   width: number;
@@ -82,7 +84,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
           )}
           {name}
         </h3>
-        {note && (
+        {showNote && note && (
           <p className="text-base text-gray-300 mt-1 mb-1 px-4 md:text-sm sm:text-xs">
             {note}
           </p>
