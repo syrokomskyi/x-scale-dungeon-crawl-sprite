@@ -19,6 +19,7 @@ interface VirtualGalleryProps {
   currentFilter: string[];
 }
 
+// TODO Need debugging.
 const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
   const [currentFilter, setCurrentFilter] = useState<string[]>([]);
   const [columns, setColumns] = useState<number>(4);
@@ -68,7 +69,8 @@ const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
   // Scroll to top when filter changes
   useEffect(() => {
     rowVirtualizer.scrollToIndex(0);
-  }, [rowVirtualizer]);
+    setCurrentFilter(currentFilter);
+  }, [currentFilter, rowVirtualizer]);
 
   const updateColumns = useCallback(() => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
