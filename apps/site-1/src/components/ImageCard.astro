@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import { thumbHashToDataURL } from "thumbhash";
 
+const showNote = false;
+
 interface Props {
   path: string;
   width: number;
@@ -71,7 +73,7 @@ function randomHeartbeatDelay() {
       }{name}
     </h3>
     {
-      note && (
+      showNote && note && (
         <p class="text-base text-gray-300 mt-1 mb-1 px-4 md:text-sm sm:text-xs">
           {note}
         </p>
