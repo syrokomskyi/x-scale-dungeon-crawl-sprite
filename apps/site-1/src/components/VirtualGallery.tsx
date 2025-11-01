@@ -65,6 +65,11 @@ const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
     gap: 16,
   });
 
+  // Scroll to top when filter changes
+  useEffect(() => {
+    rowVirtualizer.scrollToIndex(0);
+  }, [rowVirtualizer]);
+
   const updateColumns = useCallback(() => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
       setColumns(4);
