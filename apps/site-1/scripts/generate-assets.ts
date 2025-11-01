@@ -32,7 +32,7 @@ const spritesDir: string = join(
 const pathToSourceBg: string = join(spritesDir, "branch");
 const pathToBg: string = join(publicDir, "redraw-v1", "branch");
 
-const excludeFromShow: string[] = ["branch", "README.md", "mon+v2"];
+const excludeFromShow: string[] = ["branch", "README.md", "mon+v2", ".ignore"];
 
 function isVideoToExclude(filename: string): boolean {
   const lowerFilename = filename.toLowerCase();
@@ -45,8 +45,33 @@ function isVideoToExclude(filename: string): boolean {
   return false;
 }
 
+function isItemExclude(item: string, currentRelPath: string): boolean {
+  return (
+    excludeFromShow.includes(item) ||
+    isVideoToExclude(item) ||
+    ignoredPaths.has(currentRelPath) ||
+    ignoredPaths.has(currentRelPath.replace(/\.[^.]+$/, ""))
+  );
+}
+
 const crawlRefName: string = basename(crawlRefDir);
 const spritesName: string = basename(spritesDir);
+
+const ignoreFile: string = join(spritesDir, ".ignore");
+const ignoredPaths: Set<string> = new Set();
+if (existsSync(ignoreFile)) {
+  const content = readFileSync(ignoreFile, "utf-8");
+  const lines = content
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line);
+  for (const line of lines) {
+    const pline = line.trim().replace(/\\/g, "/");
+    if (pline.length > 0 && pline[0] !== "#") {
+      ignoredPaths.add(pline);
+    }
+  }
+}
 
 let totalFiles = 0;
 let copiedFiles = 0;
@@ -117,22 +142,23 @@ function parseDescriptions(): Map<string, string> {
   return descriptions;
 }
 
-function copyDir(src: string, dest: string): void {
+function copyDir(src: string, dest: string, relativePath: string = ""): void {
   if (!existsSync(dest)) {
     mkdirSync(dest, { recursive: true });
   }
   const items: string[] = readdirSync(src);
   for (const item of items) {
     const destPath: string = join(dest, item);
-    if (excludeFromShow.includes(item) || isVideoToExclude(item)) {
-      console.log(`Skipped ${relative(publicDir, destPath)}, excluded`);
+    const currentRelPath = join(relativePath, item).replace(/\\/g, "/");
+    if (isItemExclude(item, currentRelPath)) {
+      console.log(`Skipped ${currentRelPath}, excluded`);
       continue;
     }
 
     const srcPath: string = join(src, item);
     const stat = statSync(srcPath);
     if (stat.isDirectory()) {
-      copyDir(srcPath, destPath);
+      copyDir(srcPath, destPath, currentRelPath);
     } else {
       totalFiles++;
       if (!existsSync(destPath)) {
@@ -168,7 +194,11 @@ function copyDir(src: string, dest: string): void {
 
   // sprites (redraw, partially)
   console.log(`Copying sprites directory...`);
-  copyDir(spritesDir, join(publicDir, spritesName));
+  const spritesDest = join(publicDir, spritesName);
+  if (existsSync(spritesDest)) {
+    rmSync(spritesDest, { recursive: true, force: true });
+  }
+  copyDir(spritesDir, spritesDest);
   console.log(`Copied sprites directory.`);
 
   // filters.json
@@ -307,7 +337,7 @@ function copyDir(src: string, dest: string): void {
 
   // Copy sprites for background
   console.log("\nCopying sprites for background...\n");
-  copyDir(pathToSourceBg, pathToBg);
+  copyDir(pathToSourceBg, pathToBg, "branch");
   console.log("Sprites for background copied.\n");
 
   // backgrounds.json
