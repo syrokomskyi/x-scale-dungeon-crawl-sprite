@@ -37,8 +37,9 @@ const ImageCard: React.FC<ImageCardProps> = ({
   };
 
   return (
-    <div
-      className="image-card bg-black/20 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+    <button
+      type="button"
+      className="image-card bg-transparent backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-none p-0 cursor-pointer w-full text-left"
       data-path={path}
       data-note={note}
       data-icon={icon}
@@ -85,7 +86,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
           </p>
         )}
       </div>
-    </div>
+    </button>
   );
 };
 
