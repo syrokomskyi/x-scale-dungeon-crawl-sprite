@@ -89,7 +89,7 @@ const VirtualGallery: React.FC<VirtualGalleryProps> = ({ images, baseUrl }) => {
       /%2F/g,
       "+",
     );
-    history.replaceState(null, null, `#${hash}`);
+    history.replaceState(null, "", `#${hash}`);
 
     document.dispatchEvent(
       new CustomEvent("openFullscreen", {
