@@ -2,7 +2,7 @@
 import Footer from "../components/Footer.astro";
 import FullscreenCard from "../components/FullscreenCard.astro";
 import Header from "../components/Header.astro";
-import ImageCard from "../components/ImageCard.astro";
+import VirtualGallery from "../components/VirtualGallery.tsx";
 import Layout from "../layouts/Layout.astro";
 
 const baseUrl = import.meta.env.BASE_URL;
@@ -15,25 +15,11 @@ const imageList = images.default.sort(() => Math.random() - 0.5);
   <Header />
 
   <main class="container mx-auto px-4 py-8">
-    <div
-      id="gallery"
-      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-    >
-      {
-        imageList.map((image) => (
-          <ImageCard
-            path={image.path}
-            width={image.pathWidth}
-            height={image.pathHeight}
-            placeholder={image.pathPlaceholder}
-            name={image.name}
-            note={image.note}
-            icon={image.icon}
-            video={image.video}
-          />
-        ))
-      }
-    </div>
+    <VirtualGallery
+      images={imageList}
+      baseUrl={baseUrl}
+      client:load
+    />
   </main>
 
   <Footer />
@@ -42,8 +28,6 @@ const imageList = images.default.sort(() => Math.random() - 0.5);
 </Layout>
 
 <script is:inline define:vars={{ baseUrl, imageList }}>
-  let currentFilter = [];
-
   function encodePath(path) {
     let hash = encodeURIComponent(path.replace(".webp", ""));
     hash = hash.replace(/%2F/g, "+");
@@ -116,23 +100,6 @@ const imageList = images.default.sort(() => Math.random() - 0.5);
     }
   });
 
-  window.addEventListener("filterChange", (e) => {
-    currentFilter = e.detail.selected;
-    filterGallery();
-  });
-
-  function filterGallery() {
-    const gallery = document.getElementById("gallery");
-    const cards = gallery.querySelectorAll(".image-card");
-    cards.forEach((card) => {
-      const path = card.dataset.path;
-      const show =
-        currentFilter.length === 0 ||
-        path.startsWith("redraw-v1/" + currentFilter.join("/") + "/");
-      card.style.display = show ? "" : "none";
-    });
-  }
-
   document.addEventListener("DOMContentLoaded", () => {
     // Add overlay click listener
     const overlay = document.getElementById("fullscreen-overlay");
@@ -147,21 +114,6 @@ const imageList = images.default.sort(() => Math.random() - 0.5);
         openCardByPath(path);
       }
     }
-
-    // Add click listeners to images
-    const images = document.querySelectorAll(".image-card img");
-    images.forEach((img) => {
-      img.addEventListener("click", () => {
-        const card = img.closest(".image-card");
-        const path = card.dataset.path;
-        const name = img.alt;
-        const note = card.dataset.note;
-        const icon = card.dataset.icon;
-        const video = card.dataset.video;
-        openFullscreenCard(path, name, note, icon, video);
-        setHash(path);
-      });
-    });
   });
 
   // Check initial hash after setup

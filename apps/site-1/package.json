@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "prebuild": "tsx scripts/generate-assets.ts",
+    "skip-prebuild": "tsx scripts/generate-assets.ts",
     "skip-predev": "tsx scripts/generate-assets.ts",
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,7 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.1",
+    "@tanstack/react-virtual": "^3.13.12",
     "astro": "^5.15.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "thumbhash": "^0.1.1"
   },
   "devDependencies": {
