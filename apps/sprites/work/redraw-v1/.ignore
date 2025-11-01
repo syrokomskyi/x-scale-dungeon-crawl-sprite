@@ -3,13 +3,12 @@ item/amulet/artefact/urand_elemental_vulnerability2
 item/amulet/artefact/urand_hermit_pendant
 
 item/amulet/brass
-
-item/golden
-item/i-dissipation
-item/i-inaccuracy
-item/jade
-item/jasper
-item/sapphire
+item/amulet/golden
+item/amulet/i-dissipation
+item/amulet/i-inaccuracy
+item/amulet/jade
+item/amulet/jasper
+item/amulet/sapphire
 
 item/armour/artefact/urand_augmentation
 item/armour/artefact/urand_battle
@@ -19,16 +18,15 @@ item/armour/artefact/urand_charlatan
 item/armour/artefact/urand_cigotuvi
 item/armour/artefact/urand_crown_of_vainglory
 
-item/acid_dragon_armour
-item/animal_skin1
-item/animal_skin2
-item/animal_skin3
+item/armour/acid_dragon_armour
+item/armour/animal_skin1
+item/armour/animal_skin2
+item/armour/animal_skin3
 
 
 mon/aberrations/screaming_refraction
 
 mon/amorphous/azure_jelly
-mon/amorphous/mon/amorphous/
 mon/amorphous/endoplasm
 mon/amorphous/rockslime
 mon/amorphous/rockslime1
