@@ -97,16 +97,18 @@ let copiedFiles = 0;
 let skippedFiles = 0;
 let removedFiles = 0;
 
-function buildFilters(dir: string): Record<string, any> {
+function buildFiltersFromPaths(paths: string[]): Record<string, any> {
   const result: Record<string, any> = {};
-  const items = readdirSync(dir);
-  for (const item of items) {
-    const itemPath = join(dir, item);
-    if (statSync(itemPath).isDirectory()) {
-      result[item] = buildFilters(itemPath);
+  for (const path of paths) {
+    const parts = path.split("/").filter((p) => p !== "redraw-v1");
+    let current = result;
+    for (const part of parts) {
+      if (!current[part]) {
+        current[part] = {};
+      }
+      current = current[part];
     }
   }
-
   return result;
 }
 
@@ -220,16 +222,6 @@ function copyDir(src: string, dest: string, relativePath: string = ""): void {
   copyDir(spritesDir, spritesDest);
   console.log(`Copied sprites directory.`);
 
-  // filters.json
-  console.log("\nGenerating filters.json...\n");
-  const filters = buildFilters(join(publicDir, "redraw-v1"));
-  mkdirSync(join(publicDir, "data"), { recursive: true });
-  writeFileSync(
-    join(publicDir, "data", "filters.json"),
-    `${JSON.stringify(filters, null, 2)}\n`,
-  );
-  console.log("filters.json generated.");
-
   // images.json
   console.log("\nGenerating images.json...\n");
   const descriptions = parseDescriptions();
@@ -333,6 +325,21 @@ function copyDir(src: string, dest: string, relativePath: string = ""): void {
     `${JSON.stringify(images, null, 2)}\n`,
   );
   console.log("images.json generated.");
+
+  // filters.json
+  console.log("\nGenerating filters.json...\n");
+  const folderPaths = Array.from(
+    new Set(
+      images.map((img) => dirname(img.path)).filter((d) => d !== "redraw-v1"),
+    ),
+  );
+  const filters = buildFiltersFromPaths(folderPaths);
+  mkdirSync(join(publicDir, "data"), { recursive: true });
+  writeFileSync(
+    join(publicDir, "data", "filters.json"),
+    `${JSON.stringify(filters, null, 2)}\n`,
+  );
+  console.log("filters.json generated.");
 
   // Remove unused PNG files from crawl-ref
   console.log("\nRemoving unused PNG files from crawl-ref...\n");
