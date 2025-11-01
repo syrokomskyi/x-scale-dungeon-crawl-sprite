@@ -320,6 +320,7 @@ function copyDir(src: string, dest: string, relativePath: string = ""): void {
 
   images.sort((a, b) => a.path.localeCompare(b.path));
 
+  mkdirSync(join(publicDir, "data"), { recursive: true });
   writeFileSync(
     join(publicDir, "data", "images.json"),
     `${JSON.stringify(images, null, 2)}\n`,
@@ -334,7 +335,6 @@ function copyDir(src: string, dest: string, relativePath: string = ""): void {
     ),
   );
   const filters = buildFiltersFromPaths(folderPaths);
-  mkdirSync(join(publicDir, "data"), { recursive: true });
   writeFileSync(
     join(publicDir, "data", "filters.json"),
     `${JSON.stringify(filters, null, 2)}\n`,
