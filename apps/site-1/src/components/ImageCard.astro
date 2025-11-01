@@ -57,7 +57,9 @@ function randomHeartbeatDelay() {
     />
   </div>
   <div class="p-4">
-    <h3 class="text-lg text-white mb-2 md:text-base sm:text-sm">
+    <h3
+      class="flex items-start text-lg text-white mb-2 md:text-base sm:text-sm"
+    >
       {
         icon && (
           <Image
@@ -65,12 +67,13 @@ function randomHeartbeatDelay() {
             width={32}
             height={32}
             alt={name}
-            class="heartbeat w-8 h-8 inline mr-2"
+            class="shrink-0 w-6 h-6 mr-2 heartbeat"
             style={`animation-delay: ${randomHeartbeatDelay()}`}
             loading="lazy"
           />
         )
-      }{name}
+      }
+      <span>{name}</span>
     </h3>
     {
       showNote && note && (
